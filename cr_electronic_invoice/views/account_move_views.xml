@@ -87,8 +87,10 @@
                         <group name="eref_info_group" colspan="2">
                             <group string="Electronic Document Reference" name="eref_info_group1" colspan="2">
                                 <field name="reference_code_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="codigo_referencia_otro" attrs="{'readonly':[('state','!=','draft')]}"/>
                                 <field name="reference_document_id" attrs="{'readonly':[('state','!=','draft')]}"/>
                                 <field name="invoice_id" domain="[('number_electronic', '!=', False)]" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                
                             </group>
                             <group string="Electronic Receipts" name="eref_info_group2" colspan="2">
                                 <field name="fname_xml_comprobante" invisible="1" readonly="1"/>

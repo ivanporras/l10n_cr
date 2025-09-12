@@ -12,6 +12,7 @@
                 <field name="frm_ws_ambiente" invisible="1"/>
                 <field name="reference_code_id" string="Código Referencia" attrs="{'invisible':['|',('frm_ws_ambiente','=','disabled'),('move_type','not in', ('out_invoice', 'out_refund','in_invoice', 'in_refund'))],'required':[('frm_ws_ambiente','!=','disabled'),('move_type','in', ('out_refund', 'in_refund'))]}"/>
                 <field name="reference_document_id" string="Documento Referencia" attrs="{'invisible':['|',('frm_ws_ambiente','=','disabled'),('move_type','not in', ('out_invoice', 'out_refund','in_invoice', 'in_refund'))],'required':[('frm_ws_ambiente','!=','disabled'),('move_type','in', ('out_refund', 'in_refund'))]}"/>
+                <field name="codigo_referencia_otro"/>
             </xpath>
 
             <xpath expr="//field[@name='reason']" position="attributes">

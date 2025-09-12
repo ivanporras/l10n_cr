@@ -10,6 +10,7 @@ class AccountMoveReversal(models.TransientModel):
 
     reference_code_id = fields.Many2one("reference.code", string="Reference Code")
     reference_document_id = fields.Many2one("reference.document", string="Reference Document")
+    codigo_referencia_otro = fields.Char(string="Código de referencia OTRO", help="Código de referencia OTRO")
     current_company_enabled = fields.Many2one("res.company",string="Current Company Enabled",compute="_compute_current_company_enabled")
     frm_ws_ambiente = fields.Selection(related="current_company_enabled.frm_ws_ambiente")
 
@@ -47,6 +48,7 @@ class AccountMoveReversal(models.TransientModel):
                          'tipo_documento': tipo_doc,
                          'reference_code_id': self.reference_code_id.id,
                          'reference_document_id': self.reference_document_id.id,
+                         'codigo_referencia_otro': self.codigo_referencia_otro,
                          'economic_activity_id': move.economic_activity_id.id,
                          'payment_methods_id': move.payment_methods_id.id,
                          'state_tributacion': False}

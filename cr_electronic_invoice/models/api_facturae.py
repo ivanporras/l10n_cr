@@ -345,7 +345,7 @@ def gen_xml_v43(inv, sale_conditions, total_servicio_gravado,
                 total_impuestos,total_desgloce_impuesto, total_descuento, lines,
                 otrosCargos, currency_rate, invoice_comments,
                 tipo_documento_referencia, numero_documento_referencia,
-                fecha_emision_referencia, codigo_referencia, razon_referencia):
+                fecha_emision_referencia, codigo_referencia, razon_referencia,codigo_referencia_otro):
     numero_linea = 0
     payment_methods_id = []
 
@@ -645,15 +645,14 @@ def gen_xml_v43(inv, sale_conditions, total_servicio_gravado,
               '</TotalVenta>')
     sb.append('<TotalDescuentos>' + str(round(total_descuento, 5)) + '</TotalDescuentos>')
     sb.append('<TotalVentaNeta>' + str(round(base_total, 5)) + '</TotalVentaNeta>')
-
+    sb.append('<TotalDesgloseImpuesto>')
     for tax_code in total_desgloce_impuesto:
         for iva_tax in total_desgloce_impuesto[tax_code]:
-            sb.append('<TotalDesgloseImpuesto>')
             sb.append('<Codigo>' + str(tax_code) + '</Codigo>')
             sb.append('<CodigoTarifaIVA>' + str(iva_tax) + '</CodigoTarifaIVA>')
             sb.append('<TotalMontoImpuesto>' + str(
                 round(total_desgloce_impuesto[tax_code][iva_tax], 5)) + '</TotalMontoImpuesto>')
-            sb.append('</TotalDesgloseImpuesto>')
+    sb.append('</TotalDesgloseImpuesto>')
     sb.append('<TotalImpuesto>' + str(round(total_impuestos, 5)) + '</TotalImpuesto>')
 
     if total_iva_devuelto:
@@ -680,9 +679,14 @@ def gen_xml_v43(inv, sale_conditions, total_servicio_gravado,
     if tipo_documento_referencia and numero_documento_referencia and fecha_emision_referencia:
         sb.append('<InformacionReferencia>')
         sb.append('<TipoDocIR>' + str(tipo_documento_referencia) + '</TipoDocIR>')
+        if str(codigo_referencia) == '99':
+            sb.append('<TipoDocRefOTRO>'+str(codigo_referencia_otro)+'</TipoDocRefOTRO>')
         sb.append('<Numero>' + str(numero_documento_referencia) + '</Numero>')
         sb.append('<FechaEmisionIR>' + str(fecha_emision_referencia) + '</FechaEmisionIR>')
         sb.append('<Codigo>' + str(codigo_referencia) + '</Codigo>')
+        #_logger.error('------ codigo_referencia %s', codigo_referencia)
+        if str(codigo_referencia) == '99':
+            sb.append('<CodigoReferenciaOTRO>'+str(codigo_referencia_otro)+'</CodigoReferenciaOTRO>')
         sb.append('<Razon>' + str(razon_referencia) + '</Razon>')
         sb.append('</InformacionReferencia>')
     if invoice_comments or invoice_ref:

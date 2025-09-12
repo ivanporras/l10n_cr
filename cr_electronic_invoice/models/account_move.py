@@ -107,6 +107,8 @@ class AccountInvoiceElectronic(models.Model):
 
     invoice_id = fields.Many2one("account.move", string="Reference document", copy=False)
 
+    codigo_referencia_otro = fields.Char(string="Código de referencia OTRO", help="Código de referencia OTRO",copy=False)
+
     xml_respuesta_tributacion = fields.Binary(string="XML Tributación Response", copy=False, attachment=True)
 
     electronic_invoice_return_message = fields.Char(string='Hacienda answer', readonly=True)
@@ -1015,11 +1017,12 @@ class AccountInvoiceElectronic(models.Model):
                     codigo_referencia = False
                     tipo_documento_referencia = False
                     razon_referencia = False
+                    codigo_referencia_otro = False
                     currency = inv.currency_id
                     invoice_comments = escape(cleanhtml(inv.narration)) if inv.narration else ''
 
                     reference_code_id = inv.reference_code_id
-                    if (inv.invoice_id or inv.not_loaded_invoice) and reference_code_id and inv.reference_document_id:
+                    if (inv.invoice_id or inv.not_loaded_invoice) and reference_code_id and inv.reference_document_id and inv.codigo_referencia_otro:
                         # if inv.invoice_id:
                         #     if inv.invoice_id.number_electronic and inv.invoice_line_ids[0].product_id:
                         #         numero_documento_referencia = inv.invoice_id.number_electronic
@@ -1044,6 +1047,7 @@ class AccountInvoiceElectronic(models.Model):
                         tipo_documento_referencia = inv.reference_document_id.code
                         codigo_referencia = inv.reference_code_id.code
                         razon_referencia = inv.reference_code_id.name
+                        codigo_referencia_otro = inv.codigo_referencia_otro
 
                     if inv.invoice_payment_term_id:
                         sale_conditions = inv.invoice_payment_term_id.sale_conditions_id and \
@@ -1249,13 +1253,14 @@ class AccountInvoiceElectronic(models.Model):
                                         if _percentage_exoneration < 1:
                                             total_servicio_gravado += (base_line * (1 - _percentage_exoneration))
                                         total_servicio_exonerado += (base_line * _percentage_exoneration)
-
+                                    elif taxes[1]['monto'] == 0:
+                                        total_servicio_exento += base_line
                                     else:
                                         total_servicio_gravado += base_line
 
                                     total_impuestos += _line_tax
-                                else:
-                                    total_servicio_exento += base_line
+                                #else:
+                                #    total_servicio_exento += base_line
                             else:
                                 if taxes:
                                     if _tax_exoneration:
@@ -1333,7 +1338,7 @@ class AccountInvoiceElectronic(models.Model):
                         total_impuestos, total_desgloce_impuesto, total_descuento, lines,
                         otros_cargos, currency_rate, invoice_comments,
                         tipo_documento_referencia, numero_documento_referencia,
-                        fecha_emision_referencia, codigo_referencia, razon_referencia)
+                        fecha_emision_referencia, codigo_referencia, razon_referencia,codigo_referencia_otro)
 
                     xml_to_sign = str(xml_string_builder)
                     xml_firmado = api_facturae.sign_xml(
@@ -1449,11 +1454,11 @@ class AccountInvoiceElectronic(models.Model):
 
             currency = inv.currency_id
             sequence = False
-            if (inv.invoice_id) and not (inv.reference_code_id and inv.reference_document_id):
+            if (inv.invoice_id) and not (inv.reference_code_id and inv.reference_document_id and inv.codigo_referencia_otro):
                 raise UserError(_('Incomplete reference data for credit note'))
             elif (inv.not_loaded_invoice or inv.not_loaded_invoice_date) and not \
                 (inv.not_loaded_invoice and inv.not_loaded_invoice_date and
-                 inv.reference_code_id and inv.reference_document_id):
+                 inv.reference_code_id and inv.reference_document_id and inv.codigo_referencia_otro):
                 raise UserError(_('Incomplete reference data for credit note not uploaded'))
 
             if inv.move_type == 'in_invoice' and inv.partner_id.country_id and \
