@@ -1454,11 +1454,11 @@ class AccountInvoiceElectronic(models.Model):
 
             currency = inv.currency_id
             sequence = False
-            if (inv.invoice_id) and not (inv.reference_code_id and inv.reference_document_id and inv.codigo_referencia_otro):
+            if (inv.invoice_id) and not (inv.reference_code_id and inv.reference_document_id):
                 raise UserError(_('Incomplete reference data for credit note'))
             elif (inv.not_loaded_invoice or inv.not_loaded_invoice_date) and not \
                 (inv.not_loaded_invoice and inv.not_loaded_invoice_date and
-                 inv.reference_code_id and inv.reference_document_id and inv.codigo_referencia_otro):
+                 inv.reference_code_id and inv.reference_document_id):
                 raise UserError(_('Incomplete reference data for credit note not uploaded'))
 
             if inv.move_type == 'in_invoice' and inv.partner_id.country_id and \
