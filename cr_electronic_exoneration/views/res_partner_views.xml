@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_form_exonerations" model="ir.ui.view">
+        <field name="name">res.partner.form.exonerations</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Agregar campos en la pestaña principal -->
+            <xpath expr="//field[@name='has_exoneration']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <field name="category_id" position="after">
+                <field name="has_exoneration_new" invisible="supplier_rank > 0"/>
+                <field name="active_exonerations_count" invisible="has_exoneration_new != True" readonly="1"/>
+            </field>
+
+            <!-- Nueva pestaña de exoneraciones -->
+            <xpath expr="//notebook" position="inside">
+                <page name="exonerations_new" string="Exoneraciones" invisible="has_exoneration_new != True">
+                    <group>
+                        <group>
+                            <field name="exoneration_count" readonly="1"/>
+                            <field name="active_exonerations_count" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <field name="exoneration_ids" nolabel="1">
+                        <tree editable="bottom" decoration-danger="state == 'expired'" decoration-warning="state == 'expiring'">
+                            <field name="exoneration_number" placeholder="Ej: EX-2024-001-MED"/>
+                            <field name="institution_name"/>
+                            <field name="percentage_exoneration" widget="percentage"/>
+                            <field name="date_expiration"/>
+                            <field name="cabys_set_id" readonly="1" options="{'no_create': True, 'no_edit': True}"/>
+                            <field name="cabys_count" string="Códigos"/>
+                            <field name="days_to_expiry"/>
+                            <field name="state"/>
+                            <field name="active"/>
+
+                            <!-- Botones de acción -->
+                            <button name="action_view_cabys_codes"
+                                    type="object"
+                                    icon="fa-list"
+                                    title="Ver códigos CABYS"
+                                    invisible="cabys_count == 0"/>
+                            <button name="action_reload_cabys"
+                                    type="object"
+                                    icon="fa-refresh"
+                                    title="Recargar códigos CABYS"/>
+                        </tree>
+                    </field>
+
+                    <div class="alert alert-info" role="alert">
+                        <strong>Información:</strong>
+                        Al ingresar el número de exoneración, el sistema consultará automáticamente
+                        los códigos CABYS desde la API de Hacienda.
+                    </div>
+
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

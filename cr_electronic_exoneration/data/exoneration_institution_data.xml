@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Ministerio de Hacienda -->
+        <record id="institution_hacienda" model="exoneration.institution">
+            <field name="name">Ministerio de Hacienda</field>
+            <field name="code">01</field>
+            <field name="description">Dirección General de Hacienda</field>
+        </record>
+
+        <!-- Ministerio de Salud -->
+        <record id="institution_minsa" model="exoneration.institution">
+            <field name="name">Ministerio de Salud</field>
+            <field name="code">02</field>
+            <field name="description">Ministerio de Salud Pública</field>
+        </record>
+
+        <!-- Ministerio de Educación Pública -->
+        <record id="institution_mep" model="exoneration.institution">
+            <field name="name">Ministerio de Educación Pública</field>
+            <field name="code">03</field>
+            <field name="description">Ministerio de Educación Pública</field>
+        </record>
+
+        <!-- Ministerio de Obras Públicas y Transportes -->
+        <record id="institution_mopt" model="exoneration.institution">
+            <field name="name">Ministerio de Obras Públicas y Transportes</field>
+            <field name="code">04</field>
+            <field name="description">Ministerio de Obras Públicas y Transportes</field>
+        </record>
+
+        <!-- Ministerio de Agricultura y Ganadería -->
+        <record id="institution_mag" model="exoneration.institution">
+            <field name="name">Ministerio de Agricultura y Ganadería</field>
+            <field name="code">05</field>
+            <field name="description">Ministerio de Agricultura y Ganadería</field>
+        </record>
+
+        <!-- Caja Costarricense de Seguro Social -->
+        <record id="institution_ccss" model="exoneration.institution">
+            <field name="name">Caja Costarricense de Seguro Social</field>
+            <field name="code">06</field>
+            <field name="description">CCSS - Caja Costarricense de Seguro Social</field>
+        </record>
+
+        <!-- Instituto Nacional de Seguros -->
+        <record id="institution_ins" model="exoneration.institution">
+            <field name="name">Instituto Nacional de Seguros</field>
+            <field name="code">07</field>
+            <field name="description">INS - Instituto Nacional de Seguros</field>
+        </record>
+
+        <!-- Ministerio de Seguridad Pública -->
+        <record id="institution_msp" model="exoneration.institution">
+            <field name="name">Ministerio de Seguridad Pública</field>
+            <field name="code">08</field>
+            <field name="description">Ministerio de Seguridad Pública</field>
+        </record>
+
+        <!-- Poder Judicial -->
+        <record id="institution_poder_judicial" model="exoneration.institution">
+            <field name="name">Poder Judicial</field>
+            <field name="code">09</field>
+            <field name="description">Poder Judicial de Costa Rica</field>
+        </record>
+
+        <!-- Tribunal Supremo de Elecciones -->
+        <record id="institution_tse" model="exoneration.institution">
+            <field name="name">Tribunal Supremo de Elecciones</field>
+            <field name="code">10</field>
+            <field name="description">TSE - Tribunal Supremo de Elecciones</field>
+        </record>
+
+    </data>
+</odoo>

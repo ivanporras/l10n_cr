@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista Lista -->
+    <record id="view_partner_exoneration_tree" model="ir.ui.view">
+        <field name="name">partner.exoneration.tree</field>
+        <field name="model">res.partner.exoneration</field>
+        <field name="arch" type="xml">
+            <tree decoration-danger="state == 'expired'"
+                  decoration-warning="state == 'expiring'"
+                  decoration-muted="active == False">
+                <field name="exoneration_number"/>
+                <field name="partner_id"/>
+                <field name="institution_name"/>
+                <!-- ✅ CORREGIDO: Quitar widget percentage para evitar confusión -->
+                <field name="percentage_exoneration" string="% Exoneración"/>
+                <field name="date_expiration"/>
+                <field name="cabys_count"/>
+                <field name="days_to_expiry"/>
+                <field name="state"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Formulario -->
+    <record id="view_partner_exoneration_form" model="ir.ui.view">
+        <field name="name">partner.exoneration.form</field>
+        <field name="model">res.partner.exoneration</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_cabys_codes"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-list">
+                            <field name="cabys_count" widget="statinfo" string="Códigos CABYS"/>
+                        </button>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="exoneration_number"/>
+                            <field name="institution_id"/>
+                            <field name="institution_name" invisible="institution_id != False"/>
+                            <field name="exoneration_type_id"/>
+                        </group>
+                        <group>
+                            <!-- ✅ CORREGIDO: Usar widget percentage pero con explicación clara -->
+                            <field name="percentage_exoneration" widget="percentage"
+                                   help="Porcentaje de exoneración (ej: 0.13 = 13%)"/>
+                            <field name="date_issue"/>
+                            <field name="date_expiration"/>
+                            <field name="days_to_expiry" readonly="1"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <field name="description" placeholder="Descripción adicional..."/>
+                    </group>
+
+                    <notebook>
+                        <page string="Códigos CABYS">
+                            <group>
+                                <button name="action_reload_cabys"
+                                        type="object"
+                                        string="Recargar desde Hacienda"
+                                        class="btn-primary"/>
+                                <!-- ✅ NUEVO: Botón para recalcular campos -->
+                                <button name="recompute_all_fields"
+                                        type="object"
+                                        string="Recalcular Campos"
+                                        class="btn-secondary"/>
+                            </group>
+
+                            <field name="cabys_set_id" invisible="1"/>
+                            <field name="cabys_line_ids" nolabel="1">
+                                <tree create="false" delete="false" edit="false">
+                                    <field name="cabys_code"/>
+                                    <field name="description"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_partner_exoneration_search" model="ir.ui.view">
+        <field name="name">partner.exoneration.search</field>
+        <field name="model">res.partner.exoneration</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="exoneration_number"/>
+                <field name="partner_id"/>
+                <field name="institution_name"/>
+
+                <filter string="Activas" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Por Vencer" name="expiring" domain="[('state', '=', 'expiring')]"/>
+                <filter string="Vencidas" name="expired" domain="[('state', '=', 'expired')]"/>
+
+                <separator/>
+                <filter string="Este Mes" name="this_month"
+                        domain="[('date_expiration', '>=', (context_today() + relativedelta(day=1)).strftime('%Y-%m-%d')),
+                                 ('date_expiration', '&lt;', (context_today() + relativedelta(months=1, day=1)).strftime('%Y-%m-%d'))]"/>
+
+                <group expand="0" string="Agrupar Por">
+                    <filter string="Cliente" name="group_partner" context="{'group_by': 'partner_id'}"/>
+                    <filter string="Institución" name="group_institution" context="{'group_by': 'institution_id'}"/>
+                    <filter string="Estado" name="group_state" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_partner_exoneration" model="ir.actions.act_window">
+        <field name="name">Exoneraciones de Clientes</field>
+        <field name="res_model">res.partner.exoneration</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_partner_exoneration_search"/>
+        <field name="context">{
+            'search_default_active': 1,
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                ¡Crea tu primera exoneración!
+            </p>
+            <p>
+                Registra las exoneraciones de tus clientes para aplicar
+                automáticamente los descuentos de IVA correspondientes.
+            </p>
+        </field>
+    </record>
+
+</odoo>

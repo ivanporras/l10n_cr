@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista Lista -->
+    <record id="view_exoneration_type_tree" model="ir.ui.view">
+        <field name="name">exoneration.type.tree</field>
+        <field name="model">exoneration.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="exoneration_count"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Formulario -->
+    <record id="view_exoneration_type_form" model="ir.ui.view">
+        <field name="name">exoneration.type.form</field>
+        <field name="model">exoneration.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_exonerations"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-certificate">
+                            <field name="exoneration_count" widget="statinfo" string="Exoneraciones"/>
+                        </button>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="name" placeholder="Ej: Médica"/>
+                            <field name="code" placeholder="Ej: 02"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                            <field name="exoneration_count" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <field name="description" placeholder="Descripción del tipo de exoneración..."/>
+                    </group>
+
+                    <notebook>
+                        <page string="Exoneraciones">
+                            <field name="exoneration_ids" readonly="1">
+                                <tree>
+                                    <field name="exoneration_number"/>
+                                    <field name="partner_id"/>
+                                    <field name="percentage_exoneration" widget="percentage"/>
+                                    <field name="date_expiration"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_exoneration_type_search" model="ir.ui.view">
+        <field name="name">exoneration.type.search</field>
+        <field name="model">exoneration.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+
+                <filter string="Activos" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Inactivos" name="inactive" domain="[('active', '=', False)]"/>
+
+                <separator/>
+                <filter string="Con Exoneraciones" name="with_exonerations"
+                        domain="[('exoneration_count', '>', 0)]"/>
+
+                <group expand="0" string="Agrupar Por">
+                    <filter string="Estado" name="group_active" context="{'group_by': 'active'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_exoneration_type" model="ir.actions.act_window">
+        <field name="name">Tipos de Exoneración</field>
+        <field name="res_model">exoneration.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_exoneration_type_search"/>
+        <field name="context">{
+            'search_default_active': 1,
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                ¡Registra tu primer tipo de exoneración!
+            </p>
+            <p>
+                Los tipos de exoneración clasifican las diferentes categorías
+                de beneficios fiscales que pueden otorgar las instituciones.
+            </p>
+            <p>
+                <strong>Ejemplos:</strong> Médica, Educativa, Agrícola, Transporte, etc.
+            </p>
+        </field>
+    </record>
+
+</odoo>

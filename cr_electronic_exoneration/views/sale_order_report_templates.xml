@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ✅ INYECCIÓN DIRECTA EN LA SECCIÓN DE TOTALES DEL SALE ORDER -->
+    <template id="report_saleorder_document_exoneration" inherit_id="sale.report_saleorder_document">
+        <!-- Agregar tabla de información de exoneraciones después de los totales -->
+        <xpath expr="//div[@name='so_total_summary']" position="after">
+
+            <div t-if="doc.has_exoneration_lines" class="mt-4">
+
+                <h5><strong>Información de Exoneraciones</strong></h5>
+
+                <table class="table table-sm table-bordered" style="margin-top: 15px;">
+                    <thead style="background-color: #f8f9fa;">
+                        <tr>
+                            <th class="text-center" style="font-size: 11px; padding: 8px; font-weight: bold;">Número de<br/>exoneración</th>
+                            <th class="text-center" style="font-size: 11px; padding: 8px; font-weight: bold;">Tipo de Autorización</th>
+                            <th class="text-center" style="font-size: 11px; padding: 8px; font-weight: bold;">Emisor de exoneración</th>
+                            <th class="text-center" style="font-size: 11px; padding: 8px; font-weight: bold;">Fecha de<br/>Emisión</th>
+                            <th class="text-center" style="font-size: 11px; padding: 8px; font-weight: bold;">Fecha de<br/>expiración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="processed_exonerations" t-value="[]"/>
+                        <t t-foreach="doc.order_line.filtered(lambda l: l.has_exoneration)" t-as="line">
+                            <t t-if="line.exoneration_id and line.exoneration_id.exoneration_number not in processed_exonerations">
+                                <t t-set="processed_exonerations" t-value="processed_exonerations + [line.exoneration_id.exoneration_number]"/>
+                                <tr>
+                                    <td class="text-center" style="font-size: 10px; padding: 6px;">
+                                        <span t-field="line.exoneration_id.exoneration_number"/>
+                                    </td>
+                                    <td class="text-center" style="font-size: 10px; padding: 6px;">
+                                        <span t-if="line.exoneration_id.exoneration_type_id"
+                                              t-field="line.exoneration_id.exoneration_type_id.name"/>
+                                        <span t-else="">Exenciones Dirección General de Hacienda</span>
+                                    </td>
+                                    <td class="text-center" style="font-size: 10px; padding: 6px;">
+                                        <span t-if="line.exoneration_id.institution_id">
+                                            <t t-if="line.exoneration_id.institution_id.code">
+                                                Código <t t-out="line.exoneration_id.institution_id.code"/>
+                                            </t>
+                                            <t t-out="line.exoneration_id.institution_id.name"/>
+                                        </span>
+                                        <span t-elif="line.exoneration_id.institution_name">
+                                            <t t-out="line.exoneration_id.institution_name"/>
+                                        </span>
+                                        <span t-else="">Código 01 Ministerio de Hacienda</span>
+                                    </td>
+                                    <td class="text-center" style="font-size: 10px; padding: 6px;">
+                                        <span t-field="line.exoneration_id.date_issue"
+                                              t-options='{"format": "dd/MM/yyyy"}'/>
+                                    </td>
+                                    <td class="text-center" style="font-size: 10px; padding: 6px;">
+                                        <span t-field="line.exoneration_id.date_expiration"
+                                              t-options='{"format": "dd/MM/yyyy"}'/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </t>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </xpath>
+
+    </template>
+
+</odoo>

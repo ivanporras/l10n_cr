@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_exoneration_institution_user,exoneration.institution.user,model_exoneration_institution,base.group_user,1,1,1,1
+access_exoneration_type_user,exoneration.type.user,model_exoneration_type,base.group_user,1,1,1,1
+access_partner_exoneration_user,res.partner.exoneration.user,model_res_partner_exoneration,base.group_user,1,1,1,1
+access_exoneration_cabys_set_user,exoneration.cabys.set.user,model_exoneration_cabys_set,base.group_user,1,1,1,1
+access_exoneration_cabys_line_user,exoneration.cabys.line.user,model_exoneration_cabys_line,base.group_user,1,1,1,1
+access_exoneration_institution_manager,exoneration.institution.manager,model_exoneration_institution,account.group_account_manager,1,1,1,1
+access_exoneration_type_manager,exoneration.type.manager,model_exoneration_type,account.group_account_manager,1,1,1,1
+access_partner_exoneration_manager,res.partner.exoneration.manager,model_res_partner_exoneration,account.group_account_manager,1,1,1,1
+access_exoneration_cabys_set_manager,exoneration.cabys.set.manager,model_exoneration_cabys_set,account.group_account_manager,1,1,1,1
+access_exoneration_cabys_line_manager,exoneration.cabys.line.manager,model_exoneration_cabys_line,account.group_account_manager,1,1,1,1

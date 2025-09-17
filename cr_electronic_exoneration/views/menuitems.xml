@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Menú principal -->
+    <menuitem id="menu_exonerations_root"
+              name="Exoneraciones"
+              parent="account.menu_finance_configuration"
+              sequence="50"/>
+
+    <!-- Submenús -->
+    <menuitem id="menu_partner_exonerations"
+              name="Exoneraciones de Clientes"
+              parent="menu_exonerations_root"
+              action="action_partner_exoneration"
+              sequence="10"/>
+
+    <menuitem id="menu_exoneration_institutions"
+              name="Instituciones"
+              parent="menu_exonerations_root"
+              action="action_exoneration_institution"
+              sequence="20"/>
+
+    <menuitem id="menu_exoneration_types"
+              name="Tipos de Exoneración"
+              parent="menu_exonerations_root"
+              action="action_exoneration_type"
+              sequence="30"/>
+
+    <menuitem id="menu_sale_order_views"
+          name="Vistas Pedidos"
+          parent="menu_exonerations_root"
+          action="sale.action_orders"
+          sequence="40"/>
+
+</odoo>

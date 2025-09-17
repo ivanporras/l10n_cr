@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista principal de facturas con campos de exoneración -->
+    <record id="view_move_form_exoneration" model="ir.ui.view">
+        <field name="name">account.move.form.exoneration</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="cr_electronic_invoice.view_move_form_inherit"/>
+        <field name="arch" type="xml">
+
+            <!-- Agregar campos de exoneración en las líneas después de cabys_code -->
+            <xpath expr="//field[@name='invoice_line_ids']//tree//field[@name='cabys_code']" position="after">
+                <field name="has_exoneration" column_invisible="True"/>
+                <field name="exoneration_percentage"
+                       string="% Exon."
+                       invisible="not has_exoneration"
+                       widget="percentage"
+                       optional="hide"/>
+                <field name="exoneration_amount"
+                       string="Exonerado"
+                       invisible="not has_exoneration"
+                       widget="monetary"
+                       optional="hide"/>
+                <field name="tax_amount_before_exoneration"
+                       string="IVA Bruto"
+                       invisible="not has_exoneration"
+                       widget="monetary"
+                       optional="hide"/>
+            </xpath>
+
+            <!-- Mostrar totales de exoneración después de los totales electrónicos -->
+            <xpath expr="//field[@name='amount_total_electronic_invoice']" position="after">
+                <field name="total_exoneration_amount"
+                       string="Total Exonerado"
+                       invisible="not has_exoneration_lines"
+                       widget="monetary"/>
+                <field name="has_exoneration_lines" invisible="1"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- Vista de lista con indicadores de exoneración -->
+    <record id="view_move_tree_exoneration" model="ir.ui.view">
+        <field name="name">account.move.tree.exoneration</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="cr_electronic_invoice.view_move_tree_inherit"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='state_tributacion']" position="after">
+                <field name="has_exoneration_lines"
+                       string="Exon."
+                       widget="boolean_toggle"
+                       optional="hide"/>
+                <field name="total_exoneration_amount"
+                       string="Monto Exonerado"
+                       widget="monetary"
+                       optional="hide"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

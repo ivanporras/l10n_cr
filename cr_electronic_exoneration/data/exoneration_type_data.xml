@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Compras Autorizadas -->
+        <record id="type_authorized_purchase" model="exoneration.type">
+            <field name="name">Compras Autorizadas</field>
+            <field name="code">01</field>
+            <field name="description">Compras autorizadas por leyes especiales</field>
+        </record>
+
+        <!-- Ventas Diplomáticas -->
+        <record id="type_diplomatic" model="exoneration.type">
+            <field name="name">Ventas Diplomáticas</field>
+            <field name="code">02</field>
+            <field name="description">Ventas exentas para cuerpo diplomático</field>
+        </record>
+
+        <!-- Orden de Compra -->
+        <record id="type_purchase_order" model="exoneration.type">
+            <field name="name">Orden de Compra</field>
+            <field name="code">03</field>
+            <field name="description">Exoneración mediante orden de compra institucional</field>
+        </record>
+
+        <!-- Exenciones Dirección General de Hacienda -->
+        <record id="type_hacienda" model="exoneration.type">
+            <field name="name">Exenciones Dirección General de Hacienda</field>
+            <field name="code">04</field>
+            <field name="description">Exenciones otorgadas por la Dirección General de Hacienda</field>
+        </record>
+
+        <!-- Zonas Francas -->
+        <record id="type_free_zone" model="exoneration.type">
+            <field name="name">Zonas Francas</field>
+            <field name="code">05</field>
+            <field name="description">Compras realizadas por empresas de zonas francas</field>
+        </record>
+
+        <!-- Otros -->
+        <record id="type_others" model="exoneration.type">
+            <field name="name">Otros</field>
+            <field name="code">99</field>
+            <field name="description">Otros tipos de exoneración</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista principal de pedidos con campos de exoneración -->
+    <record id="view_order_form_exoneration" model="ir.ui.view">
+        <field name="name">sale.order.form.exoneration</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <!-- ✅ AGREGAR CAMPOS DE EXONERACIÓN EN LÍNEAS DE PEDIDO -->
+            <xpath expr="//field[@name='order_line']//tree//field[@name='tax_id']" position="after">
+                <field name="has_exoneration" column_invisible="True"/>
+                <field name="exoneration_percentage"
+                       string="% Exon."
+                       invisible="not has_exoneration"
+                       widget="percentage"
+                       optional="hide"/>
+                <field name="exoneration_amount"
+                       string="Exonerado"
+                       invisible="not has_exoneration"
+                       widget="monetary"
+                       optional="hide"/>
+                <field name="tax_amount_before_exoneration"
+                       string="IVA Bruto"
+                       invisible="not has_exoneration"
+                       widget="monetary"
+                       optional="hide"/>
+            </xpath>
+
+            <!-- ✅ AGREGAR TOTALES DE EXONERACIÓN EN SECCIÓN DE TOTALES -->
+            <xpath expr="//group[@name='sale_total']" position="after">
+                <group class="oe_subtotal_footer" colspan="2" name="exoneration_total" invisible="not has_exoneration_lines">
+                    <field name="has_exoneration_lines" invisible="1"/>
+                    <div class="oe_inline o_td_label">
+                        <label for="total_exoneration_amount" string="Total Exonerado"/>
+                    </div>
+                    <field name="total_exoneration_amount"
+                           nolabel="1"
+                           widget="monetary"
+                           options="{'currency_field': 'currency_id'}"/>
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- Vista de lista con indicadores de exoneración -->
+    <record id="view_order_tree_exoneration" model="ir.ui.view">
+        <field name="name">sale.order.tree.exoneration</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_tree"/>
+        <field name="arch" type="xml">
+
+            <!-- ✅ AGREGAR CAMPOS DE EXONERACIÓN DESPUÉS DE amount_total -->
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <field name="has_exoneration_lines"
+                       string="Exon."
+                       widget="boolean_toggle"
+                       optional="hide"/>
+                <field name="total_exoneration_amount"
+                       string="Monto Exonerado"
+                       widget="monetary"
+                       optional="hide"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- ✅ NUEVO: Vista kanban con información de exoneraciones -->
+    <record id="view_order_kanban_exoneration" model="ir.ui.view">
+        <field name="name">sale.order.kanban.exoneration</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sale_order_kanban"/>
+        <field name="arch" type="xml">
+
+            <!-- Agregar campos de exoneración para usar en kanban -->
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="has_exoneration_lines"/>
+                <field name="total_exoneration_amount"/>
+            </xpath>
+
+            <!-- Mostrar indicador de exoneración en tarjeta kanban -->
+            <xpath expr="//div[@class='o_kanban_record_bottom']//div[@class='oe_kanban_bottom_left text-muted']" position="inside">
+                <div class="badge text-bg-info" invisible="not has_exoneration_lines">
+                    <i class="fa fa-certificate"/> Exonerado
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
