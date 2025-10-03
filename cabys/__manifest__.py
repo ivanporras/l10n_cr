@@ -5,7 +5,7 @@
     'author': 'Singulary,info@fakturacion.com',
     'website': 'https://codeberg.org/OpenCR/l10n_cr',
     'category': 'Account',
-    'version': '17.0.1.0.0',
+    'version': '17.0.1.0.1',
     'license': 'AGPL-3',
     'price': 0,
     'currency': 'USD',

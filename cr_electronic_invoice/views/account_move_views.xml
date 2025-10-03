@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_move_form_inherit" model="ir.ui.view">
+    <record id="view_move_form_inherit_fe" model="ir.ui.view">
         <field name="name">account.move.form.inherit</field>
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_move_form"/>
@@ -70,7 +70,7 @@
                 <field name="categ_name" invisible="1" readonly="1"/>
                 <field name="product_code" invisible="1" readonly="1"/>
                 <field name="third_party_id" invisible="product_code != '04'" optional="hide"/>
-                <field name="cabys_code" readonly="1" optional="hide"/>
+                <field name="cabys_code" readonly="0" optional="hide"/>
             </xpath>
             <xpath expr="//field[@name='invoice_line_ids']//tree//field[@name='discount']" position="after">
                 <field name="discount_code_id" optional="hide" required="discount > 0"/>

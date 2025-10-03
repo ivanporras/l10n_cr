@@ -914,14 +914,15 @@ def consulta_clave(clave, token, tipo_ambiente):
 def get_economic_activities(company):
     hmapi = company.env['ir.config_parameter'].sudo().get_param('url_base')
     endpoint = hmapi + "identificacion=" + company.vat
-
+    """
     headers = {
         'Cache-Control': 'no-cache',
         'Content-Type': 'application/x-www-form-urlencoded'
     }
+    """
 
     try:
-        response = requests.get(endpoint, headers=headers, verify=False)
+        response = requests.get(endpoint, verify=False)
     except requests.exceptions.RequestException as e:
         _logger.error('Exception %s', e)
         return {'status': -1, 'text': 'Excepcion %s' % e}
@@ -930,6 +931,7 @@ def get_economic_activities(company):
         _logger.debug('FECR - get_economic_activities response: %s', (response.json()))
         response_json = {
             'status': 200,
+
             'activities': response.json().get('actividades'),
             'name': response.json().get('nombre'),
             'situacion': response.json().get('situacion', {}).get('estado')

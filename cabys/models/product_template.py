@@ -13,8 +13,8 @@ class ProductTemplate(models.Model):
     _inherit = ['product.template', ]
 
     cabys_product_id = fields.Many2one("cabys.producto", "Producto en el catálogo Cabys")
-    cabys_code = fields.Char(related='cabys_product_id.codigo', readonly=True)
-    cabys_tax = fields.Float(related='cabys_product_id.impuesto', readonly=True)
+    cabys_code = fields.Char(related='cabys_product_id.codigo', required=True)
+    cabys_tax = fields.Float(related='cabys_product_id.impuesto', required=True)
 
 
     registro_medicamento = fields.Char(string='Registro de Medicamento', required=True)
