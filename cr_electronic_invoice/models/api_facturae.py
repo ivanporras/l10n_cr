@@ -914,12 +914,12 @@ def consulta_clave(clave, token, tipo_ambiente):
 def get_economic_activities(company):
     hmapi = company.env['ir.config_parameter'].sudo().get_param('url_base')
     endpoint = hmapi + "identificacion=" + company.vat
-    """
+
     headers = {
         'Cache-Control': 'no-cache',
         'Content-Type': 'application/x-www-form-urlencoded'
     }
-    """
+
 
     try:
         response = requests.get(endpoint, verify=False)
