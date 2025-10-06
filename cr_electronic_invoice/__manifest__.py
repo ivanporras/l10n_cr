@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Facturación electrónica Costa Rica',
-    'version': '17.0.0.0.3',
+    'version': '17.0.0.0.4',
     'author': 'OdooFeCr,OdooCR',
     'license': 'AGPL-3',
     'website': 'https://codeberg.org/OpenCR/l10n_cr',
@@ -25,7 +25,7 @@
         ],
     'data': [
         'data/account_tax_group_data.xml',
-        #'data/account_tax_data.xml',
+        'data/account_tax_data.xml',
         'data/aut_ex_data.xml',
         'data/code_type_product_data.xml',
         'data/identification_type_data.xml',
