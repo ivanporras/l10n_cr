@@ -67,14 +67,14 @@
         'security/ir.model.access.csv',
         # 'data/account_tax_template_data.xml',
     ],
-    'external_dependencies': {
-        "python": [
-            'cryptography',
-            'xmlsig',
-            'OpenSSL',
-            'phonenumbers',
-            'jsonschema',
-        ],
-    },
+    #'external_dependencies': {
+    #    "python": [
+    #        'cryptography',
+    #        'xmlsig',
+    #        'OpenSSL',
+    #        'phonenumbers',
+    #        'jsonschema',
+    #    ],
+    #},
     'installable': True,
 }
