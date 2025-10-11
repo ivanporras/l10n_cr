@@ -32,12 +32,14 @@ class PartnerElectronic(models.Model):
         string="It's export",
         default=False
     )
+    """ Comentado solo para migrar v17
     inscribed = fields.Boolean(
         string="Inscribed",
         default=True,
         readonly=False,
         copy=False
     )
+    """
 
     # === Economic Activity fields === #
 
