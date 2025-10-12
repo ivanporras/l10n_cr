@@ -1,5 +1,4 @@
 xmlsig
 cryptography
-OpenSSL
 phonenumbers
 jsonschema
