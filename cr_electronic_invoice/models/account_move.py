@@ -153,16 +153,21 @@ class AccountInvoiceElectronic(models.Model):
         string='Original Invoice Date not loaded',
         readonly=True
     )
+    
+    def _auto_init(self):
+        if not column_exists(self.env.cr, "account_move", "amount_discount_electronic_invoice"):
+            # Create column manually to set default value to 'exception' on postgres level.
+            # This way we avoid heavy computation on module installation.
+            self.env.cr.execute("ALTER TABLE account_move ADD COLUMN amount_discount_electronic_invoice NUMERIC")
 
+        return super()._auto_init()
     # === Amount fields === #
-    """ Commented only for migration to v17
     amount_discount_electronic_invoice = fields.Monetary(
         string='Discount Amount',
         compute='_compute_amount_discount_electronic_invoice',
         readonly=True,
         store=True
     )
-    """
     amount_tax_electronic_invoice = fields.Monetary(
         string='Total FE taxes',
         readonly=True
