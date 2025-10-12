@@ -155,12 +155,14 @@ class AccountInvoiceElectronic(models.Model):
     )
 
     # === Amount fields === #
+    """ Commented only for migration to v17
     amount_discount_electronic_invoice = fields.Monetary(
         string='Discount Amount',
         compute='_compute_amount_discount_electronic_invoice',
         readonly=True,
         store=True
     )
+    """
     amount_tax_electronic_invoice = fields.Monetary(
         string='Total FE taxes',
         readonly=True
