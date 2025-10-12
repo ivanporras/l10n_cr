@@ -16,6 +16,7 @@ from odoo.tools import html2plaintext
 from .qr_generator import GenerateQrCode
 from . import api_facturae
 from .. import extensions
+from odoo.tools.sql import column_exists, create_column
 
 import logging
 _logger = logging.getLogger(__name__)
