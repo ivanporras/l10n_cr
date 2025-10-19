@@ -30,6 +30,8 @@ class AccountInvoiceElectronic(models.Model):
     #                                          INVOICE
     # ==============================================================================================
 
+    company_country_code = fields.Char(related="company_id.country_id.code", string="Company Country Code")
+
     # === Electronic Number Reference fields === #
     number_electronic = fields.Char(
         string="Electronic number",
