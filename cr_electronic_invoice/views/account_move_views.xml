@@ -55,16 +55,17 @@
                 <attribute name="readonly"></attribute>
             </field>
             <field name="invoice_date" position="after">
+                <field name="company_country_code" invisible="1"/>
                 <field name="date_issuance" readonly="1"
                        invisible="(move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund'))"/>
                 <field name="tipo_documento"
                        readonly="(state != 'draft')"
                        invisible="move_type not in ('out_invoice','out_refund','in_invoice','in_refund')"
                        required="move_type in ('out_invoice','out_refund','in_invoice', 'in_refund')"/>
-                <field name="payment_methods_id"
+               <field name="payment_methods_id"
                        readonly="(state != 'draft')"
-                       invisible="move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund')"
-                       required="move_type in ('out_invoice', 'out_refund','in_invoice', 'in_refund')"/>
+                       invisible="move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund') or company_country_code != 'CR'"
+                       required="move_type in ('out_invoice', 'out_refund','in_invoice', 'in_refund') and company_country_code != 'CR'"/>
             </field>
             <xpath expr="//field[@name='invoice_line_ids']//tree//field[@name='name']" position="after">
                 <field name="categ_name" invisible="1" readonly="1"/>
