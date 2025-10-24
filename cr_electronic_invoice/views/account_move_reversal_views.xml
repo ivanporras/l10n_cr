@@ -8,12 +8,13 @@
         <field name="arch" type="xml">
 
             <xpath expr="//field[@name='reason']" position="before">
+                <field name="company_country_code" invisible="1"/>
                 <field name="reference_code_id" string="Código Referencia"
-                       invisible="(move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund'))"
-                       required="(move_type in ('out_refund', 'in_refund'))"/>
+                       invisible="(move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund') or company_country_code != 'CR')"
+                       required="(move_type in ('out_refund', 'in_refund') and company_country_code != 'CR')"/>
                 <field name="reference_document_id" string="Documento Referencia"
-                       invisible="(move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund'))"
-                       required="(move_type in ('out_refund', 'in_refund'))"/>
+                       invisible="(move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund') or company_country_code != 'CR')"
+                       required="(move_type in ('out_refund', 'in_refund') and company_country_code != 'CR')"/>
             </xpath>
 
             <xpath expr="//field[@name='reason']" position="attributes">
