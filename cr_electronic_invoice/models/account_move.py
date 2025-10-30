@@ -1777,7 +1777,7 @@ class AccountInvoiceElectronic(models.Model):
 
             inv.name = inv.sequence
             inv.state_tributacion = False
-            self._send_invoices_to_hacienda()
+            #self._send_invoices_to_hacienda()
 
     def _reverse_move_vals(self, default_values, cancel=True):
         move_vals = super()._reverse_move_vals(default_values, cancel)
