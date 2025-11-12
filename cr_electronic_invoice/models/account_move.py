@@ -1443,13 +1443,12 @@ class AccountInvoiceElectronic(models.Model):
                                         if _percentage_exoneration < 1:
                                             total_servicio_gravado += (base_line * (1 - _percentage_exoneration))
                                         total_servicio_exonerado += (base_line * _percentage_exoneration)
-
+                                    elif taxes[1]['monto'] == 0:
+                                        total_servicio_exento += base_line
                                     else:
                                         total_servicio_gravado += base_line
 
                                     total_impuestos += _line_tax
-                                else:
-                                    total_servicio_exento += base_line
 
                             # FE versión 4.4 - Mercancias Gravadas
                             #    Validación: En caso que en el campo “Código de bien o servicio”
