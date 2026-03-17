@@ -1226,9 +1226,9 @@ class AccountInvoiceElectronic(models.Model):
                     elif inv.tipo_documento == "NC" and currency.name != self.company_id.currency_id.name:
                         Original_Currency = (
                                     inv.invoice_id.amount_total_signed / inv.invoice_id.amount_total_in_currency_signed)
-                        currency_rate = round(Original_Currency, 5)
+                        currency_rate = round(Original_Currency, 2)
                     else:
-                        currency_rate = round(1.0 / currency.rate, 5)
+                        currency_rate = round(1.0 / currency.rate, 2)
 
                     # Generamos las líneas de la factura
                     lines = dict([])
