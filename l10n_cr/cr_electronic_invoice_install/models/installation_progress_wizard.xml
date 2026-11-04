@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="model_installation_progress_wizard" model="ir.model">
+        <field name="name">installation.progress.wizard</field>
+        <field name="model">installation.progress.wizard</field>
+    </record>
+</odoo>

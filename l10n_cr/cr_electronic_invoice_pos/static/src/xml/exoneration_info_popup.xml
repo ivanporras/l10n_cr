@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- Exoneration Info Popup Template -->
+    <t t-name="cr_electronic_invoice_pos.ExonerationInfoPopup" owl="1">
+        <Dialog title="title" onClose="props.close">
+            <div class="exoneration-popup-body">
+                <!-- Percentage -->
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Porcentaje:</span>
+                    <span class="fw-bold"><t t-esc="percentage"/>%</span>
+                </div>
+                
+                <!-- Document Type -->
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Tipo Documento:</span>
+                    <span><t t-esc="documentType"/></span>
+                </div>
+                
+                <!-- Document Number -->
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Número:</span>
+                    <span><t t-esc="documentNumber"/></span>
+                </div>
+                
+                <hr/>
+                
+                <!-- Original Tax -->
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Impuesto Original:</span>
+                    <span><t t-esc="fullTax"/></span>
+                </div>
+                
+                <!-- Exoneration Amount -->
+                <div class="d-flex justify-content-between mb-2 text-success">
+                    <span class="text-muted">Exoneración:</span>
+                    <span class="fw-bold">- <t t-esc="exonerationAmount"/></span>
+                </div>
+                
+                <!-- Net Tax -->
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Impuesto Neto:</span>
+                    <span><t t-esc="netTax"/></span>
+                </div>
+                
+                <hr/>
+                
+                <!-- Total Savings -->
+                <div class="d-flex justify-content-between mb-2 text-success">
+                    <span class="fw-bold">Ahorro Total:</span>
+                    <span class="fw-bold"><t t-esc="totalSavings"/></span>
+                </div>
+            </div>
+            
+            <t t-set-slot="footer">
+                <button class="btn btn-primary" t-on-click="confirm">
+                    Cerrar
+                </button>
+            </t>
+        </Dialog>
+    </t>
+
+</templates>

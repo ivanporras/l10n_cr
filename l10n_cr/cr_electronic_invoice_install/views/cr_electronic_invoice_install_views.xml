@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista de formulario para el asistente de instalación -->
+        <record id="view_cr_electronic_invoice_install_form" model="ir.ui.view">
+            <field name="name">cr.electronic.invoice.install.form</field>
+            <field name="model">cr.electronic.invoice.install</field>
+            <field name="arch" type="xml">
+                <form string="Estado de Instalación de Facturación Electrónica">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>Facturación Electrónica de Costa Rica</h1>
+                        </div>
+                        <group>
+                            <field name="_check_dependencies" invisible="1"/>
+                            <field name="_check_modules" invisible="1"/>
+                        </group>
+                        <div class="alert alert-success" role="alert" invisible="not _check_dependencies or not _check_modules">
+                            <p><strong>¡Instalación Completa!</strong> Todos los componentes necesarios para la facturación electrónica están instalados correctamente.</p>
+                        </div>
+                        <div class="alert alert-warning" role="alert" invisible="_check_dependencies">
+                            <p><strong>Advertencia:</strong> Algunas dependencias Python no están instaladas. Por favor, instale las dependencias faltantes.</p>
+                        </div>
+                        <div class="alert alert-warning" role="alert" invisible="_check_modules">
+                            <p><strong>Advertencia:</strong> Algunos módulos requeridos no están instalados correctamente. Por favor, verifique la instalación de los módulos.</p>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción para abrir la vista de instalación -->
+        <record id="action_cr_electronic_invoice_install" model="ir.actions.act_window">
+            <field name="name">Estado de Instalación FE</field>
+            <field name="res_model">cr.electronic.invoice.install</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Elemento de menú para acceder a la vista de instalación -->
+        <menuitem id="menu_cr_electronic_invoice_install"
+                  name="Estado de Instalación FE"
+                  parent="account.menu_finance_configuration"
+                  action="action_cr_electronic_invoice_install"
+                  sequence="100"/>
+    </data>
+</odoo>

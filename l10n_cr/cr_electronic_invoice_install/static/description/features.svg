@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <!-- Fondo -->
+  <rect width="600" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10" ry="10" />
+  
+  <!-- Título -->
+  <text x="300" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#0072b2">Características Principales</text>
+  
+  <!-- Característica 1: Instalación Automática -->
+  <g transform="translate(50, 80)">
+    <circle cx="30" cy="30" r="25" fill="#28a745" />
+    <path d="M20,30 L27,37 L40,20" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="80" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Instalación Automática</text>
+    <text x="80" y="40" font-family="Arial, sans-serif" font-size="12" fill="#666">Todos los módulos se instalan automáticamente</text>
+  </g>
+  
+  <!-- Característica 2: CABYS Integrado -->
+  <g transform="translate(50, 140)">
+    <circle cx="30" cy="30" r="25" fill="#007bff" />
+    <text x="30" y="37" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">CABYS</text>
+    <text x="80" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Catálogo CABYS</text>
+    <text x="80" y="40" font-family="Arial, sans-serif" font-size="12" fill="#666">Catálogo de bienes y servicios integrado</text>
+  </g>
+  
+  <!-- Característica 3: Reportes -->
+  <g transform="translate(50, 200)">
+    <circle cx="30" cy="30" r="25" fill="#17a2b8" />
+    <rect x="20" y="20" width="20" height="15" fill="#ffffff" rx="2" ry="2" />
+    <line x1="23" y1="25" x2="37" y2="25" stroke="#17a2b8" stroke-width="1" />
+    <line x1="23" y1="28" x2="35" y2="28" stroke="#17a2b8" stroke-width="1" />
+    <line x1="23" y1="31" x2="33" y2="31" stroke="#17a2b8" stroke-width="1" />
+    <text x="80" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Reportes Financieros</text>
+    <text x="80" y="40" font-family="Arial, sans-serif" font-size="12" fill="#666">Reportes integrados en Excel y PDF</text>
+  </g>
+  
+  <!-- Característica 4: Importación -->
+  <g transform="translate(50, 260)">
+    <circle cx="30" cy="30" r="25" fill="#ffc107" />
+    <path d="M20,35 L30,25 L40,35 M30,25 L30,40" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="80" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Importación de Facturas</text>
+    <text x="80" y="40" font-family="Arial, sans-serif" font-size="12" fill="#666">Importa facturas de proveedores automáticamente</text>
+  </g>
+  
+  <!-- Característica 5: Cumplimiento Legal -->
+  <g transform="translate(50, 320)">
+    <circle cx="30" cy="30" r="25" fill="#dc3545" />
+    <path d="M20,25 L25,30 L40,15" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="25" y="35" width="10" height="8" fill="#ffffff" rx="1" ry="1" />
+    <text x="80" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Cumplimiento Legal</text>
+    <text x="80" y="40" font-family="Arial, sans-serif" font-size="12" fill="#666">100% conforme con normativa de Hacienda</text>
+  </g>
+</svg>

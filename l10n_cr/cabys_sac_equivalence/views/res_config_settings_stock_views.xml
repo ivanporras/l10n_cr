@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_res_config_settings_cabys_sac_stock" model="ir.ui.view">
+            <field name="name">res.config.settings.cabys.sac.stock.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <!-- Inserta nuestro bloque dentro del <form> para máxima compatibilidad -->
+                <xpath expr="//form" position="inside">
+                    <div class="app_settings_block" name="cabys_sac_block">
+                        <h2>Cabys</h2>
+                        <div class="o_setting_box" id="cabys_sac_setting">
+                            <div class="o_setting_left_pane">
+                                <field name="enable_cabys_sac_search"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="enable_cabys_sac_search"/>
+                                <div class="text-muted">Permite buscar y asignar CABYS desde un código SAC en productos.</div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

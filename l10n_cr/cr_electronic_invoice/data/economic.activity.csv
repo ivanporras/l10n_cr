@@ -1,0 +1,757 @@
+id,code_old,code,name,description,active,sale_type
+cr_electronic_invoice.activity_960105,960105,0.1,ACTIVIDADES PREOPERATIVAS O DE ORGANIZACIÓN,Preoperativa,True,goods
+cr_electronic_invoice.activity_642009,642009,0.2,SERVICIOS DIGITALES O DE TELECOMUNICACIONES E INTANGIBLES PRESTADOS DESDE EL EXTERIOR PRESTADOS POR PROVEEDORES,Servicios digitales o de telecomunicaciones e intangibles prestados desde el exterior por proveedores,True,goods
+cr_electronic_invoice.activity_0_3,,0.3,Servicios digitales o de telecomunicaciones e intangibles prestados desde el exterior por intermediarios,Servicios digitales o de telecomunicaciones e intangibles prestados desde el exterior por intermediarios,True,services
+cr_electronic_invoice.activity_11101,11101,0111.9,"CULTIVO Y VENTA DE CEREALES, LEGUMBRES Y GRANOS BASICOS NO INCLUIDAS EN CANASTA BASICA","Cultivo de otros cereales, legumbres y semillas oleaginosas n.c.p",True,goods
+cr_electronic_invoice.activity_11201,11201,0111.9,CULTIVO HORTALIZAS LEGUMBRES ESPECIALIDADES HORTICOLAS PRODUCTOS DE VIVERO EXCENTO DE VENTAS,"Cultivo de otros cereales, legumbres y semillas oleaginosas n.c.p",True,goods
+cr_electronic_invoice.activity_11231,11231,0111.9,CULTIVO HORTALIZAS LEGUMBRES ESPECIALIDADES HORTICOLAS PRODUCTOS VIVERO GRABADOS VENTAS,"Cultivo de otros cereales, legumbres y semillas oleaginosas n.c.p",True,goods
+cr_electronic_invoice.activity_11802,11802,0111.9,"CULTIVO Y VENTA DE CEREALES, LEGUMBRES Y GRANOS BASICOS INCLUIDOS EN CANASTA BASICA","Cultivo de otros cereales, legumbres y semillas oleaginosas n.c.p",True,goods
+cr_electronic_invoice.activity_11105,11105,0113.9,CULTIVO DE TUBERCULOS,"Cultivo de otras hortalizas, raíces o tubérculos n.c.p",True,goods
+cr_electronic_invoice.activity_11218,11218,0113.9,PRODUCCION DE MINIVEGETALES,"Cultivo de otras hortalizas, raíces o tubérculos n.c.p",True,goods
+cr_electronic_invoice.activity_11701,11701,0114.0,CULTIVO DE CANA DE AZUCAR,Cultivo de caña de azúcar,True,goods
+cr_electronic_invoice.activity_11104,11104,0115.0,CULTIVO DE TABACO,Cultivo de tabaco,True,goods
+cr_electronic_invoice.activity_11106,11106,0116.0,CULTIVO DE ALGODON,Cultivo de plantas de fibras,True,goods
+cr_electronic_invoice.activity_11901,11901,0119.1,CULTIVO DE FLORES DE TODO TIPO,Cultivo de Flores,True,goods
+cr_electronic_invoice.activity_11501,11501,0122.1,CULTIVO DE BANANO,Cultivo de banano,True,goods
+cr_electronic_invoice.activity_11340,11340,0122.3,CULTIVO DE PINA,Cultivo de piña,True,goods
+cr_electronic_invoice.activity_11302,11302,0122.9,CULTIVO DE FRUTAS,Cultivo de otras frutas tropicales y subtropicales,True,goods
+cr_electronic_invoice.activity_11322,11322,0125.0,CULTIVO DE SEMILLAS COMESTIBLES Y GERMINACION DE SEMILLAS OLEAGINOSAS,Cultivo de otros frutos y nueces de árboles y arbustos,True,goods
+cr_electronic_invoice.activity_11102,11102,0126.1,CULTIVO DE PALMA AFRICANA Y OTROS FRUTOS OLEAGINOSOS,Cultivo de palma africana (aceitera),True,goods
+cr_electronic_invoice.activity_11401,11401,0127.1,CULTIVO DE CAFE,Cultivo de café,True,goods
+cr_electronic_invoice.activity_11329,11329,0127.9,CULTIVO DE PLANTAS PARA PREPARAR BEBIDAS Y MEDICINAS,"Cultivo de otras plantas con las que se preparan bebidas, excepto el cultivo de café n.c.p",True,goods
+cr_electronic_invoice.activity_11349,11349,0127.9,CULTIVO DE CACAO,"Cultivo de otras plantas con las que se preparan bebidas, excepto el cultivo de café n.c.p",True,goods
+cr_electronic_invoice.activity_11301,11301,0128.0,CULTIVO DE ESPECIAS DE TODO TIPO,"Cultivo de especies de plantas aromáticas, medicinales y farmacéuticas",True,goods
+cr_electronic_invoice.activity_11103,11103,0130.0,CULTIVO Y COMERCIALIZACION DE CESPED,Propagación de plantas,True,goods
+cr_electronic_invoice.activity_11903,11903,0130.0,VIVEROS,Propagación de plantas,True,goods
+cr_electronic_invoice.activity_12301,12301,0141.1,CRIA Y VENTA DE GANADO BOVINO (VACUNO) Y BUFALO,Cría de ganado Bovino (vacuno) para carne,True,goods
+cr_electronic_invoice.activity_12302,12302,0141.2,PRODUCCION DE LECHE CRUDA Y OTROS PRODUCTOS LACTEOS SIN PROCESAMIENTO INCLUIDOS EN CANASTA BASICA,Cría de ganado Bovino (vacuno) para producción de leche cruda,True,goods
+cr_electronic_invoice.activity_12102,12102,0141.9,"PRODUCCION DE SEMEN BOVINO, VENTA DE SEMEN CONGELADO Y DILUYENTE PARA SEMEN",Cría de Búfalos y otra producción de ganado bovino (vacuno),True,goods
+cr_electronic_invoice.activity_12101,12101,0142.0,CRIA DE CABALLOS Y OTROS EQUINOS,Cría de caballos y otros equinos,True,goods
+cr_electronic_invoice.activity_12103,12103,0144.0,CRIA DE ANIMALES DOMESTICOS COMO:OVEJAS Y CABRAS,Cría de ovejas y cabras,True,goods
+cr_electronic_invoice.activity_12201,12201,0145.0,CRIA DE CERDOS,Cría de cerdos,True,goods
+cr_electronic_invoice.activity_12403,12403,0146.2,PRODUCCION DE HUEVOS DE GALLINA INCLUIDOS EN LA CANASTA BASICA,Actividades de granja para la producción de huevos de gallina,True,goods
+cr_electronic_invoice.activity_12202,12202,0146.9,CRIA DE ANIMALES DOMESTICADOS (AVES DE CORRAL),"Cría de otras aves de corral, excepto pollos",True,goods
+cr_electronic_invoice.activity_12401,12401,0146.9,"PRODUCCION Y VENTA DE HUEVOS DE CUALQUIER TIPO, EXCEPTO LOS DE GALLINA","Cría de otras aves de corral, excepto pollos",True,goods
+cr_electronic_invoice.activity_12203,12203,0149.0,CRIA DE MARIPOSAS,Cría de otros animales,True,goods
+cr_electronic_invoice.activity_12204,12204,0149.0,CRIA Y VENTA DE OTROS ANIMALES SEMIDOMESTICADOS O SALVAJES,Cría de otros animales,True,goods
+cr_electronic_invoice.activity_12402,12402,0149.0,APICULTURA Y PRODUCCION DE MIEL Y CERA DE ABEJA,Cría de otros animales,True,goods
+cr_electronic_invoice.activity_13001,13001,0150.0,CULTIVO DE PRODUCTOS AGRICOLAS EN COMBINACION CON LA CRIA DE ANIMALES (EXPLOTACI,Cultivo de productos agrícolas en combinación con la cría de animales (explotación mixta),True,goods
+cr_electronic_invoice.activity_14003,14003,0161.2,FUMIGACION DE CULTIVOS,Servicios de fumigación y riego agrícola,True,goods
+cr_electronic_invoice.activity_14005,14005,0161.2,MANEJO E INSTALACION DE SISTEMAS DE RIEGO,Servicios de fumigación y riego agrícola,True,goods
+cr_electronic_invoice.activity_14004,14004,0161.9,SERVICIO DE PLANTACION DE ARBOLES Y SIMILARES,Otros servicios de apoyo a la agricultura,True,goods
+cr_electronic_invoice.activity_14006,14006,0161.9,PREPARACION DE TERRENOS AGRICOLAS,Otros servicios de apoyo a la agricultura,True,goods
+cr_electronic_invoice.activity_930908,930908,0162.9,SERVICIO DE HERRADURA,Otras actividades de apoyo a la ganadería,True,goods
+cr_electronic_invoice.activity_154904,154904,0163.1,BENEFICIO O PROCESAMIENTO DE CAFE,Beneficio de café,True,goods
+cr_electronic_invoice.activity_14002,14002,0163.9,RECOLECCION DE COSECHAS Y ACTIVIDADES CONEXAS,Otras actividades posteriores a la cosecha,True,goods
+cr_electronic_invoice.activity_15001,15001,0170.0,"CAZA ORDINARIA MEDIANTE TRAMPAS, Y REPOBLACION DE ANIMALES DE CAZA, INCLUSO LAS ACTIVIDADES DE SERVICIOS CONEXAS.","Caza ordinaria, mediante trampas y actividades de servicio conexas",True,goods
+cr_electronic_invoice.activity_20001,20001,0210.0,VENTA DE ARBOLES EN PIE (ARBOLES DE REFORESTACION),Silvicultura y otras actividades forestales,True,goods
+cr_electronic_invoice.activity_20005,20005,0210.0,"ACTIVIDADES DE CONSERVACION DE BOSQUES. (SERVICIOS AMBIENTALES, VENTA DE OXIGENO).",Silvicultura y otras actividades forestales,True,goods
+cr_electronic_invoice.activity_20002,20002,0220.0,EXTRACCION Y/O VENTA DE MADERA,Extracción de madera,True,goods
+cr_electronic_invoice.activity_50001,50001,0311.0,PESCADORES ARTESANALES EN PEQ. ESCALA,Pesca marítima,True,goods
+cr_electronic_invoice.activity_50002,50002,0311.0,PESCADORES ARTESANALES MEDIOS,Pesca marítima,True,goods
+cr_electronic_invoice.activity_50005,50005,0311.0,PESCADORES EN GRAN ESCALA,Pesca marítima,True,goods
+cr_electronic_invoice.activity_50003,50003,0321.0,"CRIADERO DE PECES, CRUSTACEOS O MOLUSCOS. COMERCIALIZACION DE LARVAS DE ESPECIES MARINAS",Acuicultura marina,True,goods
+cr_electronic_invoice.activity_101001,101001,0510.0,EXTRACCION Y AGLOMERACION DE CARBON DE PIEDRA,Extracción de carbón de piedra,True,goods
+cr_electronic_invoice.activity_111001,111001,0620.0,EXTRACCION DE PETROLEO CRUDO Y GAS NATURAL,Extracción de gas natural,True,goods
+cr_electronic_invoice.activity_120001,120001,0721.0,EXTRACCION DE MINERALES DE URANIO Y TORIO,Extracción de minerales metalíferos no ferrosos,True,goods
+cr_electronic_invoice.activity_141001,141001,0810.0,"EXTRACCION DE PIEDRA, ARENA Y ARCILLA","Extracción de piedra, arena y arcilla",True,goods
+cr_electronic_invoice.activity_142101,142101,0891.0,EXTRACCION DE MINERALES Y SUSTANCIAS PARA LA FABRICACION DE ABONOS,Extracción de minerales para la fabricación de abonos y productos químicos,True,goods
+cr_electronic_invoice.activity_142201,142201,0893.0,EXTRACCION DE SAL,Extracción de sal,True,goods
+cr_electronic_invoice.activity_142001,142001,0899.0,EXPLOTACION DE MINAS Y CANTERAS N.C.P.,Explotación de otras minas y canteras n.c.p,True,goods
+cr_electronic_invoice.activity_142901,142901,0899.0,EXPLOTACION DE OTRAS MINAS Y CANTERAS N.C.P.,Explotación de otras minas y canteras n.c.p,True,goods
+cr_electronic_invoice.activity_151103,151103,1010.1,PRODUCCION DE CUEROS Y PIELES SIN CURTIR,Elaboración y conservación de carne y embutidos de ganado vacuno y porcino,True,goods
+cr_electronic_invoice.activity_151105,151105,1010.1,"PRODUCCION DE EMBUTIDOS EMPACADOS, ENVASADO Y ENLATADO",Elaboración y conservación de carne y embutidos de ganado vacuno y porcino,True,goods
+cr_electronic_invoice.activity_151101,151101,1010.9,"ELABORACION Y CONSERVACION DE CARNE Y EMBUTIDOS DE GANADO VACUNO, PORCINO Y DE AVES",Elaboración y conservación de otro tipo de carnes n.c.p,True,goods
+cr_electronic_invoice.activity_151201,151201,1020.0,ELABORACION Y CONSERVACION DE PESCADO Y SUS DERIVADOS,"Elaboración y conservación de pescados, crustáceos y moluscos",True,goods
+cr_electronic_invoice.activity_151301,151301,1030.0,"ELABORACION Y CONSERVACION DE FRUTAS, LEGUMBRES Y HORTALIZAS","Elaboración y conservación de frutas, legumbres y hortalizas (vegetales)",True,goods
+cr_electronic_invoice.activity_151304,151304,1030.0,PRODUCCION DE CONCENTRADOS PARA JUGOS (CITRICULTURA),"Elaboración y conservación de frutas, legumbres y hortalizas (vegetales)",True,goods
+cr_electronic_invoice.activity_151401,151401,1040.0,ELABORACION DE ACEITES Y GRASAS DE ORIGEN VEGETAL Y ANIMAL,Elaboración de aceites y grasas de origen vegetal y animal,True,goods
+cr_electronic_invoice.activity_12303,12303,1050.0,PRODUCCION DE PRODUCTOS LACTEOS Y SUS DERIVADOS INCLUIDOS EN CANASTA BASICA CON RECONOCIMIENTO DE CREDITOS FISCALES,Elaboración de productos lácteos,True,goods
+cr_electronic_invoice.activity_152001,152001,1050.0,PRODUCCION DE HELADOS Y OTROS PRODUCTOS SIMILARES,Elaboración de productos lácteos,True,goods
+cr_electronic_invoice.activity_152002,152002,1050.0,ELABORACION DE PRODUCTOS LACTEOS,Elaboración de productos lácteos,True,goods
+cr_electronic_invoice.activity_152003,152003,1050.0,ELABORACION Y VENTA DE PRODUCTOS LACTEOS INCLUIDOS EN CANASTA BASICA,Elaboración de productos lácteos,True,goods
+cr_electronic_invoice.activity_153103,153103,1061.1,BENEFICIO DE ARROZ,Beneficio de arroz,True,goods
+cr_electronic_invoice.activity_153101,153101,1061.9,SERVICIO DE MOLIENDA,Elaboración de productos de molinería excepto arroz,True,goods
+cr_electronic_invoice.activity_153102,153102,1061.9,ELABORACION DE HARINAS PREMEZCLADAS Y PREPARADAS PARA LA FABRICACION DE PRODUCTOS DE PANADERIA Y REPOSTERIA,Elaboración de productos de molinería excepto arroz,True,goods
+cr_electronic_invoice.activity_153104,153104,1061.9,ELABORACION DE PRODUCTOS DE MOLINERIA INCLUIDOS EN CANASTA BASICA,Elaboración de productos de molinería excepto arroz,True,goods
+cr_electronic_invoice.activity_154905,154905,1061.9,ELABORACION DE PRODUCTOS DE MAIZ EXENTOS DE VENTAS,Elaboración de productos de molinería excepto arroz,True,goods
+cr_electronic_invoice.activity_154908,154908,1061.9,ELABORACION DE PRODUCTOS DE MAIZ GRAVADOS CON VENTAS,Elaboración de productos de molinería excepto arroz,True,goods
+cr_electronic_invoice.activity_153201,153201,1062.0,ELABORACION DE PRODUCTOS DERIVADOS DE ALMIDON,Elaboración de almidones y productos derivados del almidón,True,goods
+cr_electronic_invoice.activity_154101,154101,1071.9,VENTA DE PAN Y OTROS PRODUCTOS SIMILARES GRAVADOS CON IVA,"Elaboración de otros productos de panadería, excepto elaboración de galletas",True,goods
+cr_electronic_invoice.activity_154102,154102,1071.9,"PASTELERIA, REPOSTERIA O AMBAS","Elaboración de otros productos de panadería, excepto elaboración de galletas",True,goods
+cr_electronic_invoice.activity_154104,154104,1071.9,ELABORACION Y VENTA DE PRODUCTOS DE PANADERIA INCLUIDOS EN CANASTA BASICA,"Elaboración de otros productos de panadería, excepto elaboración de galletas",True,goods
+cr_electronic_invoice.activity_154201,154201,1072.0,ELABORACION Y VENTA DE AZUCAR Y PRODUCTOS DERIVADOS DE LA CANA DE AZUCAR,Elaboración de azúcar y otros productos derivados de la caña de azúcar,True,goods
+cr_electronic_invoice.activity_154202,154202,1072.0,ELABORACION DE PRODUCTOS DERIVADOS DE LA CANA DE AZUCAR,Elaboración de azúcar y otros productos derivados de la caña de azúcar,True,goods
+cr_electronic_invoice.activity_154301,154301,1073.0,ELABORACION DE CACAO,"Elaboración de cacao, chocolate y productos de confitería",True,goods
+cr_electronic_invoice.activity_154302,154302,1073.0,ELABORACION DE CHOCOLATE,"Elaboración de cacao, chocolate y productos de confitería",True,goods
+cr_electronic_invoice.activity_154303,154303,1073.0,"ELABORACION DE DULCES, GOLOSINAS Y CONSERVAS EN AZUCAR","Elaboración de cacao, chocolate y productos de confitería",True,goods
+cr_electronic_invoice.activity_154401,154401,1074.0,"ELABORACION DE MACARRONES, FIDEOS, ALCUZCUZ Y PRODUCTOS FARINACEOS SIMILARES","Elaboración de macarrones, fideos, alcuzcuz y productos farináceos similares",True,goods
+cr_electronic_invoice.activity_154402,154402,1074.0,"ELABORACION DE MACARRONES, FIDEOS, ALCUZCUZ Y PRODUCTOS FARINACEOS SIMILARES INCLUIDOS EN CANASTA BASICA","Elaboración de macarrones, fideos, alcuzcuz y productos farináceos similares",True,goods
+cr_electronic_invoice.activity_154902,154902,1079.9,FABRICACION DE PRODUCTOS ALIMENTICIOS PREPARADOS N.C.P.,Elaboración de otros productos alimenticios n.c.p,True,goods
+cr_electronic_invoice.activity_155404,155404,1079.9,ELABORACION DE CONCENTRADO PARA BEBIDAS NATURALES Y GASEOSAS,Elaboración de otros productos alimenticios n.c.p,True,goods
+cr_electronic_invoice.activity_153301,153301,1080.0,ELABORACION DE ALIMENTOS PARA ANIMALES DOMESTICOS,Elaboración de alimentos preparados para animales,True,goods
+cr_electronic_invoice.activity_153302,153302,1080.0,ELABORACION DE PACAS DE HENO,Elaboración de alimentos preparados para animales,True,goods
+cr_electronic_invoice.activity_153303,153303,1080.0,ELABORACION DE ALIMENTOS PARA ANIMALES PARA EXPLOTACION AGROPECUARIA,Elaboración de alimentos preparados para animales,True,goods
+cr_electronic_invoice.activity_155101,155101,1101.0,ELABORAC. RECTIFICAC MEZCLA BEBIDAS ALCOHOLICAS/PROD. DE ALCOHOL ETILICO (SUSTAN FERMENTADAS),"Destilación, rectificación y mezcla de bebidas alcohólicas",True,goods
+cr_electronic_invoice.activity_155102,155102,1101.0,ELABORACION DE BEBIDAS CON PORCENTAJE DE ALCOHOL POR VOLUMEN MENOR AL 15%.,"Destilación, rectificación y mezcla de bebidas alcohólicas",True,goods
+cr_electronic_invoice.activity_155103,155103,1101.0,ELABORACION DE BEBIDAS CON PORCENTAJE DE ALCOHOL POR VOLUMEN MENOR AL 15%.,"Destilación, rectificación y mezcla de bebidas alcohólicas",True,goods
+cr_electronic_invoice.activity_155104,155104,1101.0,FABRICA NACIONAL DE LICORES,"Destilación, rectificación y mezcla de bebidas alcohólicas",True,goods
+cr_electronic_invoice.activity_155301,155301,1103.0,ELABORACION DE BEBIDAS MALTEADAS Y DE MALTA NO ARTESANALES,Elaboración de bebidas malteadas y de malta,True,goods
+cr_electronic_invoice.activity_155302,155302,1103.0,ELABORACION ARTESANAL DE BEBIDAS MALTEADAS Y DE MALTA,Elaboración de bebidas malteadas y de malta,True,goods
+cr_electronic_invoice.activity_155403,155403,1104.0,ELABORACION DE BEBIDAS NO ALCOHOLICAS / GASEOSAS / AGUA MINERAL Y DE MANANTIAL,Elaboración de bebidas no alcohólicas; producción de aguas minerales y otras aguas embotelladas,True,goods
+cr_electronic_invoice.activity_160001,160001,1200.0,ELABORACION DE PRODUCTOS DE TABACO,Elaboración de productos de tabaco,True,goods
+cr_electronic_invoice.activity_171101,171101,1312.0,FABRICACION DE TODO TIPO DE TELAS Y/O HILOS,Tejedura de productos textiles,True,goods
+cr_electronic_invoice.activity_171201,171201,1313.0,MAQUILA DE PRODUCTOS TEXTILES,Acabado de productos textiles,True,goods
+cr_electronic_invoice.activity_171202,171202,1313.0,HIDROFUGADO/IMPERMEABILIZADO,Acabado de productos textiles,True,goods
+cr_electronic_invoice.activity_172902,172902,1313.0,SERVICIO DE BORDADO A MANO O A MAQUINA,Acabado de productos textiles,True,goods
+cr_electronic_invoice.activity_930102,930102,1313.0,SERVICIO DE TENIDO DE PRENDAS DE VESTIR,Acabado de productos textiles,True,goods
+cr_electronic_invoice.activity_173001,173001,1391.0,FABRICACION DE TEJDOS Y ARTICULOS DE PUNTO Y GANCHILLO,Fabricación de tejidos de punto y ganchillo,True,goods
+cr_electronic_invoice.activity_172101,172101,1392.0,"FABRICACION DE ARTICULOS CONFECCIONADOS DE MATERIALES TEXTILES, EXEPTO PRENDAS DE VESTIR","Fabricación de artículos confeccionados con materiales textiles, excepto prendas de vestir",True,goods
+cr_electronic_invoice.activity_172201,172201,1393.0,FABRICACION DE TAPICES Y ALFOMBRAS,Fabricación de tapices y alfombras,True,goods
+cr_electronic_invoice.activity_172301,172301,1394.0,"FABRICACION DE CUERDAS, CORDELES, BRAMANTES Y REDES","Fabricación de cuerdas, cordeles, bramantes y redes",True,goods
+cr_electronic_invoice.activity_172302,172302,1394.0,FABRICACION DE HILOS Y CUERDAS PARA USO AGRICOLA Y PESCA,"Fabricación de cuerdas, cordeles, bramantes y redes",True,goods
+cr_electronic_invoice.activity_181001,181001,1410.9,SERVICIOS DE COSTURA Y SASTRERIA (COSTURERAS Y SASTRES),"Fabricación de otras prendas de vestir, excepto ropa interior y prendas de piel",True,services
+cr_electronic_invoice.activity_181002,181002,1410.9,FABRICACION DE PRENDAS DE VESTIR (ROPA DE TODO TIPO),"Fabricación de otras prendas de vestir, excepto ropa interior y prendas de piel",True,goods
+cr_electronic_invoice.activity_182001,182001,1511.0,ADOBO Y TENIDO DE PIELES; FABRICACION DE ARTICULOS DE PIEL NATURAL O ARTIFICIAL,Curtido y adobo de cueros; adobo y teñido de pieles,True,goods
+cr_electronic_invoice.activity_191101,191101,1512.0,"FABRICACION DE MALETAS, BOLSOS DE MANO Y ARTICULOS SIMILARES","Fabricación de maletas, bolsos de mano y de artículos similares, y artículos de talabartería o guarnicionería",True,goods
+cr_electronic_invoice.activity_192001,192001,1520.0,FABRICACION DE TODO TIPO DE ZAPATOS EXEPTO EL ORTOPEDICO,Fabricación de calzado,True,goods
+cr_electronic_invoice.activity_201002,201002,1610.0,ASERRADO Y ACEPILLADURA DE MADERA,Aserrado y acepilladura de madera,True,goods
+cr_electronic_invoice.activity_202101,202101,1621.0,"FABRICACION DE HOJAS DE MADERA PARA ENCHAPADO Y TABLEROS COMO PLYWOOD, DURPANEL Y SIMILARES",Fabricación de hojas de madera para enchapado y tableros a base de madera,True,goods
+cr_electronic_invoice.activity_202201,202201,1622.0,FABRICACION DE PARTES Y PIEZAS DE CARPINTERIA PARA EDIFICIOS Y CONSTRUCCIONES,Fabricación de partes y piezas de carpintería para edificios y construcciones,True,goods
+cr_electronic_invoice.activity_202301,202301,1622.0,FABRICACION DE TARIMAS,Fabricación de partes y piezas de carpintería para edificios y construcciones,True,goods
+cr_electronic_invoice.activity_210101,210101,1701.0,FABRICACION DE PAPEL Y CARTON Y ENVASES DE PAPEL Y CARTON,"Fabricación de pasta de madera, papel y cartón",True,goods
+cr_electronic_invoice.activity_210201,210201,1709.0,FABRICACION DE OTROS ARTICULOS DE PAPEL Y CARTON,Fabricación de otros artículos del papel y cartón,True,goods
+cr_electronic_invoice.activity_222102,222102,1811.0,TIPOGRAFIA Y/O LITOGRAFIA (IMPRENTA),Impresión,True,goods
+cr_electronic_invoice.activity_222104,222104,1811.0,IMPRESION DIGITAL,Impresión,True,goods
+cr_electronic_invoice.activity_222105,222105,1811.0,SERIGRAFIA,Impresión,True,goods
+cr_electronic_invoice.activity_223001,223001,1820.0,REPRODUCCION DE GRABACIONES,Reproducción de grabaciones,True,goods
+cr_electronic_invoice.activity_232001,232001,1920.0,REFINERIAS DE PETROLEO,Fabricación de los productos de la refinación del petróleo,True,goods
+cr_electronic_invoice.activity_232002,232002,1920.0,FABRICACION DE PRODUCTOS DIVERSOS DERIVADOS DEL PETROLEO,Fabricación de los productos de la refinación del petróleo,True,goods
+cr_electronic_invoice.activity_232005,232005,2011.0,ELABORACION DE BIOCOMBUSTIBLES,Fabricación de sustancias químicas básicas,True,goods
+cr_electronic_invoice.activity_241101,241101,2011.0,FABRICACION DE SUSTANCIAS QUIMICAS Y GASES INDUSTRIALES EXCEPTO ABONOS,Fabricación de sustancias químicas básicas,True,goods
+cr_electronic_invoice.activity_241201,241201,2012.0,FABRICACION DE ABONOS Y COMPUESTOS DE NITROGENO (ORGANICOS Y QUIMICOS),Fabricación abonos y compuestos de nitrógeno,True,goods
+cr_electronic_invoice.activity_241301,241301,2013.0,FABRICACION DE PLASTICOS Y CAUCHO SINTETICO EN FORMAS PRIMARIAS,Fabricación de plásticos y de caucho sintético en formas primarias,True,goods
+cr_electronic_invoice.activity_241302,241302,2013.0,FABRICACION DE RESINAS,Fabricación de plásticos y de caucho sintético en formas primarias,True,goods
+cr_electronic_invoice.activity_242101,242101,2021.0,FABRICACION DE PLAGUICIDAS Y OTROS PRODUCTOS QUIMICOS DE USO AGROPECUARIO,Fabricación de plaguicidas y de otros productos químicos de uso agropecuario,True,goods
+cr_electronic_invoice.activity_242201,242201,2022.0,"FABRICACION DE PINTURAS, BARNICES Y PRODUCTOS DE REVESTIMIENTO SIMILARES","Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas",True,goods
+cr_electronic_invoice.activity_242202,242202,2022.0,FABRICACION DE TINTAS DE IMPRENTAS,"Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas",True,goods
+cr_electronic_invoice.activity_242401,242401,2023.1,"FABRICACION JABONES, DETERGENTES, PREPARADOS DE TOCADOR, PARA LIMPIAR PULIR Y PERFUMES","Fabricación de jabones y detergentes, preparados para limpiar y pulir",True,goods
+cr_electronic_invoice.activity_242405,242405,2023.1,FABRICACION DE JABONES PARA LAVAR (EXCEPTO PREPARACIONES TENSO ACTIVAS USADAS COMO JABON),"Fabricación de jabones y detergentes, preparados para limpiar y pulir",True,goods
+cr_electronic_invoice.activity_242406,242406,2023.1,"FABRICACION DE CERAS, ABRILLANTADORES, LUSTRADORES Y PREPARACIONES SIMILARES","Fabricación de jabones y detergentes, preparados para limpiar y pulir",True,goods
+cr_electronic_invoice.activity_242404,242404,2023.2,FABRICACION DE JABONES DE TOCADOR,Fabricación de perfumes y preparados de tocador,True,goods
+cr_electronic_invoice.activity_242901,242901,2029.0,FABRICACION DE OTROS PRODUCTOS QUIMICOS.,Fabricación de otros productos químicos n.c.p,True,goods
+cr_electronic_invoice.activity_242902,242902,2029.0,FABRICACION DE PEGAMENTOS Y ADHESIVOS,Fabricación de otros productos químicos n.c.p,True,goods
+cr_electronic_invoice.activity_243001,243001,2030.0,FABRICACION DE FIBRAS SINTETICAS,Fabricación de fibras artificiales,True,goods
+cr_electronic_invoice.activity_242301,242301,2100.0,"FABRICACION PRODUCTOS FARMACEUTICOS, SUSTANCIAS QUIMICAS Y PRODUCTOS BOTANICOS","Fabricación de productos farmacéuticos, sustancias químicas medicinales y de productos botánicos de uso farmacéutico",True,goods
+cr_electronic_invoice.activity_251101,251101,2211.0,FABRICACION DE LLANTAS Y CUBIERTAS PARA EQUIPO Y MAQUINARIA MOVIL,Fabricación de cubiertas y cámaras de caucho; recauchutado y renovación de cubiertas de caucho,True,goods
+cr_electronic_invoice.activity_251102,251102,2211.0,REENCAUCHADORA DE LLANTAS,Fabricación de cubiertas y cámaras de caucho; recauchutado y renovación de cubiertas de caucho,True,goods
+cr_electronic_invoice.activity_251901,251901,2219.0,FABRICACION DE OTROS PRODUCTOS DE CAUCHO,Fabricación de otros productos de caucho,True,goods
+cr_electronic_invoice.activity_252001,252001,2220.9,FABRICACION DE ARTICULOS DE PLASTICO,Fabricación de otros productos de plástico,True,goods
+cr_electronic_invoice.activity_261001,261001,2310.0,FABRICACION DE VIDRIO Y PRODUCTOS DE VIDRIO,Fabricación de vidrio y de productos de vidrio,True,goods
+cr_electronic_invoice.activity_269201,269201,2391.0,FABRICACION DE PRODUCTOS DE CERAMICA REFRACTARIA,Fabricación de productos refractarios,True,goods
+cr_electronic_invoice.activity_269301,269301,2392.0,FABRICACION DE PRODUCTOS DE ARCILLA Y CERAMICA NO REFRACTARIAS PARA USO ESTRUCTURAL,Fabricación de material de arcilla para la construcción,True,goods
+cr_electronic_invoice.activity_269101,269101,2393.0,FABRICACION PRODUCTOS DE CERAMICA BARRO LOZA Y/O PORCELANA NO REFRACTARIA USO NO ESTRUCTURAL,Fabricación de otros productos de cerámica y porcelana,True,goods
+cr_electronic_invoice.activity_269401,269401,2394.0,FABRICACION DE CAL O YESO,"Fabricación de cemento, de la cal y del yeso",True,goods
+cr_electronic_invoice.activity_269402,269402,2394.0,FABRICACION DE CEMENTO,"Fabricación de cemento, de la cal y del yeso",True,goods
+cr_electronic_invoice.activity_269501,269501,2395.0,"FABRICACION DE ARTICULOS DE CEMENTO, YESO Y HORMIGON PARA LA CONSTRUCCION","Fabricación de artículos de hormigón, de cemento y de yeso",True,goods
+cr_electronic_invoice.activity_269601,269601,2396.0,"CORTE, TALLADO Y ACABADO DE LA PIEDRA","Corte, tallado y acabado de la piedra",True,goods
+cr_electronic_invoice.activity_269901,269901,2399.0,FABRICACION DE OTROS PRODUCTOS MINERALES NO METALICOS N.C.P.,Fabricación de otros productos minerales no metálicos n.c.p,True,goods
+cr_electronic_invoice.activity_271001,271001,2410.0,INDUSTRIAS BASICAS DE HIERRO Y ACERO,Industrias básicas de hierro y acero,True,goods
+cr_electronic_invoice.activity_272001,272001,2420.0,FABRICACION DE PRODUCTOS PRIMARIOS DE METALES PRECIOSOS Y METALES NO FERROSOS,Fabricación de productos primarios de metales preciosos y metales no ferrosos,True,goods
+cr_electronic_invoice.activity_273101,273101,2431.0,FUNDICION DE HIERRO Y ACERO,Fundición de hierro y acero,True,goods
+cr_electronic_invoice.activity_273201,273201,2432.0,FUNDICION DE METALES NO FERROSOS,Fundición de metales no ferrosos,True,goods
+cr_electronic_invoice.activity_281101,281101,2511.0,FABRICACION DE PRODUCTOS METALICOS PARA USO ESTRUCTURAL,Fabricación de productos metálicos para uso estructural,True,goods
+cr_electronic_invoice.activity_281201,281201,2512.0,"FABRICACION DE TANQUES, DEPOSITOS Y RECIPIENTES DE METAL","Fabricación de tanques, depósitos y recipientes de metal",True,goods
+cr_electronic_invoice.activity_281301,281301,2513.0,"FABRICACION GENERADORES DE VAPOR, EXCEPTO CALDERAS DE AGUA CALIENTE PARA CALEFACION CENTRAL","Fabricación de los generadores del vapor, excepto calderas de agua caliente para calefacción central",True,goods
+cr_electronic_invoice.activity_292701,292701,2520.0,FABRICACION DE ARMAS Y MUNICIONES,Fabricación de armas y municiones,True,goods
+cr_electronic_invoice.activity_289201,289201,2592.0,SERVICIOS DE SOLDADURA,Tratamiento y revestimiento de metales,True,goods
+cr_electronic_invoice.activity_289202,289202,2592.0,SERVICIO DE TRATAMIENTO Y REVESTIMIENTO DE TODO TIPO DE MATERIALES,Tratamiento y revestimiento de metales,True,goods
+cr_electronic_invoice.activity_289302,289302,2592.0,HOJALATERIA,Tratamiento y revestimiento de metales,True,goods
+cr_electronic_invoice.activity_289304,289304,2592.0,TALLER DE MECANICA DE PRECISION,Tratamiento y revestimiento de metales,True,goods
+cr_electronic_invoice.activity_289306,289306,2592.0,SERVICIOS DE TORNO (MECANICA DE PRECISION),Tratamiento y revestimiento de metales,True,goods
+cr_electronic_invoice.activity_289305,289305,2599.0,"FABRICACION DE PIEZAS, ARTICULOS Y ACCESORIOS DE METAL INCLUYE LAS CERRAJERIAS.",Fabricación de otros productos de metal n.c.p,True,goods
+cr_electronic_invoice.activity_289902,289902,2599.0,FABRICACION DE OTROS PRODUCTOS ELABORADOS DE METAL N.C.P.,Fabricación de otros productos de metal n.c.p,True,goods
+cr_electronic_invoice.activity_321001,321001,2610.0,MANUFACTURA O FABRICACION DE OTROS COMPONENTES ELECTRONICOS,Fabricación de componentes y tableros electrónicos,True,goods
+cr_electronic_invoice.activity_321002,321002,2610.0,DISENO DE COMPONENTES ELECTRONICOS,Fabricación de componentes y tableros electrónicos,True,goods
+cr_electronic_invoice.activity_322001,322001,2630.0,FABRICACION DE TRANSMISORES Y RECEPTORES DE RADIO Y TELEVISION,Fabricación de equipos de comunicaciones,True,goods
+cr_electronic_invoice.activity_331201,331201,2651.0,"FABRICACION DE EQUIPOS PARA MEDIR, VERIFICAR, Y NAVEGAR Y DE EQUIPOS DE CONTROL","Fabricación de equipos de medición, prueba, verificación, navegación y de equipo de control",True,goods
+cr_electronic_invoice.activity_333001,333001,2652.0,FABRICACION DE RELOJES DE TODO TIPO,Fabricación de relojes,True,goods
+cr_electronic_invoice.activity_332001,332001,2670.0,FABRICACION DE INSTRUMENTOS OPTICOS Y EQUIPO FOTOGRAFICO,Fabricación de instrumentos ópticos de equipo fotográfico,True,goods
+cr_electronic_invoice.activity_311001,311001,2710.0,"FABRICACION DE MOTORES, GENERADORES Y TRANSFORMADORES ELECTRICOS, PARTES Y ACCESORIOS","Fabricación de motores eléctricos, generadores, transformadores eléctricos y aparatos de distribución y control",True,goods
+cr_electronic_invoice.activity_401004,401004,2710.0,"FABRICACION, ENSAMBLE Y VENTA DE SISTEMAS PARA EL APROVECHAMIENTO DE ENERGIAS RENOVABLES","Fabricación de motores eléctricos, generadores, transformadores eléctricos y aparatos de distribución y control",True,goods
+cr_electronic_invoice.activity_314001,314001,2720.0,"FABRICACION DE PILAS, BATERIAS Y ACUMULADORES",Fabricación de baterias y acumuladores,True,goods
+cr_electronic_invoice.activity_313001,313001,2732.0,FABRICACION DE HILOS Y CABLES AISLADOS,Fabricación de otros hilos y cables eléctricos,True,goods
+cr_electronic_invoice.activity_315001,315001,2740.0,FABRICACION DE LAMPARAS ELECTRICAS Y EQUIPO DE ILUMINACION,Fabricación de equipos de iluminación eléctricos,True,goods
+cr_electronic_invoice.activity_293001,293001,2750.0,FABRICACION DE APARATOS DE USO DOMESTICO N.C.P.,Fabricación de aparatos de uso doméstico,True,goods
+cr_electronic_invoice.activity_319001,319001,2790.0,FABRICACION DE OTROS TIPOS DE EQUIPO ELECTRICO N.C.P.,Fabricación de otro equipo eléctrico,True,goods
+cr_electronic_invoice.activity_291101,291101,2811.0,"FABRICACION DE MOTORES Y TURBINAS, EXCEPTO MOTORES PARA AERONAVES, VEHICULOS AUTOMOTORES Y MOTOCICLETAS","Fabricación de motores y turbinas, excepto motores para aeronaves, vehículos automotores y motocicletas",True,goods
+cr_electronic_invoice.activity_291201,291201,2813.0,"FABRICACION DE BOMBAS, COMPRESORES, GRIFOS Y VALVULAS","Fabricación de otras bombas, compresores, grifos y válvulas",True,goods
+cr_electronic_invoice.activity_291401,291401,2815.0,FABRICACION DE HORNOS Y QUEMADORES,"Fabricación de hornos, hogueras y quemadores",True,goods
+cr_electronic_invoice.activity_300001,300001,2817.0,"FABRICACION DE MAQUINARIA DE OFICINA, CONTABILIDAD E INFORMATICA",Fabricación de maquinaria y equipo de oficina (excepto computadoras y equipos periféricos),True,goods
+cr_electronic_invoice.activity_292101,292101,2821.0,FABRICACION DE MAQUINARIA AGRICOLA,Fabricación de maquinaria agropecuaria y forestal,True,goods
+cr_electronic_invoice.activity_292201,292201,2822.0,FABRICACION DE MAQUINAS HERRAMIENTA,Fabricación de maquinarias para la conformación de metales y de máquinas herramientas,True,goods
+cr_electronic_invoice.activity_292301,292301,2823.0,FABRICACION DE MAQUINARIA METALURGICA,Fabricación de maquinaria para metalúrgica,True,goods
+cr_electronic_invoice.activity_292401,292401,2824.0,FABRICACION DE MAQUINARIA PARA LA EXPLOTACION DE MINAS Y CANTERAS Y PARA OBRAS DE CONSTRUCCION,Fabricación de maquinaria para explotación de minas y canteras y para obras de construcción,True,goods
+cr_electronic_invoice.activity_292501,292501,2825.0,"FABRICACION DE MAQUINARIA PARA LA ELABORACION DE ALIMENTOS, BEBIDAS Y TABACO","Fabricación de maquinaria para la elaboración de alimentos, bebidas y tabaco",True,goods
+cr_electronic_invoice.activity_292601,292601,2826.0,"FABRICACION MAQUINARIA PARA LA ELABORACION DE PRODUCTOS TEXTILES, PRENDAS DE VESTIR Y CUEROS","Fabricación de maquinaria para la elaboración de productos textiles, prendas de vestir y cueros",True,goods
+cr_electronic_invoice.activity_292901,292901,2829.0,FABRICACION DE OTROS TIPOS DE MAQUINARIA DE USO ESPECIAL,Fabricación de otros tipos de maquinaria de uso especial,True,goods
+cr_electronic_invoice.activity_341001,341001,2910.0,FABRICACION DE VEHICULOS AUTOMOTORES,Fabricación de vehículos automotores,True,goods
+cr_electronic_invoice.activity_342001,342001,2920.0,"FABRICACION DE CARROCERIAS PARA VEHICULOS AUTOMOTORES, REMOLQUES Y SEMIREMOLQUES",Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semiremolques,True,goods
+cr_electronic_invoice.activity_342002,342002,2920.0,FABRICACION DE CARROCERIAS PARA CAMIONES,Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semiremolques,True,goods
+cr_electronic_invoice.activity_343001,343001,2930.0,"FABRICACION DE PARTES, PIEZAS Y ACCESORIOS PARA VEHICULOS AUTOMOTORES",Fabricación de partes y accesorios para motores de vehículos,True,goods
+cr_electronic_invoice.activity_351102,351102,3012.0,CONSTRUCCION DE EMBARCACIONES Y ESTRUCTURAS FLOTANTES,Construcción de embarcaciones de recreo y deporte,True,goods
+cr_electronic_invoice.activity_352001,352001,3020.0,FABRICACION DE LOCOMOTORAS Y MATERIAL RODANTE PARA FERROCARRILES Y TRANVIAS,Fabricación de locomotoras y de material rodante,True,goods
+cr_electronic_invoice.activity_353001,353001,3030.0,FABRICACION DE AERONAVES Y NAVES ESPACIALES Y MAQUINARIA CONEXA,Fabricación de aeronaves y naves espaciales y de maquinaria conexa,True,goods
+cr_electronic_invoice.activity_359101,359101,3091.0,"FABRICACION DE MOTOCICLETAS, PARTES, PIEZAS Y SUS ACCESORIOS",Fabricación de motocicletas,True,goods
+cr_electronic_invoice.activity_359201,359201,3092.0,"FABRICACION DE BICICLETAS Y SILLAS DE RUEDAS, PARTES, PIEZAS Y SUS ACCESORIOS",Fabricación de bicicletas y sillas de ruedas para personas con discapacidad,True,goods
+cr_electronic_invoice.activity_359901,359901,3099.0,FABRICACION DE OTROS TIPOS DE EQUIPO DE TRANSPORTE N.C.P.,Fabricación de otros tipos de equipo de transporte n.c.p,True,goods
+cr_electronic_invoice.activity_361001,361001,3100.1,FABRICACION Y/O REPARACION DE MUEBLES Y ACCESORIOS (INCLUYE COLCHONES),Fabricación de muebles de madera,True,goods
+cr_electronic_invoice.activity_361004,361004,3100.9,MAQUILA DE MUEBLES,"Fabricación de muebles de otro tipo de material (excepto de madera, piedra, cemento o cerámica)",True,goods
+cr_electronic_invoice.activity_369101,369101,3211.0,"FABRICACION DE JOYAS, BISUTERIA Y ARTICULOS CONEXOS",Fabricación de joyas y artículos conexos,True,goods
+cr_electronic_invoice.activity_3212_0,,3212.0,Fabricación de bisutería y artículos conexos,Fabricación de bisutería y artículos conexos,True,goods
+cr_electronic_invoice.activity_369201,369201,3220.0,"FABRICACION DE INSTRUMENTOS MUSICALES, PARTES Y PIEZAS Y SUS ACCESORIOS",Fabricación de Instrumentos musicales,True,goods
+cr_electronic_invoice.activity_369301,369301,3230.0,FABRICACION DE ARTICULOS DE DEPORTE,Fabricación de artículos de deporte,True,goods
+cr_electronic_invoice.activity_369401,369401,3240.0,FABRICACION DE JUEGOS Y JUGUETES,Fabricación de juegos y juguetes,True,goods
+cr_electronic_invoice.activity_331101,331101,3250.0,FABRICACION DE PROTESIS EN GENERAL,Fabricación de instrumentos y suministros médicos y odontológicos,True,goods
+cr_electronic_invoice.activity_331102,331102,3250.0,FABRICACION Y COMERCIALIZACION DE EQUIPO MEDICO,Fabricación de instrumentos y suministros médicos y odontológicos,True,goods
+cr_electronic_invoice.activity_331103,331103,3250.0,FABRICACION Y COMERCIALIZACION DE ZAPATOS ORTOPEDICOS,Fabricación de instrumentos y suministros médicos y odontológicos,True,goods
+cr_electronic_invoice.activity_202902,202902,3290.0,"FABRICACION Y/O VENTA DE ATAUDES (CAJAS MORTUORIAS, FERETROS).",Otras industrias manufactureras n.c.p,True,goods
+cr_electronic_invoice.activity_369901,369901,3290.0,FABRICACION DE ESCOBAS,Otras industrias manufactureras n.c.p,True,goods
+cr_electronic_invoice.activity_369902,369902,3290.0,"FABRICACION DE VELAS (CANDELAS) EXCEPTO LAS PERFUMADAS, COLOREADAS Y DECORADAS.",Otras industrias manufactureras n.c.p,True,goods
+cr_electronic_invoice.activity_369903,369903,3290.0,"FABRICACION DE VELAS COLOREADAS, PERFUMADAS Y DECORADAS",Otras industrias manufactureras n.c.p,True,goods
+cr_electronic_invoice.activity_369904,369904,3290.0,"FABRICACION DE SELLOS DE MANO, METAL O HULE (CAUCHO)",Otras industrias manufactureras n.c.p,True,goods
+cr_electronic_invoice.activity_525904,525904,3290.0,TRABAJOS DE MANUALIDADES,Otras industrias manufactureras n.c.p,True,goods
+cr_electronic_invoice.activity_242903,242903,3311.0,REPARACION DE ARMAS DE FUEGO,Reparación de productos elaborados de metal,True,goods
+cr_electronic_invoice.activity_290001,290001,3312.0,SERVICIO DE REPARACION DE MAQUINARIA Y EQUIPO.,Reparación de maquinaria,True,goods
+cr_electronic_invoice.activity_290003,290003,3312.0,SERVICIO DE MANTENIMIENTO DE MAQUINARIA Y EQUIPO.,Reparación de maquinaria,True,goods
+cr_electronic_invoice.activity_291901,291901,3312.0,REPARACION DE EQUIPO DE REFRIGERACION Y CONGELACION,Reparación de maquinaria,True,goods
+cr_electronic_invoice.activity_291903,291903,3312.0,INSTALACION Y/O MANTENIMIENTO DE EQUIPO DE REFRIGERACION Y CONGELACION,Reparación de maquinaria,True,goods
+cr_electronic_invoice.activity_523926,523926,3312.0,MANTENIMIENTO DE EXTINTORES,Reparación de maquinaria,True,goods
+cr_electronic_invoice.activity_725003,725003,3312.0,"REPARACION CAJAS REGISTRADORAS, CALCULADORAS, MAQUINAS DE CONTABILIDAD Y EQUIPO DE OFICINA",Reparación de maquinaria,True,goods
+cr_electronic_invoice.activity_725004,725004,3312.0,"MANTENIMIENTO DE CAJAS REGISTRADORAS, CALCULADORAS, MAQUINAS DE CONTABILIDAD",Reparación de maquinaria,True,goods
+cr_electronic_invoice.activity_453009,453009,3314.0,REPARACION DE PORTONES ELECTRICOS,Reparación de equipo eléctrico,True,goods
+cr_electronic_invoice.activity_351101,351101,3315.0,SERVICIO DE REPARACION DE EMBARCACIONES Y SUS PARTES Y/O ESTRUCTURAS FLOTANTES,"Reparación de equipo de transporte, excepto los vehículos automotores",True,goods
+cr_electronic_invoice.activity_401002,401002,3510.0,"GENERACION Y/O DISTRIBUCION DE ENERGIA ELECTRICA (HIDRAULICA, CONVENCIONAL, TERMICO, ETC)","Generación, transmisión y distribución de energía eléctrica",True,goods
+cr_electronic_invoice.activity_402001,402001,3520.0,FABRICACION DE GAS; DISTRIBUCION DE COMBUSTIBLES GASEOSOS POR TUBERIAS,Fabricación de gas; distribución de combustibles gaseosos por tuberías,True,goods
+cr_electronic_invoice.activity_154903,154903,3530.0,FABRICACION DE HIELO,Suministro de vapor y aire acondicionado,True,goods
+cr_electronic_invoice.activity_403001,403001,3530.0,SUMINISTRO DE VAPOR Y AIRE ACONDICIONADO,Suministro de vapor y aire acondicionado,True,goods
+cr_electronic_invoice.activity_410001,410001,3600.0,"CAPTACION, TRATAMIENTO Y DISTRIBUCION DE AGUA","Captación, tratamiento y distribución de agua",True,goods
+cr_electronic_invoice.activity_919906,919906,3600.0,ASOCIACIONES ADMINISTRADORAS DE LOS SISTEMAS DE ACUEDUCTOS Y ALCANTARILLADOS (ASADAS).,"Captación, tratamiento y distribución de agua",True,goods
+cr_electronic_invoice.activity_900002,900002,3700.0,LIMPIEZA DE TANQUES SEPTICOS Y AGUAS RESIDUALES,Evacuación de aguas residuales,True,goods
+cr_electronic_invoice.activity_900001,900001,3811.0,"ASESORAMIENTO Y ELIMINACION DE DESPERDICIOS, SANEAMIENTO (EXCEPTO LIMPIEZA DE TANQUES SEPTICOS)",Recolección de desechos no peligrosos,True,goods
+cr_electronic_invoice.activity_372001,372001,3830.0,RECICLAJE DE OTRO TIPO DE MATERIALES N.C.P.,Recuperación de materiales,True,goods
+cr_electronic_invoice.activity_372003,372003,3830.0,RECICLAJE DE PAPEL Y PLASTICO Y MATERIALES RELACIONADOS,Recuperación de materiales,True,goods
+cr_electronic_invoice.activity_452002,452002,4100.0,"CONSTRUCCION DE EDIFICIOS, APARTAMENTOS, CONDOMINIOS Y CASAS DE HABITACION",Construcción de edificios,True,goods
+cr_electronic_invoice.activity_452005,452005,4210.0,CONSTRUCCION Y MANTENIMIENTO DE CARRETERAS Y OTRAS VIAS,Construcción de carreteras y vías férreas,True,goods
+cr_electronic_invoice.activity_451001,451001,4311.0,DEMOLICION DE EDIFICIOS Y OTRAS ESTRUCTURAS,Demolición,True,goods
+cr_electronic_invoice.activity_451002,451002,4312.0,PREPARACION DE TERRENOS,Preparación del terreno,True,goods
+cr_electronic_invoice.activity_453003,453003,4321.0,VENTA E INSTALACION DE ALARMAS Y OTROS SISTEMAS ELECTRICOS,Instalación eléctrica y de telecomunicaciones,True,goods
+cr_electronic_invoice.activity_453004,453004,4321.0,REPARACION DE CABLEADO DE COMUNICACIONES,Instalación eléctrica y de telecomunicaciones,True,goods
+cr_electronic_invoice.activity_453005,453005,4321.0,INSTALACION DE ALARMAS Y OTROS SISTEMAS DE SEGURIDAD,Instalación eléctrica y de telecomunicaciones,True,goods
+cr_electronic_invoice.activity_453008,453008,4321.0,INSTALACION Y MANTENIMIENTO DE CABLEADO DE COMUNICACIONES Y/O ENERGIA ELECTRICA,Instalación eléctrica y de telecomunicaciones,True,goods
+cr_electronic_invoice.activity_453011,453011,4321.0,INSTALACION Y MANTENIMIENTO DE CONMUTADORES Y OTROS SISTEMAS PARA TELECOMUNICACIONES,Instalación eléctrica y de telecomunicaciones,True,goods
+cr_electronic_invoice.activity_526005,526005,4321.0,"ELECTRICISTA, SERVICIOS",Instalación eléctrica y de telecomunicaciones,True,goods
+cr_electronic_invoice.activity_453001,453001,4322.0,REPARACION DE AIRE ACONDICIONADO,Instalación de fontanería e instalación de calefacción y aire acondicionado,True,goods
+cr_electronic_invoice.activity_453006,453006,4322.0,INSTALACION Y MANTENIMIENTO DE AIRE ACONDICIONADO,Instalación de fontanería e instalación de calefacción y aire acondicionado,True,goods
+cr_electronic_invoice.activity_453002,453002,4329.0,REPARACION DE ASCENSORES (ELEVADORES),Otro tipo de instalaciones de construcción,True,goods
+cr_electronic_invoice.activity_453007,453007,4329.0,INSTALACION Y MANTENIMIENTO DE ASCENSORES (ELEVADORES),Otro tipo de instalaciones de construcción,True,goods
+cr_electronic_invoice.activity_453010,453010,4329.0,INSTALACION Y MANTENIMIENTO DE PORTONES ELECTRICOS,Otro tipo de instalaciones de construcción,True,goods
+cr_electronic_invoice.activity_452003,452003,4330.0,"MANTENIMIENTO, REPARACION Y AMPLIACIONES DE EDIFICIOS, APARTAMENTOS, CONDOMINIOS Y CASAS",Terminación y acabados de edificios,True,goods
+cr_electronic_invoice.activity_454001,454001,4330.0,SERVICIOS DE TERMINACION Y ACABADO DE EDIFICIOS,Terminación y acabados de edificios,True,goods
+cr_electronic_invoice.activity_526010,526010,4330.0,INSTALACION Y MANTENIMIENTO DE PERSIANAS Y CORTINAS,Terminación y acabados de edificios,True,goods
+cr_electronic_invoice.activity_292402,292402,4390.0,PERFORACION DE POZOS,Otras actividades especializadas de la construcción,True,goods
+cr_electronic_invoice.activity_452006,452006,4390.0,ACTIVIDADES DE CONSTRUCCION ESPECIALES,Otras actividades especializadas de la construcción,True,goods
+cr_electronic_invoice.activity_455001,455001,4390.0,ALQUILER DE EQUIPO DE CONSTRUCCION O DEMOLICION CON OPERADORES,Otras actividades especializadas de la construcción,True,goods
+cr_electronic_invoice.activity_526012,526012,4390.0,"INSTALACION Y MANTENIMIENTO DE PISCINAS, JACUZZIS Y SIMILARES",Otras actividades especializadas de la construcción,True,goods
+cr_electronic_invoice.activity_501001,501001,4510.0,VENTA AL POR MAYOR Y MENOR DE VEHICULOS NUEVOS Y/O USADOS (PARTIDAS ARANCELARIAS 8703 Y 8711),Venta de vehículos automotores,True,goods
+cr_electronic_invoice.activity_501002,501002,4510.0,"VENTA AL POR MAYOR Y MENOR DE VEHICULOS NUEVOS Y/O USADOS, EXCEPTO PARTIDAS ARANCELARIAS 8702 Y 8704",Venta de vehículos automotores,True,goods
+cr_electronic_invoice.activity_502001,502001,4520.0,"LAVADO, ENCERADO Y PULIDO DE AUTOMOVILES (LAVA CAR)",Mantenimiento y reparación de vehículos automotores,True,goods
+cr_electronic_invoice.activity_502002,502002,4520.0,SERVICIOS DE ALINEAMIENTO Y REPARACION DE LLANTAS,Mantenimiento y reparación de vehículos automotores,True,goods
+cr_electronic_invoice.activity_502003,502003,4520.0,SERVICIO DE REPARACION DE TODA CLASE DE VEHICULOS Y SUS PARTES,Mantenimiento y reparación de vehículos automotores,True,goods
+cr_electronic_invoice.activity_502004,502004,4520.0,SERVICIO DE ENDEREZADO Y PINTURA PARA TODA CLASE DE VEHICULO,Mantenimiento y reparación de vehículos automotores,True,goods
+cr_electronic_invoice.activity_502007,502007,4520.0,AUTODECORACION,Mantenimiento y reparación de vehículos automotores,True,goods
+cr_electronic_invoice.activity_503004,503004,4530.0,VENTA DE REPUESTOS NUEVOS PARA AUTOMOVILES,"Venta de partes, piezas y accesorios de vehículos automotores",True,goods
+cr_electronic_invoice.activity_503005,503005,4530.0,COMERCIALIZACION DE LLANTAS (NEUMATICAS) PARA VEHICULOS AUTOMOTORES,"Venta de partes, piezas y accesorios de vehículos automotores",True,goods
+cr_electronic_invoice.activity_504001,504001,4540.0,VENTA DE MOTOCICLETAS,"Venta, mantenimiento y reparación de motocicletas y de sus partes, piezas y accesorios",True,goods
+cr_electronic_invoice.activity_504003,504003,4540.0,VENTA DE PARTES O ACCESORIOS DE MOTOCICLETAS,"Venta, mantenimiento y reparación de motocicletas y de sus partes, piezas y accesorios",True,goods
+cr_electronic_invoice.activity_504004,504004,4540.0,SERVICIO DE REPARACION DE TODA CLASE DE MOTOCICLETAS Y SUS PARTES,"Venta, mantenimiento y reparación de motocicletas y de sus partes, piezas y accesorios",True,goods
+cr_electronic_invoice.activity_511001,511001,4610.0,"COMISIONISTAS, AGENTES DE VENTAS, ORGANIZADORES DE SUBASTAS, TIQUETERAS, ETC.",Venta al por mayor a cambio de una retribución o por contrato,True,goods
+cr_electronic_invoice.activity_512102,512102,4620.0,VENTA AL POR MAYOR DE FLORES Y PLANTAS DE TODO TIPO,Venta al por mayor de materias primas agropecuarias y animales vivos,True,goods
+cr_electronic_invoice.activity_519014,519014,4620.0,VENTA AL POR MAYOR DE POLEN Y/O SEMILLAS PARA USO AGRICOLA,Venta al por mayor de materias primas agropecuarias y animales vivos,True,goods
+cr_electronic_invoice.activity_522102,522102,4620.0,VENTA AL POR MAYOR DE FLORES Y PLANTAS,Venta al por mayor de materias primas agropecuarias y animales vivos,True,goods
+cr_electronic_invoice.activity_523908,523908,4620.0,COMERCIO AL POR MENOR DE ANIMALES DOMESTICOS PARA CONSUMO HUMANO,Venta al por mayor de materias primas agropecuarias y animales vivos,True,goods
+cr_electronic_invoice.activity_523912,523912,4620.0,VENTA AL POR MENOR Y MAYOR DE PRODUCTOS E INSUMOS AGROPECUARIOS,Venta al por mayor de materias primas agropecuarias y animales vivos,True,goods
+cr_electronic_invoice.activity_512202,512202,4630.3,VENTA AL POR MAYOR DE FRUTAS Y VERDURAS FRESCAS INCLUIDAS O NO EN CANASTA BASICA,Venta al por mayor de frutas y verduras frescas,True,goods
+cr_electronic_invoice.activity_512235,512235,4630.3,VENTA AL POR MAYOR DE FRUTAS Y VERDURAS FRESCAS,Venta al por mayor de frutas y verduras frescas,True,goods
+cr_electronic_invoice.activity_512209,512209,4630.4,COMERCIO AL POR MAYOR DE PRODUCTOS DE TABACO,"Venta al por mayor de licores, bebidas y tabaco",True,goods
+cr_electronic_invoice.activity_512210,512210,4630.4,COMERCIO AL POR MAYOR DE BEBIDAS CON CONTENIDO ALCOHOLICO (IMPORTADORES),"Venta al por mayor de licores, bebidas y tabaco",True,goods
+cr_electronic_invoice.activity_512213,512213,4630.4,COMERCIO AL POR MAYOR DE BEBIDAS GASEOSAS Y CARBONATADAS,"Venta al por mayor de licores, bebidas y tabaco",True,goods
+cr_electronic_invoice.activity_512217,512217,4630.4,COMERCIO AL POR MAYOR DE VINOS. BEBIDAS FERMENTADAS Y NO FERMENTADAS,"Venta al por mayor de licores, bebidas y tabaco",True,goods
+cr_electronic_invoice.activity_512225,512225,4630.4,"COMERCIO AL POR MAYOR DE BEBIDAS NO ALCOHOLICAS (JUGOS DE FRUTAS, VEGETALES) Y AGUA EMBOTELLADA","Venta al por mayor de licores, bebidas y tabaco",True,goods
+cr_electronic_invoice.activity_512234,512234,4630.4,COMERCIO AL POR MAYOR DE CERVEZA IMPORTADA,"Venta al por mayor de licores, bebidas y tabaco",True,goods
+cr_electronic_invoice.activity_512201,512201,4630.9,"COMERCIO AL POR MAYOR DE ALIMENTOS, GRANOS BASICOS, CARNES Y DEMAS COMESTIBLES Y ARTICULOS DE LA CANASTA BASICA",Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_512204,512204,4630.9,COMERCIO AL POR MAYOR DE PRODUCTOS LACTEOS,Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_512208,512208,4630.9,COMERCIO AL POR MAYOR DE PRODUCTOS DE CONFITERIA,Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_512211,512211,4630.9,COMERCIO AL POR MAYOR DE OTROS ALIMENTOS N.C.P. GRABADOS CON VENTAS,Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_512214,512214,4630.9,"VENTA AL POR MAYOR DE CAFE (EXCEPTO EL ENVASADO, ENLATADO, SOLUBLE, DESCAFEINADO)",Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_512222,512222,4630.9,"COMERCIO AL POR MAYOR DE CAFE EMPACADO, ENVASADO, ENLATADO, SOLUBLE Y DESCAFEINADO",Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_512232,512232,4630.9,COMERCIO AL POR MAYOR DE PRODUCTOS SUSTITUTOS DEL AZUCAR,Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_512233,512233,4630.9,COMERCIO AL POR MAYOR DE CARNES DE TODO TIPO (PREPARADAS SAZONADAS CONDIMENTADAS EMPANIZADAS),Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_512237,512237,4630.9,COMERCIO AL POR MAYOR DE ALIMENTOS Y PRODUCTOS N.C.P. EXCENTOS DE VENTAS,Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_519010,519010,4630.9,COMERCIALIZACION Y DISTRIBUCION AL POR MAYOR DE ALIMENTOS PREPARADOS PARA ANIMALES DOMESTICOS,Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_519013,519013,4630.9,COMERCIALIZACION AL POR MAYOR DE SUPLEMENTOS ALIMENTICIOS,Venta al por mayor de otros alimentos,True,goods
+cr_electronic_invoice.activity_513101,513101,4641.1,"VENTA AL POR MAYOR DE CALZADO, PRODUCTOS TEXTILES; PRENDAS DE VESTIR;",Venta al por mayor de productos textiles y prendas de vestir,True,goods
+cr_electronic_invoice.activity_513906,513906,4649.1,"VENTA AL POR MAYOR DE ARTICULOS, ARTEFACTOS, DISCOS Y MUEBLES PARA EL HOGAR","Venta al por mayor de aparatos, artículos y equipo de uso doméstico",True,goods
+cr_electronic_invoice.activity_513602,513602,4649.2,VENTA AL POR MAYOR DE PRODUCTOS VETERINARIOS GRAVADOS CON IVA,"Venta al por mayor de productos farmacéuticos, veterinarios y artículos de tocador",True,goods
+cr_electronic_invoice.activity_519003,519003,4649.2,"VENTA AL POR MAYOR DE EQUIPO, ARTICULOS Y ACCESORIOS DE BELLEZA, COSMETICOS E HIGIENE PERSONAL","Venta al por mayor de productos farmacéuticos, veterinarios y artículos de tocador",True,goods
+cr_electronic_invoice.activity_519005,519005,4649.3,VENTA AL POR MAYOR DE EQUIPO PARA CAMPO DE JUEGOS (PLAY),"Venta al por mayor de juegos, juguetes, artículos deportivos y de esparcimiento",True,goods
+cr_electronic_invoice.activity_519011,519011,4649.3,COMERCIO AL POR MAYOR DE EQUIPO Y ACCESORIOS PARA PESCA DEPORTIVA O ARTESANAL,"Venta al por mayor de juegos, juguetes, artículos deportivos y de esparcimiento",True,goods
+cr_electronic_invoice.activity_513501,513501,4649.9,VENTA AL POR MAYOR DE PREPARADOS Y/O ARTICULOS PARA LA LIMPIEZA DE USO GENERAL,Venta al por mayor de otros enseres domésticos n.c.p,True,goods
+cr_electronic_invoice.activity_513710,513710,4649.9,VENTA AL POR MAYOR DE LIBROS Y TEXTOS EDUCATIVOS,Venta al por mayor de otros enseres domésticos n.c.p,True,goods
+cr_electronic_invoice.activity_513904,513904,4649.9,VENTA AL POR MAYOR DE SUMINISTROS Y ARTICULOS DE LIBRERIA,Venta al por mayor de otros enseres domésticos n.c.p,True,goods
+cr_electronic_invoice.activity_513907,513907,4649.9,VENTA AL POR MAYOR DE DISCOS COMPACTOS Y OTROS DISPOSITIVOS DE GRABACION,Venta al por mayor de otros enseres domésticos n.c.p,True,goods
+cr_electronic_invoice.activity_515201,515201,4651.0,"VENTA AL POR MAYOR DE EQUIPO DE COMPUTO, SUS PARTES Y ACCESORIOS","Venta al por mayor de computadoras, equipo informático periférico y programas informáticos",True,goods
+cr_electronic_invoice.activity_519016,519016,4652.0,VENTA AL POR MAYOR DE ARTICULOS Y ACCESORIOS ELECTRONICOS,"Venta al por mayor de equipo, partes y piezas electrónicas y de telecomunicaciones",True,goods
+cr_electronic_invoice.activity_515002,515002,4653.0,VENTA AL POR MAYOR DE REPUESTOS Y/O ACCESORIOS PARA MAQUINARIA Y EQUIPO AGROPECUARIO,"Venta al por mayor de maquinaria, equipo y materiales agropecuarios",True,goods
+cr_electronic_invoice.activity_515003,515003,4653.0,VENTA AL POR MAYOR DE MAQUINARIA Y EQUIPO AGROPECUARIO,"Venta al por mayor de maquinaria, equipo y materiales agropecuarios",True,goods
+cr_electronic_invoice.activity_291202,291202,4659.0,VENTA DE BOMBAS DE AGUA,Venta al por mayor de otro tipo de maquinaria y equipo,True,goods
+cr_electronic_invoice.activity_513601,513601,4659.0,VENTA AL POR MAYOR EQUIPO MEDICO ACCESORIOS MEDICAMENTOS PRODUC FARMACEUTICO EXENTOS DE VENTAS,Venta al por mayor de otro tipo de maquinaria y equipo,True,goods
+cr_electronic_invoice.activity_513604,513604,4659.0,VENTA AL POR MAYOR EQUIPO MEDICO ACCESORIO MEDICAMENTO PRODUC FARMACEUTICO GRABADOS CON VENTAS,Venta al por mayor de otro tipo de maquinaria y equipo,True,goods
+cr_electronic_invoice.activity_515001,515001,4659.0,"VENTA AL POR MAYOR DE MAQUINARIA Y EQUIPO INDUSTRIAL, DE CONSTRUCCION, INGENIERIA CIVIL Y OTROS, ASI COMO SUS ACCESORIOS",Venta al por mayor de otro tipo de maquinaria y equipo,True,goods
+cr_electronic_invoice.activity_515203,515203,4659.0,VENTA AL POR MAYOR DE EQUIPO Y SUMINISTROS DE OFICINA,Venta al por mayor de otro tipo de maquinaria y equipo,True,goods
+cr_electronic_invoice.activity_514101,514101,4661.0,VENTA AL POR MAYOR DE COMBUSTIBLES SOLIDOS (LENA Y SIMILARES),"Venta al por mayor de combustibles sólidos, líquidos y gaseosos y de productos conexos",True,goods
+cr_electronic_invoice.activity_514103,514103,4661.0,VENTA AL POR MAYOR DE COMBUSTIBLES SOLIDOS (CARBON),"Venta al por mayor de combustibles sólidos, líquidos y gaseosos y de productos conexos",True,goods
+cr_electronic_invoice.activity_514201,514201,4662.0,VENTA AL POR MAYOR DE METALES Y MINERALES METALIFEROS,Venta al por mayor de metales y de minerales metalíferos,True,goods
+cr_electronic_invoice.activity_514304,514304,4663.0,"VENTA AL POR MAYOR DE EQUIPO DE AIRE ACONDICIONADO Y CALENTADORES (ELECTRICOS, SOLARES, ETC.)","Venta al por mayor de materiales de construcción, artículos de ferretería y equipo y materiales de fontanería",True,goods
+cr_electronic_invoice.activity_514308,514308,4663.0,"VENTA AL POR MAYOR DE MATERIALES PARA LA CONSTRUCCION, ARTICULOS DE FERRETERIA, EQUIPO Y MATERIALES DE FONTANERIA Y CALEFACCION","Venta al por mayor de materiales de construcción, artículos de ferretería y equipo y materiales de fontanería",True,goods
+cr_electronic_invoice.activity_514903,514903,4669.1,VENTA AL POR MAYOR DE PRODUCTOS PARA USO AGROPECUARIO Y VENTA DESECHOS ORGANICOS E INORGANICOS,Venta al por mayor de fertilizantes y productos agroquímicos,True,goods
+cr_electronic_invoice.activity_371001,371001,4669.9,RECICLAJE DE DESPERDICIOS Y DESECHOS METALICOS,"Venta al por mayor de basura, desechos y otros productos n.c.p",True,goods
+cr_electronic_invoice.activity_503006,503006,4669.9,ACTIVIDADES DE DESARME DE VEHICULOS Y VENTA DE REPUESTOS,"Venta al por mayor de basura, desechos y otros productos n.c.p",True,goods
+cr_electronic_invoice.activity_514701,514701,4669.9,"VENTA AL POR MAYOR DE PRODUCTOS, SUSTANCIAS O REACTIVOS QUIMICOS Y SOLVENTES EN GENERAL","Venta al por mayor de basura, desechos y otros productos n.c.p",True,goods
+cr_electronic_invoice.activity_514901,514901,4669.9,VENTA AL POR MAYOR Y AL POR MENOR DE CHATARRA,"Venta al por mayor de basura, desechos y otros productos n.c.p",True,goods
+cr_electronic_invoice.activity_519006,519006,4669.9,DISTRIBUCION Y COMERCIALIZACION AL POR MAYOR DE MATERIAL DE EMPAQUE,"Venta al por mayor de basura, desechos y otros productos n.c.p",True,goods
+cr_electronic_invoice.activity_142902,142902,4690.0,VENTA DE ASFALTO/MEZCLA ASFALTICA,Venta al por mayor de otros productos no especializada,True,goods
+cr_electronic_invoice.activity_513910,513910,4690.0,VENTA AL POR MAYOR DE TODO TIPO DE ARTICULOS POR CATALOGO,Venta al por mayor de otros productos no especializada,True,goods
+cr_electronic_invoice.activity_515004,515004,4690.0,VENTA AL POR MAYOR DE EXTINTORES Y EQUIPO SIMILAR,Venta al por mayor de otros productos no especializada,True,goods
+cr_electronic_invoice.activity_519015,519015,4690.0,VENTA AL POR MAYOR DE OTROS PRODUCTOS NO ESPECIALIZADOS,Venta al por mayor de otros productos no especializada,True,goods
+cr_electronic_invoice.activity_521101,521101,4711.1,SUPERMERCADOS Y ALMACENES DE ABARROTES EN CADENA,"Venta al por menor en supermercados, almacenes y similares",True,goods
+cr_electronic_invoice.activity_521201,521201,4711.2,"ABASTECEDORES, PULPERIAS O MINI-SUPER","Venta al por menor en minisuper, pulperias y similares",True,goods
+cr_electronic_invoice.activity_521202,521202,4711.2,PULPERIAS (MINI-SUPER)(SIN CANTINA),"Venta al por menor en minisuper, pulperias y similares",True,goods
+cr_electronic_invoice.activity_521901,521901,4719.1,TIENDAS O ALMACENES POR DEPARTAMENTOS,Venta al por menor en tiendas por departamentos,True,goods
+cr_electronic_invoice.activity_523201,523201,4719.9,BAZARES,Venta al por menor en bazares y otros establecimientos no especializados n.c.p,True,goods
+cr_electronic_invoice.activity_522002,522002,4721.1,"VENTA DE CARNES (RES, POLLO,CERDO) INCLUIDAS EN LA CANASTA BASICA","Venta al por menor de carne de bovino, porcino y sus derivados",True,goods
+cr_electronic_invoice.activity_522010,522010,4721.1,"VENTA DE EMBUTIDOS Y CARNES (RES, POLLO, CERDO) INCLUIDAS EN LA CANASTA BASICA","Venta al por menor de carne de bovino, porcino y sus derivados",True,goods
+cr_electronic_invoice.activity_522017,522017,4721.1,"VENTA DE EMBUTIDOS Y CARNES (RES, POLLO, CERDO, CABALLO, ETC) GRAVADAS CON IVA","Venta al por menor de carne de bovino, porcino y sus derivados",True,goods
+cr_electronic_invoice.activity_522005,522005,4721.3,VENTA DE MARISCOS Y/O PESCADO (PESCADERIAS O MARISQUERIAS) INCLUIDOS EN LA CANASTA BASICA,Venta al por menor de pescados y mariscos,True,goods
+cr_electronic_invoice.activity_522018,522018,4721.3,VENTA DE PESCADOS Y/O MARISCOS (PESCADERIAS O MARISQUERIAS) GRAVADOS EN VENTAS,Venta al por menor de pescados y mariscos,True,goods
+cr_electronic_invoice.activity_522004,522004,4721.4,VENTA DE VERDURAS Y FRUTAS,Venta al por menor de frutas y verduras frescas,True,goods
+cr_electronic_invoice.activity_522009,522009,4721.4,VENTA DE FRUTAS GRAVADAS CON IVA,Venta al por menor de frutas y verduras frescas,True,goods
+cr_electronic_invoice.activity_522014,522014,4721.4,VENTA DE FRUTAS INCLUIDAS EN LA NUEVA CANASTA BASICA,Venta al por menor de frutas y verduras frescas,True,goods
+cr_electronic_invoice.activity_521102,521102,4721.9,"VENTA AL POR MENOR DE ESPECIAS, SALSAS Y CONDIMENTOS",Venta al por menor de otros alimentos,True,goods
+cr_electronic_invoice.activity_522001,522001,4721.9,COMERCIO AL POR MENOR DE CONFITES Y OTROS PRODUCTOS RELACIONADOS (CONFITERIA),Venta al por menor de otros alimentos,True,goods
+cr_electronic_invoice.activity_522008,522008,4721.9,VENTA AL POR MENOR DE HUEVOS DE GALLINA INCLUIDOS EN LA CANASTA BASICA,Venta al por menor de otros alimentos,True,goods
+cr_electronic_invoice.activity_522015,522015,4721.9,"VENTA AL POR MENOR DE CAFE (EXCEPTO EL ENVASADO, ENLATADO, SOLUBLE, DESCAFEINADO)",Venta al por menor de otros alimentos,True,goods
+cr_electronic_invoice.activity_522021,522021,4721.9,VENTA AL POR MENOR DE OTROS ALIMENTOS NO INCLUIDOS EN CANASTA BASICA,Venta al por menor de otros alimentos,True,goods
+cr_electronic_invoice.activity_523916,523916,4721.9,COMERCIO AL POR MENOR DE ALIMENTOS Y PRODUCTOS N.C.P. INCLUIDOS EN CANASTA BASICA,Venta al por menor de otros alimentos,True,goods
+cr_electronic_invoice.activity_523922,523922,4721.9,VENTA AL POR MENOR DE POLEN Y SEMILLAS,Venta al por menor de otros alimentos,True,goods
+cr_electronic_invoice.activity_522007,522007,4722.0,LICORERIAS Y/O DEPOSITO DE LICORES (VENTA AL POR MENOR),Venta al por menor de bebidas en comercios especializados,True,goods
+cr_electronic_invoice.activity_522012,522012,4722.0,COMERCIO AL POR MENOR DE BEBIDAS GASEOSAS Y CARBONATADAS,Venta al por menor de bebidas en comercios especializados,True,goods
+cr_electronic_invoice.activity_522013,522013,4722.0,COMERCIO AL POR MENOR DE AGUA EMBOTELLADA,Venta al por menor de bebidas en comercios especializados,True,goods
+cr_electronic_invoice.activity_522016,522016,4723.0,COMERCIO AL POR MENOR DE PRODUCTOS DE TABACO,Venta al por menor de tabaco en comercios especializados,True,goods
+cr_electronic_invoice.activity_505001,505001,4730.0,VENTA DE COMBUSTIBLES (CONOCIDAS COMO GASOLINERAS O BOMBAS),Venta al por menor de combustibles para vehículos automotores en comercios especializados,True,goods
+cr_electronic_invoice.activity_505002,505002,4730.0,"VENTA DE LUBRICANTES, ACEITES, GRASAS Y PRODUCTOS DE LIMPIEZA PARA AUTOMOTORES",Venta al por menor de combustibles para vehículos automotores en comercios especializados,True,goods
+cr_electronic_invoice.activity_505003,505003,4730.0,COMERCIO DE COMBUSTIBLE SIN PUNTO FIJO (PEDDLER),Venta al por menor de combustibles para vehículos automotores en comercios especializados,True,goods
+cr_electronic_invoice.activity_523406,523406,4741.0,"VENTA AL POR MENOR DE ARTICULOS ELECTRONICOS, ELECTRICOS Y SIMILARES","Venta al por menor de computadoras, equipo periféricos, programas de información y telecomunicaciones",True,goods
+cr_electronic_invoice.activity_523601,523601,4741.0,"COMERCIO AL POR MENOR DE COMPUTADORAS, ACCESORIOS, MICROCOMPONENTES Y PAQUETES DE COMPUTO","Venta al por menor de computadoras, equipo periféricos, programas de información y telecomunicaciones",True,goods
+cr_electronic_invoice.activity_523906,523906,4741.0,VENTA AL POR MENOR CELULARES ACCESORIOS EQUIPO Y ART PARA COMUNICACIONES INCLUYE LA REPARACION,"Venta al por menor de computadoras, equipo periféricos, programas de información y telecomunicaciones",True,goods
+cr_electronic_invoice.activity_523918,523918,4742.0,VENTA AL POR MENOR DE EQUIPO DE AUDIO Y VIDEO,Venta al por menor de equipo de audio y video en comercios especializados,True,goods
+cr_electronic_invoice.activity_523204,523204,4751.0,PASAMANERIAS,Venta al por menor de productos textiles en comercios especializados,True,goods
+cr_electronic_invoice.activity_523208,523208,4751.0,VENTA AL POR MENOR DE PRODUCTOS TEXTILES (TELAS),Venta al por menor de productos textiles en comercios especializados,True,goods
+cr_electronic_invoice.activity_523401,523401,4752.1,VENTA AL POR MENOR DE DEPOSITO DE MADERA,Venta al por menor de artículos de ferretería y pinturas en comercios especializados,True,goods
+cr_electronic_invoice.activity_523402,523402,4752.1,VENTA AL POR MENOR ARTICULOS DE FERRETERIA PINTURAS MADERA Y MATERIALES PARA LA CONSTRUCCION,Venta al por menor de artículos de ferretería y pinturas en comercios especializados,True,goods
+cr_electronic_invoice.activity_523403,523403,4752.1,VENTA DE PINTURAS,Venta al por menor de artículos de ferretería y pinturas en comercios especializados,True,goods
+cr_electronic_invoice.activity_523405,523405,4752.1,VENTA AL POR MENOR DE MATERIALES PARA LA CONSTRUCCION,Venta al por menor de artículos de ferretería y pinturas en comercios especializados,True,goods
+cr_electronic_invoice.activity_523407,523407,4752.1,VENTA AL POR MENOR DE PLYWOOD,Venta al por menor de artículos de ferretería y pinturas en comercios especializados,True,goods
+cr_electronic_invoice.activity_523404,523404,4752.2,VENTA AL POR MENOR DE VIDRIO PARA LA CONSTRUCCION,Venta al por menor de productos de vidrio en comercios especializados,True,goods
+cr_electronic_invoice.activity_525901,525901,4753.0,VENTA DE ALFOMBRAS Y TAPICES,"Venta al por menor de tapices, alfombras, cubrimientos para paredes y pisos en comercios especializados",True,goods
+cr_electronic_invoice.activity_523301,523301,4759.0,COMERCIO AL POR MENOR DE OBJETOS DE CERAMICA Y PORCELANA,"Venta al por menor de aparatos eléctricos de uso doméstico, muebles, equipos de iluminación y otros en comercios especializados",True,goods
+cr_electronic_invoice.activity_523302,523302,4759.0,VENTA AL POR MENOR DE CRISTALERIA,"Venta al por menor de aparatos eléctricos de uso doméstico, muebles, equipos de iluminación y otros en comercios especializados",True,goods
+cr_electronic_invoice.activity_523304,523304,4759.0,"VENTA AL POR MENOR DE ELECTRODOMESTICOS, MUEBLES Y ARTICULOS PARA EL HOGAR","Venta al por menor de aparatos eléctricos de uso doméstico, muebles, equipos de iluminación y otros en comercios especializados",True,goods
+cr_electronic_invoice.activity_523308,523308,4759.0,"VENTA AL POR MENOR DE INSTRUMENTOS MUSICALES, PARTES Y ACCESORIOS","Venta al por menor de aparatos eléctricos de uso doméstico, muebles, equipos de iluminación y otros en comercios especializados",True,goods
+cr_electronic_invoice.activity_523501,523501,4759.0,VENTA AL POR MENOR REALIZADA DENTRO DEL DEPOSITO LIBRE COMERCIAL DE GOLFITO.,"Venta al por menor de aparatos eléctricos de uso doméstico, muebles, equipos de iluminación y otros en comercios especializados",True,goods
+cr_electronic_invoice.activity_523805,523805,4759.0,"VENTA AL POR MENOR DE PURIFICADORES DE AGUA, SUS PARTES Y REPUESTOS","Venta al por menor de aparatos eléctricos de uso doméstico, muebles, equipos de iluminación y otros en comercios especializados",True,goods
+cr_electronic_invoice.activity_523701,523701,4761.0,LIBRERIAS,"Venta al por menor de libros, periódicos y artículos de papelería en comercios especializados",True,goods
+cr_electronic_invoice.activity_523702,523702,4761.0,VENTA AL POR MENOR DE REVISTAS/PERIODICOS EN PUESTOS DE VENTAS O MERCADOS,"Venta al por menor de libros, periódicos y artículos de papelería en comercios especializados",True,goods
+cr_electronic_invoice.activity_523703,523703,4761.0,VENTA AL POR MENOR DE LIBROS Y TEXTOS EDUCATIVOS,"Venta al por menor de libros, periódicos y artículos de papelería en comercios especializados",True,goods
+cr_electronic_invoice.activity_523902,523902,4761.0,VENTA AL POR MENOR DE SUMINISTROS Y/O EQUIPO DE OFICINA,"Venta al por menor de libros, periódicos y artículos de papelería en comercios especializados",True,goods
+cr_electronic_invoice.activity_523303,523303,4762.0,"VENTA AL POR MENOR DE DISCOS, CDS Y OTROS SIMILARES",Venta al por menor de grabaciones musicales y videográficas en comercios especializados,True,goods
+cr_electronic_invoice.activity_921902,921902,4762.0,"VENTA AL POR MENOR DE DISCOS, GRABACIONES DE MUSICA Y DE VIDEO",Venta al por menor de grabaciones musicales y videográficas en comercios especializados,True,goods
+cr_electronic_invoice.activity_351103,351103,4763.0,VENTA DE EMBARCACIONES DE MOTOR Y VELA,Venta al por menor de artículos de deporte en comercios especializados,True,goods
+cr_electronic_invoice.activity_513901,513901,4763.0,VENTA AL POR MENOR DE ARTICULOS DEPORTIVOS,Venta al por menor de artículos de deporte en comercios especializados,True,goods
+cr_electronic_invoice.activity_523917,523917,4763.0,VENTA AL POR MENOR DE BICICLETAS Y SUS ACCESORIOS,Venta al por menor de artículos de deporte en comercios especializados,True,goods
+cr_electronic_invoice.activity_523910,523910,4764.0,VENTA AL POR MENOR DE JUGUETES Y/O ARTICULOS DE ESPARCIMIENTO,Venta al por menor de juegos y de juguetes en almacenes especializados,True,goods
+cr_electronic_invoice.activity_523202,523202,4771.1,VENTA AL POR MENOR DE ROPA (BOUTIQUE),Venta al por menor de prendas de vestir y artículos de cuero en almacenes especializados,True,goods
+cr_electronic_invoice.activity_523205,523205,4771.1,"VENTA AL POR MENOR DE PRENDAS DE VESTIR, ROPA Y ZAPATOS (TIENDAS)",Venta al por menor de prendas de vestir y artículos de cuero en almacenes especializados,True,goods
+cr_electronic_invoice.activity_523207,523207,4771.1,VENTA AL POR MENOR DE ARTICULOS DE CUERO (EXCEPTO CALZADO),Venta al por menor de prendas de vestir y artículos de cuero en almacenes especializados,True,goods
+cr_electronic_invoice.activity_523203,523203,4771.2,VENTA AL POR MENOR DE CALZADO (ZAPATERIAS),Venta al por menor de zapatos en comercios especializados,True,goods
+cr_electronic_invoice.activity_522003,522003,4772.0,MACROBIOTICAS,"Venta al por menor de productos farmacéuticos y medicinales, cosméticos y artículos de tocador en comercios especializados",True,goods
+cr_electronic_invoice.activity_523101,523101,4772.0,FARMACIAS,"Venta al por menor de productos farmacéuticos y medicinales, cosméticos y artículos de tocador en comercios especializados",True,goods
+cr_electronic_invoice.activity_523102,523102,4772.0,VENTA AL POR MENOR DE COSMETICOS Y PERFUMERIA,"Venta al por menor de productos farmacéuticos y medicinales, cosméticos y artículos de tocador en comercios especializados",True,goods
+cr_electronic_invoice.activity_523919,523919,4772.0,VENTA AL POR MENOR DE ARTICULOS Y ACCESORIOS ORTOPEDICOS,"Venta al por menor de productos farmacéuticos y medicinales, cosméticos y artículos de tocador en comercios especializados",True,goods
+cr_electronic_invoice.activity_402002,402002,4773.0,INSTALACION Y VENTA DE TANQUES PARA GAS,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523209,523209,4773.0,VENTA AL POR MENOR DE MATERIALES PARA CALZADO,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523309,523309,4773.0,VENTA DE CUADROS PINTURAS HECHAS POR PINTORES NACIONALES Y EXTRANJEROS PRODUCIDOS EN EL PAIS,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523801,523801,4773.0,VENTA AL POR MENOR DE ARMAS (ARMERIAS),Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523803,523803,4773.0,VENTA AL POR MENOR DE MAQUINARIA Y EQUIPO DE TODO TIPO Y ARTICULOS CONEXOS,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523807,523807,4773.0,"VENTA AL POR MENOR DE REPUESTOS NUEVOS PARA MAQUINARIA, EQUIPO Y OTROS",Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523901,523901,4773.0,VENTA AL POR MENOR DE OTROS PRODUCTOS EN ALMACENES ESPECIALIZADOS,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523903,523903,4773.0,VENTA AL POR MENOR DE FLORES,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523905,523905,4773.0,"VENTA AL POR MENOR DE JOYERIA, RELOJERIA Y BISUTERIA",Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523907,523907,4773.0,FLORISTERIA,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523909,523909,4773.0,VENTA DE PRODUCTOS DE ARTESANIA Y SOUVENIR,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523911,523911,4773.0,"VENTA AL POR MENOR DE PANALES DESECHABLES, ARTICULOS DE LIMPIEZA Y OTROS (PANALERA)",Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523913,523913,4773.0,"VENTA AL POR MENOR DE ANIMALES DOMESTICOS/MASCOTAS, ALIMENTOS Y ACCESORIOS",Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523914,523914,4773.0,VENTA AL POR MENOR DE PRODUCTOS PARA USO AGROPECUARIO,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523915,523915,4773.0,DISTRIBUCION Y VENTA DE GAS EN CILINDRO,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523920,523920,4773.0,VENTA AL POR MENOR DE ANTEOJOS Y ARTICULOS OPTICOS (OPTICA),Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523921,523921,4773.0,"VENTA AL POR MENOR DE CAJAS REGISTRADORAS, CALCULADORAS O MAQUINAS DE CONTABILIDAD",Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523923,523923,4773.0,VENTA AL POR MENOR DE REPUESTOS PARA ELECTRODOMESTICOS,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523925,523925,4773.0,VENTA AL POR MENOR DE EXTINTORES,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523929,523929,4773.0,VENTA DE PERROS ENTRENADOS PARA SEGURIDAD,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_523935,523935,4773.0,VENTA AL POR MENOR DE OTROS PRODUCTOS NUEVOS EN COMERCIOS ESPECIALIZADOS NO INCLUIDOS EN CANASTA BASICA.,Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_524005,524005,4773.0,"VENTA DE MONEDAS, BILLETES, ESTAMPILLAS (NUEVAS Y USADAS) PARA COLECCION Y ESPECIES FISCALES",Otra venta al por menor de otros productos nuevos en comercios especializados,True,goods
+cr_electronic_invoice.activity_503002,503002,4774.0,VENTA DE REPUESTOS USADOS PARA AUTOMOVILES,Venta al por menor de artículos de segunda mano,True,goods
+cr_electronic_invoice.activity_523306,523306,4774.0,VENTA AL POR MENOR DE ANTIGUEDADES,Venta al por menor de artículos de segunda mano,True,goods
+cr_electronic_invoice.activity_523806,523806,4774.0,VENTA AL POR MENOR DE MAQUINARIA INDUSTRIAL USADA,Venta al por menor de artículos de segunda mano,True,goods
+cr_electronic_invoice.activity_523808,523808,4774.0,"VENTA AL POR MENOR DE REPUESTOS USADOS PARA MAQUINARIA, EQUIPO Y OTROS",Venta al por menor de artículos de segunda mano,True,goods
+cr_electronic_invoice.activity_524001,524001,4774.0,VENTA DE TODO TIPO DE ARTICULOS USADOS,Venta al por menor de artículos de segunda mano,True,goods
+cr_electronic_invoice.activity_524004,524004,4774.0,VENTA DE LIBROS USADOS,Venta al por menor de artículos de segunda mano,True,goods
+cr_electronic_invoice.activity_524006,524006,4774.0,VENTA AL POR MENOR DE ROPA USADA,Venta al por menor de artículos de segunda mano,True,goods
+cr_electronic_invoice.activity_11904,11904,4781.0,PEQUENOS PRODUCTORES AGRICOLAS,"Venta al por menor en puestos de venta y mercados de: alimentos, bebidas y de productos del tabaco",True,goods
+cr_electronic_invoice.activity_11907,11907,4781.0,PEQUENOS PRODUCTORES AGRICOLAS (FERIAS DEL AGRICULTOR),"Venta al por menor en puestos de venta y mercados de: alimentos, bebidas y de productos del tabaco",True,goods
+cr_electronic_invoice.activity_4781_0,,4781.0,"Venta al por menor en puestos de venta y mercados de: alimentos, bebidas y de productos del tabaco","Venta al por menor en puestos de venta y mercados de: alimentos, bebidas y de productos del tabaco",True,goods
+cr_electronic_invoice.activity_523930,523930,4799.0,VENTA AL POR MENOR DE PIEZAS DE BAMBU,"Otros tipos de venta al por menor no realizada en comercios, puestos de venta o mercados",True,goods
+cr_electronic_invoice.activity_525101,525101,4799.0,VENTA AL POR MENOR DE TODO TIPO DE ARTICULOS POR CATALOGO,"Otros tipos de venta al por menor no realizada en comercios, puestos de venta o mercados",True,goods
+cr_electronic_invoice.activity_525201,525201,4799.0,VENTA DE REVISTAS/PERIODICOS (PUESTOS CALLEJEROS),"Otros tipos de venta al por menor no realizada en comercios, puestos de venta o mercados",True,goods
+cr_electronic_invoice.activity_525902,525902,4799.0,VENTA AMBULANTE DE ARTICULOS PARA EL HOGAR,"Otros tipos de venta al por menor no realizada en comercios, puestos de venta o mercados",True,goods
+cr_electronic_invoice.activity_525903,525903,4799.0,VENTA DE LIBROS A DOMICILIO,"Otros tipos de venta al por menor no realizada en comercios, puestos de venta o mercados",True,goods
+cr_electronic_invoice.activity_601001,601001,4911.0,SERVICIO DE TRANSPORTE POR VIA FERREA,Transporte de pasajeros por ferrocarril,True,goods
+cr_electronic_invoice.activity_602102,602102,4921.0,SERVICIO DE TRANSPORTE REGULAR DE PERSONAS POR VIA TERRESTRE,"Transporte terrestre de pasajeros del área urbana, suburbana por vía terrestre",True,goods
+cr_electronic_invoice.activity_602101,602101,4922.1,TRANSPORTE REGULAR DE ESTUDIANTES Y EMPLEADOS POR VIA TERRESTRE,Transporte terrestre de estudiantes y de empleados,True,goods
+cr_electronic_invoice.activity_602202,602202,4922.2,SERVICIO DE TAXI,Servicios de taxi,True,goods
+cr_electronic_invoice.activity_602203,602203,4922.2,SERVICIO ESPECIAL ESTABLE DE TAXI,Servicios de taxi,True,goods
+cr_electronic_invoice.activity_602201,602201,4922.3,TRANSPORTE NO REGULAR DE PASAJEROS POR VIA TERRESTRE (EXCURSIONES),"Transporte terrestre no regular de pasajeros, en buses",True,goods
+cr_electronic_invoice.activity_602304,602304,4923.1,SERVICIO DE MUDANZA INTERNACIONAL,Transporte terrestre local e internacional de contenedores,True,goods
+cr_electronic_invoice.activity_602001,602001,4923.9,SERVICIO DE TRANSPORTE DE CARGA POR VIA TERRESTRE,Otro transporte de carga n.c.p,True,goods
+cr_electronic_invoice.activity_602002,602002,4923.9,TRANSPORTE DE PRODUCTOS DERIVADOS DEL PETROLEO,Otro transporte de carga n.c.p,True,goods
+cr_electronic_invoice.activity_602301,602301,4923.9,SERVICIO DE ACARREO Y DISTRIBUCION DE TODO TIPO DE MERCANCIA (INCLUYE LA MUDANZA NACIONAL),Otro transporte de carga n.c.p,True,goods
+cr_electronic_invoice.activity_603001,603001,4930.0,SERVICIO DE TRANSPORTE POR TUBERIAS,Transporte por tuberías,True,goods
+cr_electronic_invoice.activity_611001,611001,5012.0,TRANSPORTE DE CARGA POR VIA ACUATICA,Transporte marítimo y de cabotaje de carga,True,goods
+cr_electronic_invoice.activity_621002,621002,5110.0,SERVICIO DE TRANSPORTE AEREO REGULADO DE PASAJEROS (LINEAS AEREAS),Transporte de pasajeros por vía aérea,True,goods
+cr_electronic_invoice.activity_622001,622001,5110.0,SERVICIO DE TRANSPORTE AEREO NO REGULAR DE PASAJEROS,Transporte de pasajeros por vía aérea,True,goods
+cr_electronic_invoice.activity_621001,621001,5120.0,SERVICIO DE TRANSPORTE DE CARGA POR VIA AEREA,Transporte de carga por vía aérea,True,goods
+cr_electronic_invoice.activity_630201,630201,5210.0,SERVICIOS DE ALMACENAJE,Almacenamiento y depósito,True,goods
+cr_electronic_invoice.activity_602302,602302,5221.1,SERVICIOS DE GRUA,Remolque y asistencia para vehículo destinado al transporte terrestre,True,goods
+cr_electronic_invoice.activity_630301,630301,5221.2,PARQUEOS/ESTACIONAMIENTO DE VEHICULOS,Servicios de estacionamientos y garajes,True,goods
+cr_electronic_invoice.activity_630302,630302,5221.2,"FUNCIONAMIENTO DE INSTALACIONES TERMINALES COMO PUERTOS, MUELLES Y AEROPUERTOS",Servicios de estacionamientos y garajes,True,goods
+cr_electronic_invoice.activity_630303,630303,5221.9,PERMISO DE PASO POR PROPIEDADES PRIVADAS (PEAJE),"Servicios de administración de carreteras, puentes y otros servicios auxiliares",True,goods
+cr_electronic_invoice.activity_551005,551005,5223.0,SERVICIO DE SALAS VIP Y PREMIUN EN AEROPUERTOS,Actividades de servicio secundario de transporte por vía aérea,True,goods
+cr_electronic_invoice.activity_630001,630001,5223.0,PRESTACION DE SERVICIOS DE TRANSITO AEREO,Actividades de servicio secundario de transporte por vía aérea,True,goods
+cr_electronic_invoice.activity_630101,630101,5224.0,SERVICIO DE CONSOLIDACION DE CARGA Y DESCARGA,Manipulación de carga,True,goods
+cr_electronic_invoice.activity_630901,630901,5229.0,"AGENCIAS ADUANALES, ALMACENES FISCALES Y ESTACIONAMIENTOS TRANSITORIOS",Otras actividades de apoyo al transporte,True,goods
+cr_electronic_invoice.activity_630903,630903,5229.0,AGENCIA DE TRANSPORTE (NAVIERA),Otras actividades de apoyo al transporte,True,goods
+cr_electronic_invoice.activity_630904,630904,5229.0,AGENTE ADUANERO FISICO O JURIDICO,Otras actividades de apoyo al transporte,True,goods
+cr_electronic_invoice.activity_741407,741407,5229.0,ASESOR ADUANERO,Otras actividades de apoyo al transporte,True,goods
+cr_electronic_invoice.activity_749907,749907,5229.0,SERVICIO DE INSPECCION DE TODO TIPO DE MERCADERIAS Y ACTIVOS (INCLUYE DROGAS),Otras actividades de apoyo al transporte,True,goods
+cr_electronic_invoice.activity_641101,641101,5310.0,ACTIVIDADES POSTALES Y DE CORREO,Servicios postales (Correo),True,goods
+cr_electronic_invoice.activity_551002,551002,5510.1,HOTEL,Actividades de alojamiento para estancias cortas en hoteles y moteles,True,goods
+cr_electronic_invoice.activity_551004,551004,5510.1,"MOTEL Y/O SERVICIO DE HABITACION OCASIONAL, ALBERGUES, POSADAS Y SIMILARES",Actividades de alojamiento para estancias cortas en hoteles y moteles,True,goods
+cr_electronic_invoice.activity_551001,551001,5510.9,ALQUILER DE BIENES INMUEBLES DE USO HABITACIONAL POR PERIODOS INFERIORES A UN MES,Otras actividades de alojamiento para estancias cortas n.c.p,True,goods
+cr_electronic_invoice.activity_853103,853103,5590.0,RESIDENCIAS UNIVERSITARIAS CON SERVICIOS INTEGRADOS,Otras actividades de alojamientos,True,goods
+cr_electronic_invoice.activity_522011,522011,5610.0,"PREPARACION, SERVICIO Y VENTA DE FRUTAS PICADAS Y BEBIDAS DE FRUTAS Y/O LEGUMBRES.",Actividades de restaurantes y de servicios móviles de comidas,True,goods
+cr_electronic_invoice.activity_552002,552002,5610.0,CAFETERIAS,Actividades de restaurantes y de servicios móviles de comidas,True,goods
+cr_electronic_invoice.activity_552004,552004,5610.0,"SERVICIO DE RESTAURANTE, CAFETERIAS, SODAS Y OTROS EXPENDIOS DE COMIDA",Actividades de restaurantes y de servicios móviles de comidas,True,goods
+cr_electronic_invoice.activity_552005,552005,5610.0,SODAS,Actividades de restaurantes y de servicios móviles de comidas,True,goods
+cr_electronic_invoice.activity_552007,552007,5610.0,OTROS EXPENDIOS DE COMIDAS,Actividades de restaurantes y de servicios móviles de comidas,True,goods
+cr_electronic_invoice.activity_552003,552003,5621.0,SERVICIOS DE CATERING SERVICE,Suministros de comidas por encargo,True,goods
+cr_electronic_invoice.activity_552001,552001,5630.0,"BARES, CANTINAS O TABERNAS",Actividades de servicio de bebidas,True,goods
+cr_electronic_invoice.activity_221101,221101,5811.0,EDICION DE LIBROS DE TEXTOS,Edición de libros,True,goods
+cr_electronic_invoice.activity_221201,221201,5813.0,"EDICION DE PERIODICOS, REVISTAS Y OTRAS PUBLICACIONES PERIODICAS","Edición de periódicos, diarios y revistas",True,goods
+cr_electronic_invoice.activity_921101,921101,5911.0,ACTIVIDADES PRODUCCION POSTPRODUCCION Y DISTRIBUCION DE PELICULAS CINEMATOGRAFICAS (VIDEOS),"Actividades de producción de películas cinematográficas, videos y programas de televisión",True,goods
+cr_electronic_invoice.activity_921201,921201,5914.0,EXHIBICION DE FILMES Y VIDEOCINTAS (SALAS DE CINE),Actividades de proyección de películas,True,goods
+cr_electronic_invoice.activity_924906,924906,5920.0,"GRABACION DE SONIDO (MUSICA, ETC.) EN DISCOS GRAMOFONICOS Y EN CINTA MAGNETOFONICA",Actividades de grabación y publicación de grabaciones sonoras,True,goods
+cr_electronic_invoice.activity_642004,642004,6010.0,SERVICIO DE RADIO FRECUENCIA,Transmisiones de radio,True,goods
+cr_electronic_invoice.activity_921301,921301,6010.0,TRANSMISIONES DE RADIO,Transmisiones de radio,True,goods
+cr_electronic_invoice.activity_921303,921303,6010.0,TRANSMISIONES DE RADIO CULTURALES SEGUN LEY GENERAL DE TELECOMUNICACIONES.,Transmisiones de radio,True,goods
+cr_electronic_invoice.activity_921302,921302,6020.0,PROGRAMACION Y TRANSMISIONES DE TELEVISION,Programación y transmisión de televisión,True,goods
+cr_electronic_invoice.activity_921501,921501,6020.0,CANALES DE TELEVISION,Programación y transmisión de televisión,True,goods
+cr_electronic_invoice.activity_642002,642002,6110.0,"SERVICIO DE TELEVISION POR CABLE, SATELITE U OTROS SISTEMAS SIMILARES",Actividades de telecomunicaciones alámbricas,True,goods
+cr_electronic_invoice.activity_642005,642005,6110.0,"SERVICIOS TELEFONICOS, TELEGRAFICOS Y POR TELEX",Actividades de telecomunicaciones alámbricas,True,goods
+cr_electronic_invoice.activity_642007,642007,6110.0,VENTA DE ESPACIO EN EL CABLE SUBMARINO,Actividades de telecomunicaciones alámbricas,True,goods
+cr_electronic_invoice.activity_642008,642008,6120.0,"SERVICIO DE TRANSMISION DE DATOS, TEXTO, SONIDO, VOZ Y VIDEO POR MEDIO DE LA RED DE INTERNET",Actividades de telecomunicaciones inalámbricas,True,goods
+cr_electronic_invoice.activity_712301,712301,6190.1,SERVICIOS DE INTERNET EN LOCALES PUBLICOS (CAFE INTERNET),Servicios de café internet,True,goods
+cr_electronic_invoice.activity_525905,525905,6190.9,"VENTA AL POR MENOR DE TARJETAS TELEFONICAS, PINES, TIEMPO AIRE Y SIMILARES",Otras actividades de telecomunicación,True,goods
+cr_electronic_invoice.activity_642001,642001,6190.9,"SERVICIOS DE RADIO-MENSAJES, RADIOLOCALIZADORES Y SIMILARES",Otras actividades de telecomunicación,True,goods
+cr_electronic_invoice.activity_642003,642003,6190.9,MANTENIMIENTO DE REDES DE TELECOMUNICACION,Otras actividades de telecomunicación,True,goods
+cr_electronic_invoice.activity_722003,722003,6201.0,"DISENADOR GRAFICO, DE SOFTWARE Y PAGINAS WEB",Actividades de programación informática,True,goods
+cr_electronic_invoice.activity_721001,721001,6202.0,CONSULTORES INFORMATICOS,Actividades de consultoría informática y gestión de instalaciones informáticas,True,goods
+cr_electronic_invoice.activity_729001,729001,6209.0,OTRAS ACTIVIDADES DE INFORMATICA,Otras actividades de la tecnología de información y servicio informáticos,True,goods
+cr_electronic_invoice.activity_723001,723001,6311.0,PROCESAMIENTO DE DATOS,"Procesamiento de datos, hospedaje y actividades conexas",True,goods
+cr_electronic_invoice.activity_724001,724001,6311.0,ACTIVIDADES RELACIONADAS CON BASES DE DATOS,"Procesamiento de datos, hospedaje y actividades conexas",True,goods
+cr_electronic_invoice.activity_922001,922001,6391.0,ACTIVIDADES DE AGENCIAS DE NOTICIAS,Actividades de agencias de noticias,True,goods
+cr_electronic_invoice.activity_651101,651101,6411.0,BANCA CENTRAL,Banca Central,True,goods
+cr_electronic_invoice.activity_651901,651901,6419.0,COOPERATIVAS DE AHORRO Y CREDITO,Otros tipos de intermediación monetaria,True,goods
+cr_electronic_invoice.activity_651903,651903,6419.0,BANCOS ESTATALES (EXCEPTO EL BANCO CENTRAL),Otros tipos de intermediación monetaria,True,goods
+cr_electronic_invoice.activity_651904,651904,6419.0,ENTIDADES FINANCIERAS PRIVADAS (BANCOS),Otros tipos de intermediación monetaria,True,goods
+cr_electronic_invoice.activity_651905,651905,6419.0,SERVICIO DE ENVIO Y RECIBO DE DINERO,Otros tipos de intermediación monetaria,True,goods
+cr_electronic_invoice.activity_651906,651906,6419.0,INSTITUCIONES DE AHORRO Y CREDITO PARA VIVIENDA,Otros tipos de intermediación monetaria,True,goods
+cr_electronic_invoice.activity_659906,659906,6420.0,ACTIVIDADES DE SOCIEDADES DE CARTERA (HOLDING),Actividades de sociedades de cartera,True,goods
+cr_electronic_invoice.activity_659902,659902,6430.0,FIDEICOMISOS Y/O ADMINISTRADORES DE FONDOS DE INVERSION,Fondo y sociedades de Inversión y entidades financieras similares,True,goods
+cr_electronic_invoice.activity_659903,659903,6430.0,SOCIEDADES DE INVERSION MOBILIARIA,Fondo y sociedades de Inversión y entidades financieras similares,True,goods
+cr_electronic_invoice.activity_659905,659905,6430.0,FONDOS DE INVERSION,Fondo y sociedades de Inversión y entidades financieras similares,True,goods
+cr_electronic_invoice.activity_659101,659101,6491.0,ARRENDAMIENTO OPERATIVO EN FUNCION FINANCIERA CON OPCION DE COMPRA O RENOVACION (LEASING OPERATIVO),Arrendamiento financiero,True,goods
+cr_electronic_invoice.activity_524002,524002,6492.0,CASA DE EMPENO Y AFIN,Otros tipos de crédito,True,goods
+cr_electronic_invoice.activity_659201,659201,6492.0,ENTIDADES FINANCIERAS DISTINTAS AL SISTEMA BANCARIO NACIONAL,Otros tipos de crédito,True,goods
+cr_electronic_invoice.activity_659202,659202,6492.0,EMISORES DE TARJETAS DE CREDITO/DEBITO,Otros tipos de crédito,True,goods
+cr_electronic_invoice.activity_659901,659901,6492.0,SERVICIO DE PRESTAMO (PRESTAMISTAS),Otros tipos de crédito,True,goods
+cr_electronic_invoice.activity_6499_0,,6499.0,"Otras actividades de servicios financiero, excepto las de seguros y fondos de pensiones n.c.p","Otras actividades de servicios financiero, excepto las de seguros y fondos de pensiones n.c.p",True,services
+cr_electronic_invoice.activity_659904,659904,6499.0,SERVICIO RECUPERACION DE DEUDAS (FACTOREO),"Otras actividades de servicios financiero, excepto las de seguros y fondos de pensiones n.c.p",True,goods
+cr_electronic_invoice.activity_659907,659907,6499.0,INGRESOS POR INTERESES DIFERENTES AL COMERCIO DEL PRESTAMO,"Otras actividades de servicios financiero, excepto las de seguros y fondos de pensiones n.c.p",True,goods
+cr_electronic_invoice.activity_660101,660101,6511.0,SEGUROS DE VIDA,Seguros de vida,True,goods
+cr_electronic_invoice.activity_660303,660303,6512.0,PLANES DE SEGUROS GENERALES,Seguros generales,True,goods
+cr_electronic_invoice.activity_660201,660201,6530.0,OPERADORAS DE PENSIONES,Fondos de pensión,True,goods
+cr_electronic_invoice.activity_660202,660202,6530.0,FONDOS DE OPERADORAS DE PENSIONES EXENTOS DEL 8%,Fondos de pensión,True,goods
+cr_electronic_invoice.activity_671101,671101,6611.0,ADMINISTRACION DE MERCADOS FINANCIEROS,Administración de mercados financieros,True,goods
+cr_electronic_invoice.activity_671201,671201,6612.0,CORREDORES DE BOLSA,Corretaje de valores y de contratos de productos básicos,True,goods
+cr_electronic_invoice.activity_671202,671202,6612.0,PUESTOS DE BOLSA,Corretaje de valores y de contratos de productos básicos,True,goods
+cr_electronic_invoice.activity_671901,671901,6612.0,PUESTOS Y/O CASAS DE CAMBIO DE MONEDA EXTRANJERA,Corretaje de valores y de contratos de productos básicos,True,goods
+cr_electronic_invoice.activity_659203,659203,6619.0,TRAMITACION Y LIQUIDACION DE LAS TRANSACCIONES CON TARJETAS DE CREDITO/DEBITO (ADQUIRENTE),Otras actividades auxiliares a las actividades de servicios financieros,True,goods
+cr_electronic_invoice.activity_671902,671902,6619.0,ASESORES FINANCIEROS Y ACTIVIDADES AUXILIARES DE LA INTERMEDIACION FINANCIERA,Otras actividades auxiliares a las actividades de servicios financieros,True,goods
+cr_electronic_invoice.activity_660301,660301,6622.0,AGENTES DE SEGUROS,Actividades de agentes y corredores de seguro,True,goods
+cr_electronic_invoice.activity_660302,660302,6622.0,COMERCIALIZADORES DE SEGUROS,Actividades de agentes y corredores de seguro,True,goods
+cr_electronic_invoice.activity_672001,672001,6629.0,ACTIVIDADES AUXILIARES DE LA FINANCIACION DE PLANES DE SEGUROS Y DE PENSIONES,Otras actividades auxiliares de seguros y fondos de pensiones,True,goods
+cr_electronic_invoice.activity_701001,701001,6810.0,ALQUILER DE CASAS Y OTROS,Actividades inmobiliarias con bienes propios o arrendados,True,goods
+cr_electronic_invoice.activity_701002,701002,6810.0,ALQUILER DE LOCALES COMERCIALES Y CENTROS COMERCIALES,Actividades inmobiliarias con bienes propios o arrendados,True,goods
+cr_electronic_invoice.activity_701003,701003,6810.0,COMPRA Y VENTA DE PROPIEDADES (INVERSIONISTAS),Actividades inmobiliarias con bienes propios o arrendados,True,goods
+cr_electronic_invoice.activity_701004,701004,6810.0,ALQUILER DE EDIFICIOS Y PROPIEDADES DIFERENTES A CASAS DE HABITACION,Actividades inmobiliarias con bienes propios o arrendados,True,goods
+cr_electronic_invoice.activity_702002,702002,6810.0,ARRENDAMIENTO O ALQUILER DE BIENES INMUEBLES MEDIANTE CONTRATO VERBAL O ESCRITO.,Actividades inmobiliarias con bienes propios o arrendados,True,goods
+cr_electronic_invoice.activity_702001,702001,6820.0,AGENTES O CORREDORES DE BIENES RAICES,Actividades inmobiliarias realizadas a cambio de una retribución o por contrata,True,goods
+cr_electronic_invoice.activity_741101,741101,6910.0,"BUFFETE DE ABOGADO, NOTARIO, ASESOR LEGAL",Actividades jurídicas,True,goods
+cr_electronic_invoice.activity_741203,741203,6920.0,"ACTIVIDAD DE CONTABILIDAD (CONTADORES), TENEDURIA DE LIBROS, TODO TIPO DE AUDITORIA, INCLUYENDO LA FISCAL Y ASESORIA FISCAL.","Actividades de contabilidad, teneduría de libros y auditorías; consultoría fiscal",True,goods
+cr_electronic_invoice.activity_751401,751401,7010.0,ACTIVIDADES DE SERVICIOS AUXILIARES PARA LA ADMINISTRACION PUBLICA EN GENERAL,Actividades de oficinas principales,True,goods
+cr_electronic_invoice.activity_741402,741402,7020.0,ASESORAMIENTO EMPRESARIAL Y EN MATERIA DE GESTION,Actividades de consultoría en gestión,True,goods
+cr_electronic_invoice.activity_742102,742102,7110.0,ACTIVIDADES DE ARQUITECTURA E INGENIERIA,Actividades de arquitectura e ingeniería y actividades conexas de consultoría técnica,True,goods
+cr_electronic_invoice.activity_742105,742105,7110.0,SERVICIOS DE CONSULTORIA EN MANTENIMIENTO INDUSTRIAL Y MECANICO,Actividades de arquitectura e ingeniería y actividades conexas de consultoría técnica,True,goods
+cr_electronic_invoice.activity_742108,742108,7110.0,ACTIVIDADES DE GEOGRAFIA Y/O GEOLOGIA,Actividades de arquitectura e ingeniería y actividades conexas de consultoría técnica,True,goods
+cr_electronic_invoice.activity_742112,742112,7110.0,DIBUJANTE ARQUITECTONICO Y/O PLANOS DE CONSTRUCCION,Actividades de arquitectura e ingeniería y actividades conexas de consultoría técnica,True,goods
+cr_electronic_invoice.activity_851911,851911,7110.0,PROFESIONALES EN SALUD OCUPACIONAL,Actividades de arquitectura e ingeniería y actividades conexas de consultoría técnica,True,goods
+cr_electronic_invoice.activity_502008,502008,7120.0,SERVICIO DE REVISION TECNICA VEHICULAR (DIAGNOSTICOS POR ESCANNER),Ensayos y análisis técnicos,True,goods
+cr_electronic_invoice.activity_742107,742107,7120.0,QUIMICOS,Ensayos y análisis técnicos,True,goods
+cr_electronic_invoice.activity_742201,742201,7120.0,ENSAYOS Y ANALISIS TECNICOS,Ensayos y análisis técnicos,True,goods
+cr_electronic_invoice.activity_742202,742202,7120.0,PROFESIONALES EN TECNOLOGIA DE ALIMENTOS,Ensayos y análisis técnicos,True,goods
+cr_electronic_invoice.activity_731001,731001,7210.0,INVESTIGACION Y DESARROLLO EXPERIMENTAL EN EL CAMPO DE LAS CIENCIAS NATURALES Y LA INGENIERIA,Investigaciones y desarrollo experimental en el campo de las ciencias naturales y la ingeniería,True,goods
+cr_electronic_invoice.activity_732001,732001,7220.0,INVESTIGACIONES Y DESARROLLO EXPERIMENTAL EN EL CAMPO DE LAS CIENCIAS SOCIALES Y LAS HUMANIDADES,Investigación y desarrollo experimental en el campo de las ciencias sociales y las humanidades,True,goods
+cr_electronic_invoice.activity_743001,743001,7310.0,PUBLICIDAD,Publicidad,True,goods
+cr_electronic_invoice.activity_743004,743004,7310.0,SERVICIOS DE PUBLICIDAD,Publicidad,True,goods
+cr_electronic_invoice.activity_743005,743005,7310.0,ALQUILER DE ESPACIOS PUBLICITARIOS,Publicidad,True,goods
+cr_electronic_invoice.activity_743006,743006,7310.0,PUBLICIDAD A TRAVES DE MEDIOS ELECTRONICOS,Publicidad,True,goods
+cr_electronic_invoice.activity_741301,741301,7320.0,ASESORES EN MERCADEO Y VENTAS,Estudios de mercados y encuestas de opinión pública,True,goods
+cr_electronic_invoice.activity_741302,741302,7320.0,ENCUESTAS DE OPINION PUBLICA,Estudios de mercados y encuestas de opinión pública,True,goods
+cr_electronic_invoice.activity_172103,172103,7410.0,DISENO ARTISTICO PARA COSTURA (MOLDES),Actividades especializadas de diseño,True,goods
+cr_electronic_invoice.activity_221901,221901,7410.0,ARTES GRAFICAS,Actividades especializadas de diseño,True,goods
+cr_electronic_invoice.activity_749904,749904,7410.0,SERVICIO DE DISENO O DECORACION DE INTERIORES (POR CUENTA PROPIA).,Actividades especializadas de diseño,True,goods
+cr_electronic_invoice.activity_749401,749401,7420.0,ESTUDIOS FOTOGRAFICOS,Actividades de fotografía,True,goods
+cr_electronic_invoice.activity_749402,749402,7420.0,SERVICIO DE FOTOGRAFIA (FOTOGRAFO),Actividades de fotografía,True,goods
+cr_electronic_invoice.activity_749911,749911,7420.0,AGENCIAS FOTOGRAFICAS POR CATALOGO,Actividades de fotografía,True,goods
+cr_electronic_invoice.activity_621003,621003,7490.0,SERVICIO DE PILOTAJE,"Otras actividades profesionales, científicas y técnicas n.c.p.",True,goods
+cr_electronic_invoice.activity_731003,731003,7490.0,METEOROLOGO POR CUENTA PROPIA,"Otras actividades profesionales, científicas y técnicas n.c.p.",True,goods
+cr_electronic_invoice.activity_741401,741401,7490.0,ECONOMISTAS,"Otras actividades profesionales, científicas y técnicas n.c.p.",True,goods
+cr_electronic_invoice.activity_742110,742110,7490.0,BIOLOGO POR CUENTA PROPIA,"Otras actividades profesionales, científicas y técnicas n.c.p.",True,goods
+cr_electronic_invoice.activity_749102,749102,7490.0,SERVICIOS DE BIBLIOTECOLOGIA,"Otras actividades profesionales, científicas y técnicas n.c.p.",True,goods
+cr_electronic_invoice.activity_749906,749906,7490.0,SERVICIOS DE TRADUCTOR,"Otras actividades profesionales, científicas y técnicas n.c.p.",True,goods
+cr_electronic_invoice.activity_749917,749917,7490.0,MODELAJE PROFESIONAL (MODELO),"Otras actividades profesionales, científicas y técnicas n.c.p.",True,goods
+cr_electronic_invoice.activity_853202,853202,7490.0,SERVICIOS PROFESIONALES NO CONTEMPLADOS EN OTRA PARTE,"Otras actividades profesionales, científicas y técnicas n.c.p.",True,goods
+cr_electronic_invoice.activity_852001,852001,7500.0,SERVICIOS VETERINARIOS CON VENTA DE PRODUCTOS GRAVADOS CON VENTAS,Actividades veterinarias,True,goods
+cr_electronic_invoice.activity_852002,852002,7500.0,SERVICIOS MEDICOS VETERINARIOS,Actividades veterinarias,True,goods
+cr_electronic_invoice.activity_711101,711101,7710.1,ALQUILER DE AUTOMOVILES DE TODO TIPO,Alquiler de automóviles sin conductor,True,goods
+cr_electronic_invoice.activity_711105,711105,7721.0,ALQUILER DE CARRITOS DE GOLF Y OTROS,Alquiler y arrendamiento de equipo recreativo y deportivo,True,goods
+cr_electronic_invoice.activity_713002,713002,7721.0,ALQUILER DE EQUIPO RECREATIVO Y DEPORTIVO,Alquiler y arrendamiento de equipo recreativo y deportivo,True,goods
+cr_electronic_invoice.activity_713053,713053,7721.0,"ALQUILER DE ANIMALES (CABALLOS, SERPIENTES, ETC)",Alquiler y arrendamiento de equipo recreativo y deportivo,True,goods
+cr_electronic_invoice.activity_712904,712904,7722.0,ALQUILER DE PELICULAS CINEMATOGRAFICAS (VIDEO CLUB) Y/O VIDEO JUEGOS,Alquiler de cintas de vídeo y discos,True,goods
+cr_electronic_invoice.activity_713001,713001,7729.0,ALQUILER DE MENAJE,Alquiler y arrendamiento de otros efectos personales y enseres domésticos,True,goods
+cr_electronic_invoice.activity_713012,713012,7729.0,ALQUILER DE TRAJES DE TODO TIPO,Alquiler y arrendamiento de otros efectos personales y enseres domésticos,True,goods
+cr_electronic_invoice.activity_713013,713013,7729.0,ALQUILER DE EQUIPO Y UTENSILIOS PARA EVENTOS ESPECIALES,Alquiler y arrendamiento de otros efectos personales y enseres domésticos,True,goods
+cr_electronic_invoice.activity_711102,711102,7730.0,ALQUILER DE MOTOCICLETA/SERVICIO,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_711103,711103,7730.0,"ALQUILER DE EQUIPO DE TRANSPORTE POR VIA TERRESTRE, ACUATICA O AEREA","Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712101,712101,7730.0,ALQUILER DE MAQUINARIA Y EQUIPO PARA USO AGRICOLA,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712201,712201,7730.0,ALQUILER DE MAQUINARIA Y EQUIPO DE CONSTRUCCION E INGENIERIA CIVIL,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712302,712302,7730.0,ALQUILER DE MAQUINARIA Y EQUIPO DE OFICINA,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712901,712901,7730.0,ALQUILER DE MAQUINAS EXPENDEDORAS DE ALIMENTOS Y OTROS,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712902,712902,7730.0,ALQUILER DE MAQUINAS DE ENTRETENIMIENTO (CON MONEDAS),"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712905,712905,7730.0,"ALQUILER DE EQUIPO PARA RADIO, TELEVISION Y COMUNICACIONES","Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712906,712906,7730.0,ALQUILER DE EQUIPO PARA DISPENSAR BILLETES (CAJERO AUTOMATICO),"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712907,712907,7730.0,ALQUILER MAQUINARIA Y EQUIPO PARA LA ELABORACION Y/O MANTENIMIENTO DE PRODUCTOS,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712909,712909,7730.0,ALQUILER DE OTROS TIPOS DE MAQUINARIA Y EQUIPO PARA USO COMERCIAL,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712910,712910,7730.0,ALQUILER DE MAQUINARIA Y/O EQUIPO PARA USO INDUSTRIAL,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_712911,712911,7730.0,ALQUILER DE RAMPAS Y SIMILARES,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_713003,713003,7730.0,ALQUILER DE EQUIPO MEDICO Y ARTICULOS CONEXOS,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_713004,713004,7730.0,ALQUILER DE ARTICULOS EN GENERAL PARA LA INDUSTRIA,"Alquiler y arrendamiento de otros tipo de maquinaria, equipo y bienes tangibles",True,goods
+cr_electronic_invoice.activity_701005,701005,7740.0,ALQUILER DE MARCAS REGISTRADAS,Arrendamiento de propiedad intelectual y productos similares excepto obras protegidas por derechos de autor,True,goods
+cr_electronic_invoice.activity_701006,701006,7740.0,"ALQUILER DE PATENTES (DE LICORES, UNICAMENTE)",Arrendamiento de propiedad intelectual y productos similares excepto obras protegidas por derechos de autor,True,goods
+cr_electronic_invoice.activity_701007,701007,7740.0,EXPLOTACION DE FRANQUICIAS,Arrendamiento de propiedad intelectual y productos similares excepto obras protegidas por derechos de autor,True,goods
+cr_electronic_invoice.activity_749101,749101,7830.0,SERVICIOS DE ADMINISTRACION DE PERSONAL,Otras actividades de dotación de recursos humanos,True,goods
+cr_electronic_invoice.activity_630401,630401,7911.0,AGENCIAS DE VIAJES Y EXCURSIONES,Actividades de agencias de viajes,True,goods
+cr_electronic_invoice.activity_630403,630403,7912.0,ACTIVIDADES DE OPERADORES TURISTICOS (GUIA DE TURISMO),Actividades de operadores turísticos,True,goods
+cr_electronic_invoice.activity_630405,630405,7912.0,EXPLOTACION DE ACTIVIDADES TURISTICAS (CUYA PRESTACION NO SEA REALIZADA POR UN CENTRO DE RECREO),Actividades de operadores turísticos,True,goods
+cr_electronic_invoice.activity_749201,749201,8010.0,"SERVICIOS DE INVESTIGACION, SEGURIDAD PRIVADA, AGENCIAS Y CONSULTORES",Actividades de seguridad privada,True,goods
+cr_electronic_invoice.activity_752201,752201,8010.0,ACTIVIDADES DE DEFENSA,Actividades de seguridad privada,True,goods
+cr_electronic_invoice.activity_702003,702003,8110.0,"MANTENIMIENTO, REPARACION Y LIMPIEZA DE LOS SERVICIOS Y BIENES COMUNES DE LA PROPIEDAD EN CONDOMINIO",Actividades combinadas de apoyo a instalaciones,True,goods
+cr_electronic_invoice.activity_749302,749302,8121.0,SERVICIOS DE LIMPIEZA (INTERIORES Y EXTERIORES),Limpieza general de edificios,True,goods
+cr_electronic_invoice.activity_749301,749301,8129.0,SERVICIOS DE FUMIGACION (NO AGRICOLA),Otras actividades de limpieza de edificios e instalaciones industriales,True,goods
+cr_electronic_invoice.activity_14001,14001,8130.0,SERVICIO DE JARDINERIA Y/O DISENO PAISAJISTA,Actividades de paisajismo y servicios de mantenimiento conexos,True,goods
+cr_electronic_invoice.activity_523206,523206,8219.0,SERVICIO DE FOTOCOPIADORA,"Fotocopiado, preparación de documentos y otras actividades especializadas de apoyo de oficina",True,goods
+cr_electronic_invoice.activity_749901,749901,8219.0,SERVICIO DE FOTOCOPIADO Y OTROS,"Fotocopiado, preparación de documentos y otras actividades especializadas de apoyo de oficina",True,goods
+cr_electronic_invoice.activity_749902,749902,8219.0,SERVICIOS DE LEVANTADO DE TEXTO Y/O CORRECCION DE TEXTOS Y OTROS,"Fotocopiado, preparación de documentos y otras actividades especializadas de apoyo de oficina",True,goods
+cr_electronic_invoice.activity_749903,749903,8219.0,SERVICIOS SECRETARIALES Y/O OFICINISTA,"Fotocopiado, preparación de documentos y otras actividades especializadas de apoyo de oficina",True,goods
+cr_electronic_invoice.activity_749905,749905,8220.0,SERVICIO DE CONTESTACION DE TELEFONOS (CALL CENTER),Actividades de centros de llamadas,True,goods
+cr_electronic_invoice.activity_749914,749914,8291.0,SERVICIO DE COBRANZA DE RECIBOS PUBLICOS Y OTROS,Actividades de agencias de cobro y agencias de calificación crediticia,True,goods
+cr_electronic_invoice.activity_749918,749918,8291.0,AGENCIAS DE COBRO Y CALIFICACION CREDITICIA,Actividades de agencias de cobro y agencias de calificación crediticia,True,goods
+cr_electronic_invoice.activity_749501,749501,8292.0,SERVICIOS DE ENVASE Y EMPAQUE,Actividades de envasado y empacado,True,goods
+cr_electronic_invoice.activity_749908,749908,8299.0,SERVICIO DE RECOLECCION DE MONEDAS DE LOS TELEFONOS PUBLICOS,Otras actividades de servicios de apoyo a las empresas n.c.p,True,goods
+cr_electronic_invoice.activity_525303,525303,8411.0,EMISION DE LA LOTERIA NACIONAL Y SIMILARES,Actividades de la administración pública en general,True,goods
+cr_electronic_invoice.activity_659908,659908,8411.0,FONDOS DE LA LEY DEL SISTEMA DE BANCA PARA EL DESARROLLO,Actividades de la administración pública en general,True,goods
+cr_electronic_invoice.activity_659909,659909,8411.0,FIDEICOMISOS DE LA LEY DEL SISTEMA DE BANCA PARA EL DESARROLLO,Actividades de la administración pública en general,True,goods
+cr_electronic_invoice.activity_751101,751101,8411.0,ACTIVIDADES DE LA ADMINISTRACION PUBLICA EN GENERAL,Actividades de la administración pública en general,True,goods
+cr_electronic_invoice.activity_751102,751102,8411.0,"ACTIVIDADES DE LA ADMINISTRACION PUBLICA EN GENERAL, NO SUJETAS A IMPUESTO SOBRE LAS UTILIDADES Y SOBRE EL VALOR AGREGADO",Actividades de la administración pública en general,True,goods
+cr_electronic_invoice.activity_751103,751103,8411.0,MUNICIPALIDADES Y CONCEJOS DE DISTRITO,Actividades de la administración pública en general,True,goods
+cr_electronic_invoice.activity_751105,751105,8411.0,ENTES PUBLICOS DE NATURALEZA TRIBUTARIA E INSCRIPCION DE BIENES.,Actividades de la administración pública en general,True,goods
+cr_electronic_invoice.activity_751202,751202,8411.0,COMITES CANTONALES DE DEPORTES Y RECREACION,Actividades de la administración pública en general,True,goods
+cr_electronic_invoice.activity_751301,751301,8413.0,ACTIVIDADES DEL SECTOR PUBLICO RELACIONADAS CON LA INFRAESTRUCTURA,Regulación y facilitación de la actividad económica,True,goods
+cr_electronic_invoice.activity_751302,751302,8413.0,FONDOS PUBLICOS (ACTIVIDADES DEL SECTOR PUBLICO),Regulación y facilitación de la actividad económica,True,goods
+cr_electronic_invoice.activity_752101,752101,8421.0,RELACIONES EXTERIORES,Relaciones exteriores,True,goods
+cr_electronic_invoice.activity_752301,752301,8423.0,ACTIVIDADES DE MANTENIMIENTO DEL ORDEN PUBLICO Y DE SEGURIDAD,Actividades de mantenimiento del orden público y de seguridad,True,goods
+cr_electronic_invoice.activity_752302,752302,8423.0,"SERVICIOS DE VIGILANCIA O CONTROL PORTUARIA, COSTERA, AEREA, Y FRONTERIZA",Actividades de mantenimiento del orden público y de seguridad,True,goods
+cr_electronic_invoice.activity_753001,753001,8430.0,ACTIVIDADES DE PLANES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA,Actividades de planes de seguridad social de afiliación obligatoria,True,goods
+cr_electronic_invoice.activity_801001,801001,8510.0,ENSENANZA PREESCOLAR Y PRIMARIA PRIVADA,Enseñanza preescolar y primaria,True,goods
+cr_electronic_invoice.activity_801002,801002,8510.0,ENSENANZA PREESCOLAR Y PRIMARIA PRIVADA NO AUTORIZADOS POR EL MEP.,Enseñanza preescolar y primaria,True,goods
+cr_electronic_invoice.activity_851913,851913,8510.0,PROFESIONALES EN EDUCACION ESPECIAL,Enseñanza preescolar y primaria,True,goods
+cr_electronic_invoice.activity_802101,802101,8521.0,ENSENANZA SECUNDARIA PRIVADA,Enseñanza secundaria de formación general,True,goods
+cr_electronic_invoice.activity_802102,802102,8521.0,ENSENANZA SECUNDARIA PRIVADA NO AUTORIZADA POR EL MEP.,Enseñanza secundaria de formación general,True,goods
+cr_electronic_invoice.activity_802202,802202,8522.0,ENSENANZA SECUNDARIA DE FORMACION TECNICA Y PROFESIONAL NO AUTORIZADA POR EL MEP.,Enseñanza de formación técnica y profesional,True,goods
+cr_electronic_invoice.activity_803002,803002,8530.1,ENSENANZA SUPERIOR PRIVADA (UNIVERSIDADES),Enseñanza universitaria,True,goods
+cr_electronic_invoice.activity_803003,803003,8530.1,ENSENANZA SUPERIOR PUBLICA (UNIVERSIDADES),Enseñanza universitaria,True,goods
+cr_electronic_invoice.activity_802201,802201,8530.2,ENSENANZA DE FORMACION TECNICA Y PARAUNIVERSITARIA,Enseñanza parauniversitaria,True,goods
+cr_electronic_invoice.activity_924103,924103,8541.0,"ENTRENADOR, INSTRUCTORES Y/O PREPARADORES FISICOS POR CUENTA PROPIA",Educación deportiva y recreativa,True,goods
+cr_electronic_invoice.activity_924104,924104,8541.0,ACTIVIDADES DE ESCUELAS Y CLUBES DEPORTIVOS,Educación deportiva y recreativa,True,goods
+cr_electronic_invoice.activity_809005,809005,8542.0,ENSENANZA CULTURAL,Educación cultural,True,goods
+cr_electronic_invoice.activity_809007,809007,8542.0,ESCUELA Y AGENCIA DE MODELOS,Educación cultural,True,goods
+cr_electronic_invoice.activity_749204,749204,8549.0,INSTRUCTOR DE TIRO (MANEJO DE ARMAS).,Otros tipos de enseñanza n.c.p,True,goods
+cr_electronic_invoice.activity_809001,809001,8549.0,ESCUELAS COMERCIALES (NO ESTATALES),Otros tipos de enseñanza n.c.p,True,goods
+cr_electronic_invoice.activity_809004,809004,8549.0,PROFESOR POR CUENTA PROPIA,Otros tipos de enseñanza n.c.p,True,goods
+cr_electronic_invoice.activity_809006,809006,8549.0,ENSENANZA DE LA DE SEGURIDAD PRIVADA,Otros tipos de enseñanza n.c.p,True,goods
+cr_electronic_invoice.activity_841214,841214,8550.0,TERAPIA DEL LENGUAJE,Actividades de apoyo a la enseñanza,True,goods
+cr_electronic_invoice.activity_851214,851214,8550.0,TERAPIA DEL LENGUAJE,Actividades de apoyo a la enseñanza,True,goods
+cr_electronic_invoice.activity_851101,851101,8610.0,ACTIVIDADES DE HOSPITALES,Actividades de hospitales,True,goods
+cr_electronic_invoice.activity_851909,851909,8610.0,"SERVICIOS DE RADIOLOGIA, ANESTESIOLOGIA Y OTROS",Actividades de hospitales,True,goods
+cr_electronic_invoice.activity_851201,851201,8620.1,GINECOLOGO,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851202,851202,8620.1,SERVICIOS DE MEDICO GENERAL,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851203,851203,8620.1,NEUROLOGOS,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851204,851204,8620.1,"SERVICIOS DE OFTALMOLOGO U OCULISTA, OPTOMETRISTA Y/O OPTICO",Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851206,851206,8620.1,ORTOPEDISTA (CONSULTA PRIVADA),Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851208,851208,8620.1,OTORRINOLARINGOLOGIA Y SERVICIOS CONEXOS.,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851209,851209,8620.1,FARMACEUTICO O BOTICARIO,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851210,851210,8620.1,CARDIOLOGOS,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851212,851212,8620.1,ONCOLOGOS,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851213,851213,8620.1,REUMATOLOGO,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851906,851906,8620.1,PSIQUIATRIA,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851917,851917,8620.1,CIRUJANO PLASTICO.,Actividades de médicos,True,goods
+cr_electronic_invoice.activity_851207,851207,8620.2,SERVICIOS DE ODONTOLOGO Y CONEXOS,Actividades de odontólogos,True,goods
+cr_electronic_invoice.activity_851218,851218,8690.1,IMAGENELOGIA DIAGNOSTICA Y TERAPEUTICA,Laboratorios médicos y de diagnóstico,True,goods
+cr_electronic_invoice.activity_851908,851908,8690.1,LABORATORIOS MEDICOS - CLINICOS,Laboratorios médicos y de diagnóstico,True,goods
+cr_electronic_invoice.activity_851915,851915,8690.1,SERVICIOS DE ESTERILIZACION DE PRODUCTOS MEDICOS Y FARMACEUTICOS,Laboratorios médicos y de diagnóstico,True,goods
+cr_electronic_invoice.activity_851215,851215,8690.9,TERAPIA OCUPACIONAL,Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851216,851216,8690.9,TERAPIA RESPIRATORIA,Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851217,851217,8690.9,AUDIOLOGIA,Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851901,851901,8690.9,MEDICINA ALTERNATIVA,Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851902,851902,8690.9,FISIOTERAPEUTA O TERAPEUTA FISICO,Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851905,851905,8690.9,PSICOLOGO,Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851907,851907,8690.9,SERVICIOS DE ENFERMERIA,Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851910,851910,8690.9,TRANSPORTE EN AMBULANCIA TERRESTRE Y AEREO (SERVICIO PRIVADO),Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851912,851912,8690.9,NUTRICIONISTA,Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851914,851914,8690.9,SERVICIOS DE PARAMEDICOS,Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_851916,851916,8690.9,"OTRAS ACTIVIDADES RELACIONADAS CON LA SALUD HUMANA (BANCO DE SANGRE, BANCO DE PIEL, ETC)",Otras actividades relacionadas con la salud humana,True,goods
+cr_electronic_invoice.activity_919905,919905,8720.0,ASOCIACION PROAYUDA A PERSONAS ADICTAS A DROGAS E INDIGENTES,"Actividades de atención en instituciones para personas con retraso mental, enfermos mentales y toxicómanos",True,goods
+cr_electronic_invoice.activity_853102,853102,8790.0,FUNDACIONES DE SERVICIO SOCIAL CON ALOJAMIENTO,Otras actividades de atención en instituciones n.c.p,True,goods
+cr_electronic_invoice.activity_853104,853104,8790.0,SERVICIOS SOCIALES CON ALOJAMIENTO PARA ADULTOS,Otras actividades de atención en instituciones n.c.p,True,goods
+cr_electronic_invoice.activity_853101,853101,8810.0,FUNDACIONES DE SERVICIO SOCIAL SIN ALOJAMIENTO,Asistencia social sin alojamiento para el adulto mayor y personas con discapacidad,True,goods
+cr_electronic_invoice.activity_853201,853201,8890.0,GUARDERIAS/CENTROS INFANTILES Y SERVICIOS SOCIALES,Otras actividades de asistencia social sin alojamiento n.c.p,True,goods
+cr_electronic_invoice.activity_853203,853203,8890.0,SERVICIOS SOCIALES SIN ALOJAMIENTO,Otras actividades de asistencia social sin alojamiento n.c.p,True,goods
+cr_electronic_invoice.activity_741408,741408,9000.0,"CORRESPONSAL DE RADIO, TELEVISION Y PRENSA ESCRITA","Actividades creativas, artísticas y de entretenimiento",True,goods
+cr_electronic_invoice.activity_921401,921401,9000.0,TEATROS (EXPLOTACION),"Actividades creativas, artísticas y de entretenimiento",True,goods
+cr_electronic_invoice.activity_921402,921402,9000.0,ACTIVIDADES MUSICALES Y ARTISTICAS (SERVICIOS),"Actividades creativas, artísticas y de entretenimiento",True,goods
+cr_electronic_invoice.activity_921403,921403,9000.0,PERIODISTA POR CUENTA PROPIA,"Actividades creativas, artísticas y de entretenimiento",True,goods
+cr_electronic_invoice.activity_923202,923202,9000.0,SERVICIOS DE RESTAURACION DE OBRAS DE ARTE,"Actividades creativas, artísticas y de entretenimiento",True,goods
+cr_electronic_invoice.activity_924908,924908,9000.0,ESPECTACULOS PUBLICOS EN GENERAL EXCEPTO LOS DEPORTIVOS Y EL TEATRO,"Actividades creativas, artísticas y de entretenimiento",True,goods
+cr_electronic_invoice.activity_923101,923101,9101.0,ACTIVIDADES DE BIBLIOTECAS Y ARCHIVOS,Actividades de Bibliotecas y archivos,True,goods
+cr_electronic_invoice.activity_923201,923201,9102.0,GALERIAS DE ARTE,Actividades de museos y preservación de lugares históricos,True,goods
+cr_electronic_invoice.activity_923301,923301,9103.0,"ACTIVIDADES DE JARDINES BOTANICOS, ZOOLOGICOS, PARQUES NACIONALES Y RESERVAS NACIONALES","Actividades de jardines botánicos, zoológicos y parques naturales",True,goods
+cr_electronic_invoice.activity_525301,525301,9200.0,VENTA DE LOTERIA EN AGENCIAS O AL DETALLE,Actividades de juego de azar y apuestas,True,goods
+cr_electronic_invoice.activity_924902,924902,9200.0,EXPLOTACION DE CASINOS (INCLUYE MESAS DE JUEGOS Y MAQUINAS TRAGAMONEDAS),Actividades de juego de azar y apuestas,True,goods
+cr_electronic_invoice.activity_924907,924907,9200.0,SERVICIO DE ENLACE DE LLAMADAS Y CASAS DE APUESTAS ELECTRONICAS (SPORTBOOKS),Actividades de juego de azar y apuestas,True,goods
+cr_electronic_invoice.activity_924910,924910,9200.0,EXPLOTACION DE JUEGOS DE AZAR NO ELECTRONICOS (INCLUYE MAQUINAS TRAGAMONEDAS REALIZADAS EN LUGARES DIFERENTES A CASINOS.),Actividades de juego de azar y apuestas,True,goods
+cr_electronic_invoice.activity_924101,924101,9311.0,GIMNASIOS,Gestión de instalaciones deportivas,True,goods
+cr_electronic_invoice.activity_924102,924102,9311.0,EXPLOTACION DE PISCINAS O ALBERCAS DE BANO,Gestión de instalaciones deportivas,True,goods
+cr_electronic_invoice.activity_924105,924105,9311.0,EXPLOTACION DE INSTALACIONES Y CAMPOS DEPORTIVOS,Gestión de instalaciones deportivas,True,goods
+cr_electronic_invoice.activity_924107,924107,9311.0,ESPECTACULOS DEPORTIVOS,Gestión de instalaciones deportivas,True,goods
+cr_electronic_invoice.activity_924106,924106,9319.0,ACTIVIDADES DEPORTIVAS Y OTRAS POR CUENTA PROPIA,Otras actividades deportivas,True,goods
+cr_electronic_invoice.activity_924903,924903,9319.0,PESCA DEPORTIVA,Otras actividades deportivas,True,goods
+cr_electronic_invoice.activity_921903,921903,9329.0,SALON DE BAILE Y DISCOTECA,Otras actividades de esparcimiento y recreativas n.c.p,True,goods
+cr_electronic_invoice.activity_921904,921904,9329.0,SALON DE PATINES,Otras actividades de esparcimiento y recreativas n.c.p,True,goods
+cr_electronic_invoice.activity_924901,924901,9329.0,NIGHT CLUB/CABARETTE,Otras actividades de esparcimiento y recreativas n.c.p,True,goods
+cr_electronic_invoice.activity_924904,924904,9329.0,"ACTIVIDADES DE JUEGOS DE BILLAR, POOL Y OTROS SIMILARES",Otras actividades de esparcimiento y recreativas n.c.p,True,goods
+cr_electronic_invoice.activity_924905,924905,9329.0,SALA DE VIDEO JUEGOS,Otras actividades de esparcimiento y recreativas n.c.p,True,goods
+cr_electronic_invoice.activity_924909,924909,9329.0,OTRAS ACTIVIDADES DE ESPARCIMIENTO,Otras actividades de esparcimiento y recreativas n.c.p,True,goods
+cr_electronic_invoice.activity_930907,930907,9329.0,SERVICIO DE DISCO MOVIL,Otras actividades de esparcimiento y recreativas n.c.p,True,goods
+cr_electronic_invoice.activity_911101,911101,9411.0,ACTIVIDADES DE ORGANIZACIONES EMPRESARIALES Y DE EMPLEADORES,Actividades de Asociaciones empresariales y de empleadores,True,goods
+cr_electronic_invoice.activity_911102,911102,9411.0,CAMARAS DE COMERCIO,Actividades de Asociaciones empresariales y de empleadores,True,goods
+cr_electronic_invoice.activity_911201,911201,9412.0,ACTIVIDADES DE ORGANIZACIONES PROFESIONALES,Actividades de asociaciones profesionales,True,goods
+cr_electronic_invoice.activity_912001,912001,9420.0,ASOCIACIONES SOLIDARISTAS,Actividades de sindicatos,True,goods
+cr_electronic_invoice.activity_912002,912002,9420.0,ACTIVIDADES DE SINDICATOS,Actividades de sindicatos,True,goods
+cr_electronic_invoice.activity_919101,919101,9491.0,ACTIVIDADES DE ORGANIZACIONES RELIGIOSAS,Actividades de organizaciones religiosas,True,goods
+cr_electronic_invoice.activity_919201,919201,9492.0,ACTIVIDADES DE ORGANIZACIONES POLITICAS,Actividades de organizaciones políticas,True,goods
+cr_electronic_invoice.activity_751201,751201,9499.0,"JUNTAS DE EDUCACION, COMEDORES ESCOLARES, PATRONATOS, COOPERATIVAS ESCOLARES, COLEGIALES, VOCACIONALES",Actividades de otras asociaciones n.c.p,True,goods
+cr_electronic_invoice.activity_853301,853301,9499.0,ASOCIACIONES DECLARADAS DE UTILIDAD PUBLICA POR EL PODER EJECUTIVO,Actividades de otras asociaciones n.c.p,True,goods
+cr_electronic_invoice.activity_919901,919901,9499.0,ASOCIACION DE DESARROLLO COMUNAL Y/O SERVICIOS COMUNITARIOS,Actividades de otras asociaciones n.c.p,True,goods
+cr_electronic_invoice.activity_919902,919902,9499.0,ASOCIACIONES DE CLUBES SOCIALES,Actividades de otras asociaciones n.c.p,True,goods
+cr_electronic_invoice.activity_919903,919903,9499.0,"ASOCIACIONES O ENTIDADES CON FINES CULTURALES, SOCIALES, RECREATIVOS, ARTESANALES",Actividades de otras asociaciones n.c.p,True,goods
+cr_electronic_invoice.activity_725001,725001,9511.0,REPARACION DE EQUIPO DE COMPUTO,Reparación de computadoras y equipo periférico,True,goods
+cr_electronic_invoice.activity_725002,725002,9511.0,MANTENIMIENTO DE EQUIPO DE COMPUTO,Reparación de computadoras y equipo periférico,True,goods
+cr_electronic_invoice.activity_526011,526011,9512.0,REPARACION Y MANTENIMIENTO DE EQUIPO PARA TELECOMUNICACIONES,Reparación de equipos de comunicaciones,True,goods
+cr_electronic_invoice.activity_523927,523927,9521.0,REPARACION EQUIPO DE AUDIO Y VIDEO,Reparación de aparatos electrónicos de consumo eléctrico,True,goods
+cr_electronic_invoice.activity_526006,526006,9522.0,REPARACION DE ARTICULOS ELECTRICOS,Reparación de aparatos de uso doméstico y equipo doméstico y de jardinería,True,goods
+cr_electronic_invoice.activity_526001,526001,9523.0,SERVICIOS DE REPARACION DE ZAPATOS,Reparación de calzado y artículos de cuero,True,goods
+cr_electronic_invoice.activity_361002,361002,9524.0,REPARACION DE TAPICERIA,Reparación de muebles y accesorios domésticos,True,goods
+cr_electronic_invoice.activity_526002,526002,9524.0,REPARACION DE MUEBLES Y ACCESORIOS DOMESTICOS,Reparación de muebles y accesorios domésticos,True,goods
+cr_electronic_invoice.activity_523904,523904,9529.0,SERVICIOS DE REPARACION DE JOYERIA Y RELOJERIA EN GENERAL,Reparación de otros bienes personales y enseres domésticos n.c.p,True,goods
+cr_electronic_invoice.activity_526003,526003,9529.0,REPARACION DE BICICLETAS,Reparación de otros bienes personales y enseres domésticos n.c.p,True,goods
+cr_electronic_invoice.activity_526008,526008,9601.0,REPARACION Y MANTENIMIENTO DE PERSIANAS Y CORTINAS,"Lavado y limpieza, incluida la limpieza en seco, de productos textiles y piel",True,goods
+cr_electronic_invoice.activity_930101,930101,9601.0,SERVICIOS DE LAVANDERIA DE TODO TIPO,"Lavado y limpieza, incluida la limpieza en seco, de productos textiles y piel",True,goods
+cr_electronic_invoice.activity_930103,930103,9601.0,SERVICIO DE LIMPIEZA Y LAVADO DE MUEBLES,"Lavado y limpieza, incluida la limpieza en seco, de productos textiles y piel",True,goods
+cr_electronic_invoice.activity_930202,930202,9602.0,"SALONES DE BELLEZA, PELUQUERIA Y BARBERIA",Actividades de peluquería y otros tratamientos de belleza,True,goods
+cr_electronic_invoice.activity_930301,930301,9603.0,SERVICIOS FUNEBRES Y ACTIVIDADES CONEXAS,Funerales y actividades conexas,True,goods
+cr_electronic_invoice.activity_930302,930302,9603.0,CEMENTERIO PUBLICO (JUNTA ADMINISTRADORA),Funerales y actividades conexas,True,goods
+cr_electronic_invoice.activity_930303,930303,9603.0,CEMENTERIO O CAMPOSANTO PRIVADO,Funerales y actividades conexas,True,goods
+cr_electronic_invoice.activity_930901,930901,9609.0,SALAS DE MASAJES,Otras actividades de servicios personales n.c.p,True,goods
+cr_electronic_invoice.activity_930903,930903,9609.0,OTRAS ACTIVIDADES DE SERVICIOS PERSONALES N.C.P.,Otras actividades de servicios personales n.c.p,True,goods
+cr_electronic_invoice.activity_930904,930904,9609.0,CENTRO O SALA DE BRONCEADO,Otras actividades de servicios personales n.c.p,True,goods
+cr_electronic_invoice.activity_930905,930905,9609.0,PELUQUERIA Y SALA DE ESTETICA PARA ANIMALES,Otras actividades de servicios personales n.c.p,True,goods
+cr_electronic_invoice.activity_930906,930906,9609.0,SERVICIO DE TATUAJE Y PIERCING,Otras actividades de servicios personales n.c.p,True,goods
+cr_electronic_invoice.activity_930915,930915,9609.0,ALBERGUE Y CUIDO DE ANIMALES A DOMICILIO,Otras actividades de servicios personales n.c.p,True,goods
+cr_electronic_invoice.activity_950001,950001,9700.0,HOGARES PRIVADOS CON SERVICIO DOMESTICO,Actividades de los hogares como empleadores de personal doméstico,True,goods
+cr_electronic_invoice.activity_990001,990001,9900.0,"ACTIVIDADES DE ORGANIZACIONES Y ORGANOS EXTRATERRITORIALES, INCLUYE LAS EMBAJADAS DE OTROS PAISES",Actividades de organizaciones y órganos extraterritoriales,True,goods
+cr_electronic_invoice.activity_990002,990002,9900.0,ACTIVIDADES DE ORGANIZACIONES Y ORGANOS EXTRATERRITORIALES QUE BRINDAN SERVICIOS EN EL PAIS,Actividades de organizaciones y órganos extraterritoriales,True,goods
+cr_electronic_invoice.activity_960104,960104.0,EXCLUIR,IMPUESTO A LAS PERSONAS JURIDICAS,"EN ESTA CLASE SE ESTA INCLUYENDO EL IMPUESTO A LAS PERSONAS JURIDICAS LEY 9428 PARA TODAS SOCIEDADES MERCANTILES, LAS SUCURSALES DE UNA SOCIEDAD EXTRANJERA O SU REPRESENTANTE Y LAS EMPRESAS INDIVIDUALES DE RESPONSABILIDAD LIMITADA. LA FECHA DE INICIO DE ESTA OBLIGACION TRIBUTARIA PARA LAS SOCIEDADES INSCRITAS EN EL REGISTRO NACIONAL ES EL 01 DE SETIEMBRE DEL 2017 Y PARA LAS NUEVAS SOCIEDADEDES LA FECHA DE CONSTITUCION DE LA SOCIEDAD. ESTO SE DEFINE POR CUANTO ESTE CAMPO ES OBLIGATORIO YA QUE NO CORRESPONDE A LA REALIZACION DE UNA ACTIVIDAD ECONOMICA.",False,goods
+cr_electronic_invoice.activity_960106,960106.0,EXCLUIR,EXPORTADORES DE MERCANCIAS EXENTAS DEL IMPUESTO DE VENTAS,INCLUYASE EN ESTE CODIGO LOS EXPORTADORES DE MERCANCIAS EXENTAS DEL IMPUESTO DE VENTAS; INSCRITOS EN RENTA O RENTA SIMPLIFICADA ESTRICTAMENTE COMO DECLARANTES EN VENTAS. LO ANTERIOR DE CONFORMIDAD CON EL ART. 4 DE LA LEY GENERAL DEL IMPUESTO SOBRE LAS VENTAS Y 9 SU REGLAMENTO.,False,goods
+cr_electronic_invoice.activity_960107,960107.0,EXCLUIR,PRODUCTORES DE MERCANCIAS EXENTAS DEL IMPUESTO DE VENTAS,INCLUYASE EN ESTE CODIGO LOS PRODUCTORES DE MERCANCIAS EXENTAS DEL IMPUESTO DE VENTAS; INSCRITOS EN RENTA O RENTA SIMPLIFICADA ESTRICTAMENTE COMO DECLARANTES EN VENTAS. LO ANTERIOR DE CONFORMIDAD CON EL ARTICULO 9 DEL REGLAMENTO DE VENTAS.,False,goods
+cr_electronic_invoice.activity_960108,960108.0,EXCLUIR,COMERCIALIZADORES DE MERCANCIAS EXENTAS DEL IMPUESTO DE VENTAS,INCLUYASE EN ESTE CODIGO LOS COMERCIALIZADORES DE MERCANCIAS EXENTAS DEL IMPUESTO DE VENTAS; INSCRITOS EN RENTA O RENTA SIMPLIFICADA ESTRICTAMENTE COMO DECLARANTES EN VENTAS. LO ANTERIOR DE CONFORMIDAD CON EL ARTICULO 9 DEL REGLAMENTO DE VENTAS.,False,goods
+cr_electronic_invoice.activity_960109,960109.0,EXCLUIR,DISTRIBUIDORES DE MERCANCIAS EXENTAS DEL IMPUESTO DE VENTAS,INCLUYASE EN ESTE CODIGO LOS DISTRIBUIDORES DE MERCANCIAS EXENTAS DEL IMPUESTO DE VENTAS; INSCRITOS EN RENTA O RENTA SIMPLIFICADA ESTRICTAMENTE COMO DECLARANTES EN VENTAS. LO ANTERIOR DE CONFORMIDAD CON EL ARTICULO 9 DEL REGLAMENTO DE VENTAS.,False,goods

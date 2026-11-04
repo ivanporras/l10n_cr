@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Tipos de Documento de Exoneración o Autorización
+    Según Nota 10.1 de la Resolución DGT - Versión 4.4
+    Rige a partir del 01 de junio de 2025
+-->
+<odoo>
+    <data noupdate="0">
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 01: Compras autorizadas por la DGT (INHABILITADO)          -->
+        <!-- Solo para uso en Notas de Crédito y Débito                        -->
+        <!-- ================================================================== -->
+        <record id="AutEx_1" model="aut.ex">
+            <field name="code">01</field>
+            <field name="name">Compras autorizadas por la Dirección General de Tributación</field>
+            <field name="active" eval="False"/>
+            <field name="is_disabled" eval="True"/>
+            <field name="notes">Código inhabilitado. Solo puede utilizarse en Notas de Crédito y Débito que lo requieran.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 02: Ventas exentas a diplomáticos                          -->
+        <!-- REQUIERE: Número de artículo de ley                               -->
+        <!-- ================================================================== -->
+        <record id="AutEx_2" model="aut.ex">
+            <field name="code">02</field>
+            <field name="name">Ventas exentas a diplomáticos</field>
+            <field name="active" eval="True"/>
+            <field name="is_disabled" eval="False"/>
+            <field name="notes">Requiere número de artículo de la ley que autoriza la exención.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 03: Autorizado por Ley especial                             -->
+        <!-- REQUIERE: Número de artículo de ley                               -->
+        <!-- ================================================================== -->
+        <record id="AutEx_3" model="aut.ex">
+            <field name="code">03</field>
+            <field name="name">Autorizado por Ley especial</field>
+            <field name="active" eval="True"/>
+            <field name="is_disabled" eval="False"/>
+            <field name="notes">Requiere número de artículo de la ley especial que autoriza.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 04: Exenciones DGH Autorización Local Genérica             -->
+        <!-- VALIDACIÓN: Hacienda verifica número, fecha y tarifa              -->
+        <!-- ================================================================== -->
+        <record id="AutEx_4" model="aut.ex">
+            <field name="code">04</field>
+            <field name="name">Exenciones Dirección General de Hacienda Autorización Local Genérica</field>
+            <field name="active" eval="True"/>
+            <field name="is_disabled" eval="False"/>
+            <field name="notes">Hacienda validará el número de autorización, fecha de emisión y tarifa exonerada contra los registros del Departamento de Gestión de Exenciones.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 05: Exenciones DGH Transitorio V (INHABILITADO)            -->
+        <!-- Solo para uso en Notas de Crédito y Débito                        -->
+        <!-- ================================================================== -->
+        <record id="AutEx_5" model="aut.ex">
+            <field name="code">05</field>
+            <field name="name">Exenciones Dirección General de Hacienda Transitorio V (servicios de ingeniería, arquitectura, topografía obra civil)</field>
+            <field name="active" eval="False"/>
+            <field name="is_disabled" eval="True"/>
+            <field name="notes">Código inhabilitado. Solo puede utilizarse en Notas de Crédito y Débito que lo requieran.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 06: Servicios turísticos ICT (INHABILITADO)                -->
+        <!-- Solo para uso en Notas de Crédito y Débito                        -->
+        <!-- ================================================================== -->
+        <record id="AutEx_6" model="aut.ex">
+            <field name="code">06</field>
+            <field name="name">Servicios turísticos inscritos ante el Instituto Costarricense de Turismo (ICT)</field>
+            <field name="active" eval="False"/>
+            <field name="is_disabled" eval="True"/>
+            <field name="notes">Código inhabilitado. Solo puede utilizarse en Notas de Crédito y Débito que lo requieran.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 07: Transitorio XVII (INHABILITADO)                        -->
+        <!-- Solo para uso en Notas de Crédito y Débito                        -->
+        <!-- ================================================================== -->
+        <record id="AutEx_7" model="aut.ex">
+            <field name="code">07</field>
+            <field name="name">Transitorio XVII (Recolección, Clasificación, almacenamiento de Reciclaje y reutilizable)</field>
+            <field name="active" eval="False"/>
+            <field name="is_disabled" eval="True"/>
+            <field name="notes">Código inhabilitado. Solo puede utilizarse en Notas de Crédito y Débito que lo requieran.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 08: Exoneración a Zona Franca (NUEVO v4.4)                 -->
+        <!-- REQUIERE: Número de artículo de ley                               -->
+        <!-- ================================================================== -->
+        <record id="AutEx_8" model="aut.ex">
+            <field name="code">08</field>
+            <field name="name">Exoneración a Zona Franca</field>
+            <field name="active" eval="True"/>
+            <field name="is_disabled" eval="False"/>
+            <field name="notes">NUEVO en v4.4. Requiere número de artículo de la ley que establece la exoneración.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 09: Exoneración servicios exportación (NUEVO v4.4)         -->
+        <!-- Artículo 11 RLIVA                                                  -->
+        <!-- ================================================================== -->
+        <record id="AutEx_9" model="aut.ex">
+            <field name="code">09</field>
+            <field name="name">Exoneración de servicios complementarios para la exportación según artículo 11 RLIVA</field>
+            <field name="active" eval="True"/>
+            <field name="is_disabled" eval="False"/>
+            <field name="notes">NUEVO en v4.4. Para servicios complementarios a la exportación según Reglamento de la Ley del IVA.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 10: Órgano corporaciones municipales (NUEVO v4.4)          -->
+        <!-- ================================================================== -->
+        <record id="AutEx_10" model="aut.ex">
+            <field name="code">10</field>
+            <field name="name">Órgano de las corporaciones municipales</field>
+            <field name="active" eval="True"/>
+            <field name="is_disabled" eval="False"/>
+            <field name="notes">NUEVO en v4.4. Según artículos 169 y siguientes de la Constitución Política, las Municipalidades son corporaciones de carácter autónomo para la administración de intereses y servicios locales.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 11: Exenciones DGH Impuesto Local Concreta (NUEVO v4.4)   -->
+        <!-- VALIDACIÓN: Hacienda verifica número, fecha y tarifa              -->
+        <!-- REQUIERE: Información de referencia en el comprobante             -->
+        <!-- ================================================================== -->
+        <record id="AutEx_11" model="aut.ex">
+            <field name="code">11</field>
+            <field name="name">Exenciones Dirección General de Hacienda Autorización de Impuesto Local Concreta</field>
+            <field name="active" eval="True"/>
+            <field name="is_disabled" eval="False"/>
+            <field name="notes">NUEVO en v4.4. Uso exclusivo cuando el receptor es beneficiario con incentivo fiscal para aplicar o solicitar devolución de impuestos locales. Requiere información de referencia. Hacienda validará contra registros del Departamento de Gestión de Exenciones.</field>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 99: Otros                                                   -->
+        <!-- REQUIERE: Descripción del tipo en TipoDocumentoOTRO               -->
+        <!-- ================================================================== -->
+        <record id="AutEx_99" model="aut.ex">
+            <field name="code">99</field>
+            <field name="name">Otros</field>
+            <field name="active" eval="True"/>
+            <field name="is_disabled" eval="False"/>
+            <field name="notes">Requiere completar el campo TipoDocumentoOTRO con la descripción específica del tipo de documento. Mínimo 5 caracteres, máximo 100.</field>
+        </record>
+        
+    </data>
+</odoo>

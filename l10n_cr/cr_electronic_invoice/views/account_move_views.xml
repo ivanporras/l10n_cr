@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_move_form_inherit" model="ir.ui.view">
+        <field name="name">account.move.form.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+
+            <!-- ── Alertas de estado tributación ── -->
+            <xpath expr="//sheet" position="before">
+                <div class="alert alert-info mb-0" role="alert"
+                     invisible="(state_tributacion not in (False)) or (state in ('draft', 'cancel'))">
+                    The document has not yet been issued, it will be sent automatically in 5 minutes, if you need to
+                    send it manually press
+                    <button class="oe_link" type="object" name="generate_and_send_invoice"
+                            style="padding: 0; vertical-align: baseline;">Send Document</button>
+                </div>
+                <div class="alert alert-warning mb-0" role="alert"
+                     invisible="state_tributacion not in ('procesando') or state in ('draft', 'cancel')">
+                    The document was issued successfully, however we still do not have the answer, it will be consulted
+                    in 10 minutes, if you wish to consult it manually press
+                    <button class="oe_link" type="object" name="action_check_hacienda_for_invoices"
+                            style="padding: 0; vertical-align: baseline;">Consult Document</button>
+                </div>
+            </xpath>
+
+            <!-- ── Botones de acción FE ── -->
+            <xpath expr="//button[@name='button_draft']" position="after">
+                <button name="action_send_mrs_to_hacienda" type="object" string="Send Receiver Message"
+                        invisible="(move_type not in ('in_invoice', 'in_refund', 'entry')) or (tipo_documento == 'FEC')"/>
+                <button name="action_create_fec" type="object" string="Send FEC"
+                        invisible="tipo_documento != 'FEC' or state_tributacion not in (False, 'rechazado', 'error')"/>
+                <button name="create_partner_from_xml" class="oe_highlight" type="object" string="Create Provider"
+                        invisible="move_type in ('entry', 'out_invoice', 'out_refund') or partner_id != False or xml_supplier_approval == False"/>
+            </xpath>
+
+            <!-- ── Texto de monto en letras ── -->
+            <xpath expr="//field[@name='narration']/.." position="inside">
+                <group colspan="8">
+                    <field name="invoice_amount_text" placeholder="Terms and Conditions" nolabel="1"/>
+                </group>
+            </xpath>
+
+            <!-- ── Campos de encabezado FE (antes de ref) ── -->
+            <xpath expr="//field[@name='ref']" position="before">
+            </xpath>
+
+            <!-- ── Fecha y tipo de documento ── -->
+            <xpath expr="//field[@name='invoice_date']" position="attributes">
+                <attribute name="readonly"></attribute>
+            </xpath>
+
+            <!-- ── Actividades Económicas al final del encabezado (antes del notebook) ── -->
+            <xpath expr="//group[following-sibling::notebook]" position="inside">
+                <!-- Grupo de Actividades Económicas FE - Fila completa -->
+                <group name="fe_activities" string="Actividades Económicas" colspan="4"
+                       col="2"
+                       class="mt-2"
+                       invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') and tipo_documento != 'FEC'">
+                    <!-- Actividades económicas del proveedor -->
+                    <field name="partner_economic_activities_ids" invisible="1" readonly="1"/>
+                    <field name="partner_economic_activity_id"
+                           string="Proveedor"
+                           readonly="state != 'draft'"
+                           invisible="move_type not in ('in_invoice', 'in_refund') and tipo_documento != 'FEC'"
+                           options='{"no_open": True, "no_create": True}'/>
+
+                    <!-- Actividades económicas propias -->
+                    <field name="economic_activities_ids" invisible="1" readonly="1"/>
+                    <field name="economic_activity_id"
+                           string="Empresa"
+                           readonly="state != 'draft'"
+                           required="(move_type in ('out_invoice', 'out_refund') or tipo_documento == 'FEC') and (economic_activities_ids)"
+                           options='{"no_open": True, "no_create": True}'/>
+                </group>
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_date']" position="after">
+                <field name="date_issuance" readonly="1"
+                       invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')"/>
+                <field name="tipo_documento"
+                       readonly="state != 'draft'"
+                       invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')"
+                       required="move_type in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')"/>
+                <field name="payment_methods_id"
+                       readonly="state != 'draft'"
+                       invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')"/>
+            </xpath>
+
+            <!-- ── Columnas adicionales en líneas de factura ── -->
+            <xpath expr="//field[@name='invoice_line_ids']//list//field[@name='name']" position="after">
+                <field name="categ_name" invisible="1" readonly="1"/>
+                <field name="product_code" invisible="1" readonly="1"/>
+                <field name="third_party_id" invisible="product_code != '04'" optional="hide"/>
+                <field name="cabys_code" readonly="1" optional="hide"/>
+            </xpath>
+            <xpath expr="//field[@name='invoice_line_ids']//list//field[@name='discount']" position="after">
+                <field name="discount_code_id" optional="hide" required="discount > 0"/>
+                <field name="discount_note" optional="hide"/>
+                <field name="tariff_head" optional="hide"/>
+            </xpath>
+
+            <!-- ── Hacer visible el botón de envío ── -->
+            <xpath expr="//button[@name='action_invoice_sent']" position="attributes">
+                <attribute name="invisible">False</attribute>
+            </xpath>
+
+            <xpath expr="//group[hasclass('oe_subtotal_footer')]" position="replace">
+                <group class="oe_subtotal_footer"
+                       invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt') or payment_state == 'invoicing_legacy'">
+
+                    <!-- Campos de control -->
+                    <field name="has_exoneration" invisible="1"/>
+
+                    <!-- Widget estándar de Odoo: Subtotal + desglose IVA + Total -->
+                    <field name="tax_totals"
+                           widget="account-tax-totals-field"
+                           nolabel="1"
+                           colspan="2"
+                           readonly="state != 'draft' or (move_type not in ('in_invoice', 'in_refund', 'in_receipt') and not quick_edit_mode)"/>
+
+                    <!-- Descuento electrónico (facturas de cliente) -->
+                    <field name="amount_discount_electronic_invoice"
+                           class="oe_subtotal_footer_separator"
+                           invisible="move_type not in ('out_invoice', 'out_refund') or amount_discount_electronic_invoice == 0"
+                           readonly="state != 'draft' or (move_type not in ('in_invoice', 'in_refund', 'in_receipt') and not quick_edit_mode)"/>
+
+                    <!-- Total impuestos antes de exoneración -->
+                    <field name="amount_tax_before_exoneration"
+                           string="Total Impuestos"
+                           class="oe_subtotal_footer_separator"
+                           widget="monetary"
+                           options="{'currency_field': 'currency_id'}"
+                           invisible="not has_exoneration"/>
+
+                    <!-- Monto exonerado -->
+                    <field name="amount_exoneration"
+                           string="Exoneración"
+                           class="oe_subtotal_footer_separator"
+                           widget="monetary"
+                           options="{'currency_field': 'currency_id'}"
+                           invisible="not has_exoneration"/>
+
+                    <!-- IVA devuelto (facturas de cliente) -->
+                    <field name="amount_iva_returned"
+                           class="oe_subtotal_footer_separator"
+                           invisible="move_type not in ('out_invoice', 'out_refund') or amount_iva_returned == 0"
+                           readonly="state != 'draft' or (move_type not in ('in_invoice', 'in_refund', 'in_receipt') and not quick_edit_mode)"/>
+
+                    <!-- Importes electrónicos para facturas de proveedor -->
+                    <field name="amount_tax_electronic_invoice"
+                           class="oe_subtotal_footer_separator"
+                           invisible="move_type in ('out_invoice', 'out_refund')"/>
+                    <field name="amount_total_electronic_invoice"
+                           class="oe_subtotal_footer_separator"
+                           invisible="move_type in ('out_invoice', 'out_refund')"/>
+
+                    <!-- Pagos registrados y saldo pendiente — igual que la vista original -->
+                    <field name="invoice_payments_widget" colspan="2" nolabel="1" widget="payment"/>
+                    <field name="amount_residual"
+                           class="oe_subtotal_footer_separator"
+                           invisible="state == 'draft'"/>
+
+                </group>
+            </xpath>
+
+            <!-- ── Pestaña: Electronic Information ── -->
+            <xpath expr="//page[2]" position="after">
+                <page name="fe_invoice_data" string="Electronic Information"
+                      invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')">
+
+                    <field name="qr_image" widget="image" invisible="1"/>
+
+                    <group id="fe_tab_group" col="2">
+
+                        <!-- Aceptación electrónica (solo facturas de proveedor) -->
+                        <group string="Electronic Acceptance" name="fe_in_info_group" colspan="2" col="4"
+                               invisible="tipo_documento == 'FEC' or move_type in ('out_invoice', 'out_refund')">
+                            <field name="fname_xml_supplier_approval" invisible="1"/>
+                            <field name="xml_supplier_approval" filename="fname_xml_supplier_approval" colspan="3"
+                                   invisible="tipo_documento == 'FEC' or move_type in ('out_invoice', 'out_refund')"/>
+                            <button name="load_xml_data" type="object" string="Cargar datos del XML" colspan="1"
+                                    invisible="xml_supplier_approval == False or move_type in ('out_invoice', 'out_refund') or tipo_documento == 'FEC' or state != 'draft'"/>
+                            <newline/>
+                            <field name="state_invoice_partner"
+                                   invisible="move_type in ('out_invoice', 'out_refund') or tipo_documento == 'FEC'"/>
+                        </group>
+
+                        <!-- Referencia y comprobantes electrónicos -->
+                        <group name="eref_info_group" colspan="2">
+                            <group string="Electronic Document Reference" name="eref_info_group1" colspan="2">
+                                <field name="reference_code_id" readonly="state != 'draft'"/>
+                                <field name="reference_document_id" readonly="state != 'draft'"/>
+                                <field name="invoice_id" domain="[('number_electronic', '!=', False)]"
+                                       readonly="state != 'draft'"/>
+                                <field name="not_loaded_invoice"
+                                       readonly="state != 'draft'"
+                                       invisible="invoice_id != False"/>
+                                <field name="not_loaded_invoice_date"
+                                       readonly="state != 'draft'"
+                                       invisible="invoice_id != False"/>
+                            </group>
+                            <group string="Electronic Receipts" name="eref_info_group2" colspan="2">
+                                <field name="fname_xml_comprobante" invisible="1" readonly="1"/>
+                                <field name="xml_comprobante" filename="fname_xml_comprobante"/>
+                                <field name="fname_xml_respuesta_tributacion" invisible="1" readonly="1"/>
+                                <field name="xml_respuesta_tributacion" filename="fname_xml_respuesta_tributacion"/>
+                                <field name="state_tributacion" readonly="1"/>
+                                <field name="electronic_invoice_return_message" readonly="1"/>
+                            </group>
+                        </group>
+                    </group>
+
+                    <!-- Exoneración del cliente -->
+                    <group string="Información de Exoneración del Cliente"
+                           name="exoneration_info"
+                           col="2"
+                           invisible="not has_exoneration">
+                        <group string="Datos de Autorización">
+                            <field name="partner_exoneration_number" string="Número de Exoneración" readonly="1"/>
+                            <field name="partner_type_exoneration" string="Tipo de Autorización" readonly="1"/>
+                            <field name="partner_exoneration_institution_id" string="Institución Emisora" readonly="1"/>
+                            <field name="partner_exoneration_expiry" string="Fecha Vencimiento" readonly="1"/>
+                        </group>
+                        <group string="Montos de Exoneración">
+                            <field name="exoneration_percentage" string="% Exoneración" readonly="1"/>
+                            <field name="amount_tax_before_exoneration" string="Impuesto Completo"
+                                   widget="monetary" options="{'currency_field': 'currency_id'}" readonly="1"/>
+                            <field name="amount_exoneration" string="Monto Exonerado"
+                                   widget="monetary" options="{'currency_field': 'currency_id'}" readonly="1"/>
+                            <field name="amount_total_to_pay" string="Total a Pagar"
+                                   widget="monetary" options="{'currency_field': 'currency_id'}" readonly="1"/>
+                        </group>
+                    </group>
+
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+
+    <!-- ============================================================================
+         VISTA DE LISTA
+         Agrega tipo_documento, estado FE y columna de exoneración
+    ============================================================================ -->
+    <record id="view_move_list_inherit" model="ir.ui.view">
+        <field name="name">account.invoice.list.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="attributes">
+                <attribute name="decoration-danger">state_tributacion == 'rechazado'</attribute>
+            </xpath>
+            <xpath expr="//list//field[@name='name']" position="after">
+                <field name="tipo_documento" string="Doc Elect." optional="show"/>
+                <field name="state_tributacion" string="Estado FE" optional="show"
+                       widget="badge"
+                       decoration-success="state_tributacion == 'aceptado'"
+                       decoration-warning="state_tributacion == 'procesando'"
+                       decoration-danger="state_tributacion in ('rechazado', 'error')"
+                       decoration-info="state_tributacion == 'pendiente'"/>
+            </xpath>
+            <xpath expr="//field[@name='amount_total_in_currency_signed'][last()]" position="after">
+                <field name="has_exoneration" invisible="1"/>
+                <field name="amount_exoneration"
+                       string="Exoneración"
+                       widget="monetary"
+                       optional="hide"
+                       decoration-success="has_exoneration == True"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <!-- ============================================================================
+         VISTA DE BÚSQUEDA
+         Agrega filtro por nombre extendido y por exoneración
+    ============================================================================ -->
+    <record id="view_account_invoice_filter_inherit" model="ir.ui.view">
+        <field name="name">account.invoice.select.inherited</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <!-- Búsqueda extendida por referencia -->
+            <field name="name" string="Invoice"
+                   filter_domain="['|', '|', '|', '|', '|',
+                       ('name', 'ilike', self),
+                       ('invoice_origin', 'ilike', self),
+                       ('ref', 'ilike', self),
+                       ('invoice_payment_ref', 'ilike', self),
+                       ('partner_id', 'child_of', self),
+                       ('reference', 'ilike', self)]"/>
+            <!-- Filtros de exoneración -->
+            <xpath expr="//filter[@name='late']" position="after">
+                <separator/>
+                <filter string="Con Exoneración" name="has_exoneration_filter"
+                        domain="[('has_exoneration', '=', True)]"/>
+                <filter string="Sin Exoneración" name="no_exoneration_filter"
+                        domain="[('has_exoneration', '=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

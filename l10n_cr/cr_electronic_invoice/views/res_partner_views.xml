@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_partner_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="property_payment_term_id" position="after">
+                <field name="payment_methods_id" groups="account.group_account_invoice"/>
+            </field>
+            <field name="vat" position="after">
+                <field name="identification_id"/>
+                <field name="inscribed" force_save="1"/>
+                <field name="supplier_rank" invisible="1" readonly="1"/>
+            </field>
+            <xpath expr="//form/sheet/notebook" position="before">
+                <group col="7">
+                    <separator colspan="7"/>
+                    <field name="activity_id" domain="[('id', 'in', economic_activities_ids)]" options="{&quot;no_create&quot;: True, &quot;active_test&quot;: False}" colspan="5" />
+                    <button name="action_get_economic_activities" type="object" string="Consultar Actividad Economica en Hacienda" colspan="2" />
+                    <field name="economic_activities_ids" readonly="0" widget="section_and_note_one2many" mode="list" context="{'partner_id': id}" colspan="7">
+                        <list editable="bottom">
+                            <field name="code" />
+                            <field name="name"/>
+                            <field name="sale_type"/>
+                        </list>
+                    </field>
+                </group>
+            </xpath>
+            <field name="category_id" position="after">
+                <field name="has_exoneration" invisible="supplier_rank > 0"/>
+                <field name="requires_otro_texto" invisible="supplier_rank > 0"/>
+                <field name="export" invisible="supplier_rank > 0"/>
+            </field>
+
+            <!-- Add Exoneration and OtroTexto tabs (merged from view_partner_form_exoneration) -->
+            <xpath expr="//page[@name='internal_notes']" position="after">
+                <field name="has_exoneration" invisible="1"/>
+                <page name="exoneration" string="Exoneración"
+                      invisible="(is_company == False and parent_id != False) or has_exoneration == False">
+
+                    <group string="Datos de Exoneración" name="exoneration_main_group">
+                        <group name="exoneration_status" colspan="4">
+                            <field name="exoneration_is_valid" string="Exoneración Válida"
+                                   invisible="has_exoneration == False"
+                                   readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group string="Tipo de Documento" name="exoneration_type_group"
+                           invisible="has_exoneration == False">
+                        <group>
+                            <field name="type_exoneration"
+                                   string="Tipo de Documento"
+                                   required="has_exoneration == True"/>
+                            <field name="type_exoneration_other"
+                                   string="Tipo de Documento OTRO"
+                                   placeholder="Describa el tipo de documento (min. 5 caracteres)"
+                                   invisible="requires_type_other == False"
+                                   required="requires_type_other == True"/>
+                            <field name="exoneration_number"
+                                   string="Número de Documento"
+                                   placeholder="Ej: AUT-2024-001"
+                                   required="has_exoneration == True"/>
+                        </group>
+                        <group>
+                            <field name="exoneration_article"
+                                   string="Número de Artículo"
+                                   placeholder="Número de artículo de la ley"
+                                   invisible="requires_article == False"
+                                   required="requires_article == True"/>
+                            <field name="exoneration_inciso"
+                                   string="Número de Inciso"
+                                   placeholder="Inciso del artículo (si aplica)"
+                                   invisible="requires_article == False"/>
+                        </group>
+                    </group>
+
+                    <group string="Institución Emisora" name="exoneration_institution_group"
+                           invisible="has_exoneration == False">
+                        <group>
+                            <field name="institution_id"
+                                   string="Institución Emisora"
+                                   required="has_exoneration == True"/>
+                            <field name="institution_name_other"
+                                   string="Nombre Institución OTRO"
+                                   placeholder="Nombre de la institución (min. 5 caracteres)"
+                                   invisible="requires_institution_other == False"
+                                   required="requires_institution_other == True"/>
+                        </group>
+                    </group>
+
+                    <group string="Datos de la Exoneración" name="exoneration_details_group"
+                           invisible="has_exoneration == False">
+                        <group>
+                            <field name="percentage_exoneration"
+                                   string="Tarifa Exonerada (%)"
+                                   required="has_exoneration == True"/>
+
+                            <field name="authorization_exoneration"
+                                   string="Número de Autorización"/>
+                        </group>
+                        <group>
+                            <field name="date_issue"
+                                   string="Fecha de Emisión"
+                                   required="has_exoneration == True"/>
+                            <field name="date_expiration"
+                                   string="Fecha de Vencimiento"/>
+                            <field name="date_notification"
+                                   string="Última Notificación"
+                                   groups="base.group_no_one"/>
+                        </group>
+                    </group>
+
+                    <group string="Códigos CABYS Autorizados" name="exoneration_cabys_group"
+                           invisible="has_exoneration == False">
+                        <field name="allowed_cabys_ids" nolabel="1" colspan="4"/>
+                        <p class="text-muted" colspan="4">
+                            Ingrese los códigos CABYS autorizados para esta exoneración.
+                            Si se aplica una exoneración, el código CABYS debe estar en esta lista.
+                        </p>
+                    </group>
+
+                    <!-- Campos ocultos para lógica de la interfaz -->
+                    <group name="exoneration_hidden_fields" invisible="1">
+                        <field name="requires_article"/>
+                        <field name="requires_institution_other"/>
+                        <field name="requires_type_other"/>
+                    </group>
+
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='exoneration']" position="after">
+                <page name="fe_otro_texto" string="FE: Otros"
+                      invisible="requires_otro_texto == False">
+                    <field name="otro_texto_rule_ids" nolabel="1" colspan="4"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <!-- ================================================================== -->
+    <!-- VISTA PARA LÍNEAS OTROTEXTO (Modelo res.partner.otro.texto.rule)   -->
+    <!-- ================================================================== -->
+    <record id="view_res_partner_otro_texto_rule_tree" model="ir.ui.view">
+        <field name="name">res.partner.otro.texto.rule.tree</field>
+        <field name="model">res.partner.otro.texto.rule</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="xml_node_type" optional="show"/>
+                <field name="codigo"/>
+                <field name="source_type"/>
+                <field name="value_free_text"
+                       required="source_type == 'free_text'"
+                       readonly="source_type == 'field'"/>
+                <field name="value_field_id"
+                       required="source_type == 'field'"
+                       readonly="source_type == 'free_text'"/>
+            </list>
+        </field>
+    </record>
+    <!-- ================================================================== -->
+    <!-- VISTA PARA LÍNEAS CABYS (Modelo res.partner.cabys.line)            -->
+    <!-- ================================================================== -->
+    <record id="view_partner_cabys_line_list" model="ir.ui.view">
+        <field name="name">res.partner.cabys.line.list</field>
+        <field name="model">res.partner.cabys.line</field>
+        <field name="arch" type="xml">
+            <list string="Códigos CABYS Autorizados" editable="bottom">
+                <field name="name" string="Código CABYS" placeholder="Código de 13 dígitos"/>
+                <field name="cabys_id" string="Descripción CABYS" readonly="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ================================================================== -->
+    <!-- VISTA FORMULARIO - Extensión para exoneraciones                   -->
+    <!-- ================================================================== -->
+    <!-- <delete id="cr_electronic_invoice.view_partner_form_exoneration" model="ir.ui.view"/> -->
+    
+    <!-- ================================================================== -->
+    <!-- VISTA LISTA - Mostrar indicador de exoneración                    -->
+    <!-- ================================================================== -->
+    <record id="view_partner_list_exoneration" model="ir.ui.view">
+        <field name="name">res.partner.list.exoneration.v44</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="has_exoneration" optional="hide" string="Exon."/>
+            </xpath>
+        </field>
+    </record>
+    
+    <!-- ================================================================== -->
+    <!-- VISTA BÚSQUEDA - Filtrar por exoneración                          -->
+    <!-- ================================================================== -->
+    <record id="view_partner_filter_exoneration" model="ir.ui.view">
+        <field name="name">res.partner.filter.exoneration.v44</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <separator/>
+                <filter name="has_exoneration" string="Con Exoneración" 
+                        domain="[('has_exoneration', '=', True)]"/>
+                <filter name="without_exoneration" string="Sin Exoneración" 
+                        domain="[('has_exoneration', '=', False)]"/>
+                <filter name="exoneration_expired" string="Exoneración Vencida" 
+                        domain="[('has_exoneration', '=', True), ('date_expiration', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <!-- ================================================================== -->
+    <!-- ACCIÓN PARA VERIFICAR EXONERACIONES VENCIDAS                      -->
+    <!-- ================================================================== -->
+    <record id="action_check_exonerations" model="ir.actions.server">
+        <field name="name">Verificar Exoneraciones Vencidas</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.check_exonerations()
+        </field>
+    </record>
+    
+    <!-- ================================================================== -->
+    <!-- MENU ITEM PARA TIPOS DE EXONERACIÓN                               -->
+    <!-- ================================================================== -->
+    <record id="action_aut_ex" model="ir.actions.act_window">
+        <field name="name">Tipos de Documento de Exoneración</field>
+        <field name="res_model">aut.ex</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'active_test': False}</field>
+    </record>
+    
+    <record id="view_aut_ex_list" model="ir.ui.view">
+        <field name="name">aut.ex.list</field>
+        <field name="model">aut.ex</field>
+        <field name="arch" type="xml">
+            <list string="Tipos de Documento de Exoneración" 
+                  decoration-muted="is_disabled == True"
+                  decoration-danger="active == False">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="requires_article"/>
+                <field name="is_disabled"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+    
+    <record id="view_aut_ex_form" model="ir.ui.view">
+        <field name="name">aut.ex.form</field>
+        <field name="model">aut.ex</field>
+        <field name="arch" type="xml">
+            <form string="Tipo de Documento de Exoneración">
+                <sheet>
+                    <widget name="web_ribbon" title="Inhabilitado" bg_color="bg-danger" 
+                            invisible="is_disabled == False"/>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                            <field name="is_disabled"/>
+                            <field name="requires_article"/>
+                        </group>
+                    </group>
+                    <group string="Notas">
+                        <field name="notes" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <!-- ================================================================== -->
+    <!-- MENU ITEM PARA INSTITUCIONES                                      -->
+    <!-- ================================================================== -->
+    <record id="action_institution_exoneration" model="ir.actions.act_window">
+        <field name="name">Instituciones que Emite Exoneración</field>
+        <field name="res_model">institution.exoneration</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    
+    <record id="view_institution_exoneration_list" model="ir.ui.view">
+        <field name="name">institution.exoneration.list</field>
+        <field name="model">institution.exoneration</field>
+        <field name="arch" type="xml">
+            <list string="Instituciones que Emite Exoneración">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+    
+    <record id="view_institution_exoneration_form" model="ir.ui.view">
+        <field name="name">institution.exoneration.form</field>
+        <field name="model">institution.exoneration</field>
+        <field name="arch" type="xml">
+            <form string="Institución que Emite Exoneración">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                            <field name="is_other"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

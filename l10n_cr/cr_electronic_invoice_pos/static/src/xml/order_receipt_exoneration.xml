@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    
+    <!-- 
+        OrderReceipt - Shows correct total with exoneration
+    -->
+    <t t-name="cr_electronic_invoice_pos.OrderReceiptExoneration" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        
+        <!-- Replace total section with exoneration-aware version -->
+        <xpath expr="//div[hasclass('pos-receipt-amount') and hasclass('receipt-total')]" position="replace">
+            <t t-if="props.data?.exonerationInfo?.hasExoneration">
+                <div class="pos-receipt-amount" style="color: #666;">
+                    <s>
+                        <t t-out="props.data?.label_total or 'Total'"/>
+                        <span t-esc="formatCurrency(props.data?.exonerationInfo?.originalTotal)" class="pos-receipt-right-align"/>
+                    </s>
+                </div>
+                <div class="pos-receipt-amount" style="color: green;">
+                    Exoneracion (-<t t-esc="props.data?.exonerationInfo?.percentage"/>%)
+                    <span t-esc="'- ' + formatCurrency(props.data?.exonerationInfo?.totalExoneration)" class="pos-receipt-right-align"/>
+                </div>
+                <div class="pos-receipt-amount receipt-total" style="font-weight: bold; font-size: 14px;">
+                    Total a Pagar
+                    <span t-esc="formatCurrency(props.data?.exonerationInfo?.adjustedTotal)" class="pos-receipt-right-align"/>
+                </div>
+            </t>
+            <t t-else="">
+                <div class="pos-receipt-amount receipt-total">
+                    <t t-out="props.data?.label_total or 'Total'"/>
+                    <span t-esc="formatCurrency(taxTotals.order_sign * taxTotals.order_total)" class="pos-receipt-right-align"/>
+                </div>
+            </t>
+        </xpath>
+    </t>
+    
+</templates>

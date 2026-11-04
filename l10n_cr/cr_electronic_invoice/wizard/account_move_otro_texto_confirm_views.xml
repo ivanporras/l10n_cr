@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_move_otro_texto_confirm_form" model="ir.ui.view">
+        <field name="name">account.move.otro.texto.confirm.form</field>
+        <field name="model">account.move.otro.texto.confirm</field>
+        <field name="arch" type="xml">
+            <form string="Confirmación de Campos Vacíos">
+                <field name="warning_message" nolabel="1"/>
+                <footer>
+                    <button name="action_confirm_and_post" string="Continuar y Validar" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

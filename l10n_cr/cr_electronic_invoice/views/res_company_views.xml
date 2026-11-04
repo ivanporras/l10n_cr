@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_company_form_inherit" model="ir.ui.view">
+        <field name="name">res.company.form.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <!-- Agregar CSS para hacer las pestañas siempre visibles -->
+            <xpath expr="//form" position="attributes">
+                <attribute name="class">o_company_form_always_show_tabs</attribute>
+            </xpath>
+            
+            <!-- Agregar estilos CSS personalizados -->
+            <xpath expr="//form" position="inside">
+                <style>
+                    .o_company_form_always_show_tabs .o_notebook .nav-tabs {
+                        display: flex !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                        position: relative !important;
+                        z-index: 1000 !important;
+                    }
+                    .o_company_form_always_show_tabs .o_notebook .nav-tabs .nav-link {
+                        display: block !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }
+                    .o_company_form_always_show_tabs .o_notebook {
+                        position: relative !important;
+                    }
+                </style>
+            </xpath>
+
+
+            <field name="vat" position="after">
+                <field name="identification_id"/>
+            </field>
+
+            <field name="identification_id" position="after">
+                <separator string="Facturación Electrónica" colspan="2"/>
+                <field name="invoice_is_electronic" string="¿Desea habilitar facturación electrónica?"/>
+            </field>
+
+            <field name="color" position="after">
+                <div class="o_setting_box" style="margin-top: 20px; padding: 15px; border: 1px solid #dee2e6; border-radius: 8px; background-color: #f8f9fa;">
+                    <div class="o_setting_left_pane">
+                        <i class="fa fa-search fa-2x text-primary" style="margin-right: 15px;" title="Search"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <div class="o_form_label" style="font-weight: bold; margin-bottom: 5px;">Consulta de Contribuyente</div>
+                        <div class="text-muted" style="margin-bottom: 10px;">Consultar información del contribuyente en el sistema de Hacienda</div>
+                        <button name="action_consultar_contribuyente" 
+                                string="Consultar Contribuyente" 
+                                type="object" 
+                                class="btn btn-primary"
+                                icon="fa-search"/>
+                    </div>
+                </div>
+            </field>
+
+            <!-- <field name="incoterm_id" position="attributes">
+                    <attribute name="attrs">{'invisible': [('country_id','=',%(base.cr)d)]}
+                    </attribute>
+                </field> -->
+            <!-- Página para consultar información de EXONET-->
+
+
+            <xpath expr="//page[1]" position="after">
+                <page string="API Consultas">
+                    <block title="EndPoints Consultas y consultas" name="fecr_endpoints_container">
+                        <setting>
+                            <field name="url_base_exo"/>
+                        </setting>
+
+                        <setting>
+                            <field name="url_base"/>
+                        </setting>
+                    </block>
+                    <block>
+                        <setting>
+                            <field invisible="(ultima_respuesta_exo in (False,''))"
+                                   readonly="(ultima_respuesta_exo != False)"
+                                   name="ultima_respuesta_exo"/>
+                        </setting>
+                        <setting>
+                            <field invisible="(ultima_respuesta in (False,''))"
+                                   readonly="(ultima_respuesta != False)"
+                                   name="ultima_respuesta"/>
+                        </setting>
+                    </block>
+                </page>
+            </xpath>
+
+
+            <xpath expr="//page[1]" position="after">
+                <page name="" string="Facturación Electrónica" invisible="invoice_is_electronic == False">
+                    <form>
+                        <sheet>
+                            <div class="alert alert-info" role="alert" style="margin-bottom: 20px;">
+                                <i class="fa fa-info-circle" title="Info"/> <strong>Configuración de Facturación Electrónica</strong><br/>
+                                Complete la siguiente información para habilitar la facturación electrónica en su empresa.
+                            </div>
+                            <group>
+                                <group string="📋 Información de la Empresa">
+                                    <field name="commercial_name" placeholder="Ingrese el nombre comercial de la empresa"/>
+                                    <field name="legal_name" placeholder="Ingrese la razón social de la empresa"/>
+                                    <field name="company_registry" placeholder="Ingrese el número de registro de la empresa"/>
+                                    <field name="vat" placeholder="Ingrese el número de identificación fiscal"/>
+                                    <field name="identification_id" placeholder="Seleccione el tipo de identificación"/>
+                                    <field name="currency_id" placeholder="Seleccione la moneda"/>
+                                </group>
+                                
+                                <group string="⚙️ Configuración del Proveedor">
+                                    <field name="invoice_provider_type" placeholder="Seleccione el tipo de proveedor"/>
+                                    <field name="invoice_provider_identification"
+                                           invisible="invoice_provider_type == 'inhouse'"
+                                           required="invoice_provider_type == 'external'"
+                                           placeholder="Ingrese la identificación del proveedor externo"
+                                    />
+                                </group>
+
+                            </group>
+                            
+                            <separator string="📍 Información de Ubicación" style="margin-top: 20px;"/>
+                            <group>
+                                <group string="Ubicación Principal">
+                                    <field name="country_id" string="País" readonly="1"
+                                           options="{'no_create': True, 'no_create_edit': True}"
+                                           placeholder="Country Code"/>
+                                    <field name="state_id" string="Provincia" placeholder="Seleccionar Provincia"
+                                           domain="[('country_id', '=',country_id)]"
+                                           options="{'no_create': True, 'no_create_edit': True}"/>
+                                    <field name="county_id" string="Cantón" placeholder="Seleccionar Cantón"
+                                           readonly="0" domain="[('state_id', '=',state_id)]"
+                                           options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                                    <field name="district_id" string="Distrito" placeholder="Seleccionar Distrito"
+                                           readonly="0" domain="[('county_id', '=',county_id)]"
+                                           options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                                </group>
+                                
+                                <group string="Detalles de Dirección">
+                                    <field name="neighborhood_id" string="Barrio" placeholder="Seleccionar Barrio"
+                                           readonly="0" domain="[('district_id', '=',district_id)]"
+                                           options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                                    <field name="street" string="Otras Señas" placeholder="Dirección específica" readonly="0"
+                                           options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                                    <field name="street2" string="Señas Adicionales" placeholder="Información adicional" readonly="0"
+                                           options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                                </group>
+                            </group>
+
+                            <separator string="🔐 Configuración de Credenciales" style="margin-top: 20px;"/>
+                            <group>
+                                <group string="Credenciales de Hacienda">
+                                    <field name="frm_ws_identificador" string="Usuario de Hacienda" placeholder="Ingrese su usuario de Hacienda"/>
+                                    <field name="frm_ws_password" string="Contraseña de Hacienda" password="True" placeholder="Ingrese su contraseña de Hacienda"/>
+                                    <field name="frm_ws_ambiente" widget="radio"/>
+                                </group>
+                                
+                                <group string="Certificados Digitales">
+                                    <field name="signature" placeholder="Seleccione el archivo de certificado digital"/>
+                                    <field name="frm_pin" string="PIN del Certificado" password="True" placeholder="Ingrese el PIN del certificado"/>
+                                    <field name="date_expiration_sign" string="Fecha de Expiración" force_save="True" readonly="1"/>
+                                </group>
+                            </group>
+                            
+                            <div class="o_setting_box" style="margin: 20px 0; padding: 15px; border: 1px solid #28a745; border-radius: 8px; background-color: #d4edda;">
+                                <div class="o_setting_left_pane">
+                                    <i class="fa fa-check-circle fa-2x text-success" title="Success"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <div class="o_form_label" style="font-weight: bold; margin-bottom: 5px;">Prueba de Conexión</div>
+                                    <div class="text-muted" style="margin-bottom: 10px;">Verificar la conexión con el sistema de Hacienda</div>
+                                    <button name="test_get_token" type="object" string="Probar Conexión" class="btn btn-success"/>
+                                </div>
+                            </div>
+
+                            <separator string="🏢 Actividades Económicas" style="margin-top: 20px;"/>
+                            <group>
+                                <group string="Actividad Principal">
+                                    <field name="activity_id" domain="[('id', 'in', economic_activities_ids)]"
+                                            options='{"no_open": True, "no_create": True}'
+                                            placeholder="Seleccione la actividad económica principal"/>
+                                </group>
+                                <group>
+                                    <div class="o_setting_box" style="padding: 10px;">
+                                         <button name="action_get_economic_activities" type="object"
+                                                 string="Consultar Actividades en Hacienda" 
+                                                 class="btn btn-info"
+                                                 icon="fa-download"/>
+                                     </div>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="economic_activities_ids" widget="many2many_tags" readonly="1"
+                                       options="{'no_create': True}"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,15 @@
+diff a/l10n_cr/cr_electronic_invoice/models/res_company.py b/l10n_cr/cr_electronic_invoice/models/res_company.py	(rejected hunks)
+@@ -44,11 +44,13 @@ class CompanyElectronic(models.Model):
+         context={
+             'active_test': False
+         },
++        check_company=False,
+     )
+     economic_activities_ids = fields.Many2many(
+         comodel_name='economic.activity',
+         string='Actividades Económicas',
+         context={'active_test': False},
++        check_company=False,
+     )
+     signature = fields.Binary(
+         string="Cryptographic Key"

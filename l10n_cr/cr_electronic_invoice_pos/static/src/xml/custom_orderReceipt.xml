@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    
+    <!-- Receipt Header - Custom layout -->
+    <t t-name="cr_electronic_invoice_pos.ReceiptHeader" t-inherit="point_of_sale.ReceiptHeader" t-inherit-mode="extension">
+        <!-- Replace company contact section with our custom info -->
+        <xpath expr="//div[hasclass('pos-receipt-contact')]" position="replace">
+            <div class="pos-receipt-contact" style="text-align: center;">
+                
+                <!-- Company Info -->
+                <div t-if="order.company?.name" style="margin-bottom: 4px;">
+                    <b t-esc="order.company.name"/>
+                </div>
+                <div t-if="order.company?.vat" style="margin-bottom: 4px;">
+                    Identificación: <span t-esc="order.company.vat"/>
+                </div>
+                <div t-if="order.company?.phone" style="margin-bottom: 4px;">
+                    Tel: <span t-esc="order.company.phone"/>
+                </div>
+                <div t-if="order.company?.email" style="margin-bottom: 4px;">
+                    Email: <span t-esc="order.company.email"/>
+                </div>
+                <!-- Full Address: Street, County, District, Province, Country -->
+                <div style="margin-bottom: 4px;">
+                    <t t-if="order.headerData?.company_street" t-esc="order.headerData.company_street"/>
+                    <t t-if="order.headerData?.company_county">, <t t-esc="order.headerData.company_county"/></t>
+                    <t t-if="order.headerData?.company_state">, <t t-esc="order.headerData.company_state"/></t>
+                    <t t-if="order.headerData?.company_district">, <t t-esc="order.headerData.company_district"/></t>
+                    <t t-if="order.headerData?.company_country">, <t t-esc="order.headerData.company_country"/></t>
+                </div>
+                
+                <div style="border-bottom: 1px dashed #000; margin: 8px 0;"></div>
+                
+                <!-- Electronic Invoice Info -->
+                <div t-if="order.get_tipo_documento" style="margin-bottom: 4px;">
+                    <b>Tipo Documento:</b>
+                    <t t-if="order.get_tipo_documento() == 'FE'"> Factura Electronica</t>
+                    <t t-elif="order.get_tipo_documento() == 'NC'"> Nota de Credito</t>
+                    <t t-elif="order.get_tipo_documento() == 'ND'"> Nota de Debito</t>
+                    <t t-elif="order.get_tipo_documento() == 'FEE'"> Factura Electronica Exportacion</t>
+                    <t t-elif="order.get_tipo_documento() == 'FEC'"> Factura Electronica Compra</t>
+                    <t t-else=""> Tiquete Electronico</t>
+                </div>
+                
+                <!-- Electronic Number (Clave) -->
+                <div t-if="order.get_number_electronic" style="margin-bottom: 4px;">
+                    <div><b>Clave:</b></div>
+                    <div style="word-break: break-all; padding-left: 5px;">
+                        <t t-esc="order.get_number_electronic()"/>
+                    </div>
+                </div>
+                
+                <!-- Consecutive -->
+                <div t-if="order.get_sequence" style="margin-bottom: 4px;">
+                    <b>Consecutivo:</b>
+                    <span style="padding-left: 5px;"><t t-esc="order.get_sequence()"/></span>
+                </div>
+                
+                <!-- Sale Condition (Hacienda Required - Nota 5) -->
+                <div style="margin-bottom: 4px;">
+                    <b>Condicion Venta:</b>
+                    <span style="padding-left: 5px;">Contado</span>
+                </div>
+                
+                <!-- Payment Method (Hacienda Nota 6) -->
+                <div style="margin-bottom: 4px;">
+                    <b>Medio de Pago:</b>
+                    <span style="padding-left: 5px;">Efectivo</span>
+                </div>
+                
+                <div style="border-bottom: 1px dashed #000; margin: 8px 0;"></div>
+                
+                <!-- Customer Info -->
+                <div t-if="order.partner_id" style="margin-bottom: 4px;">
+                    <b>Cliente: </b>
+                    <t t-if="order.partner_id.name">
+                        <span t-esc="order.partner_id.name"/>
+                    </t>
+                </div>
+                <div t-if="order.partner_id?.vat" style="margin-bottom: 4px;">
+                    Identificación: <span t-esc="order.partner_id.vat"/>
+                </div>
+                <div t-if="order.partner_id?.email" style="margin-bottom: 4px;">
+                    Email: <span t-esc="order.partner_id.email"/>
+                </div>
+
+                <div style="border-bottom: 1px dashed #000; margin: 8px 0;"></div>
+            </div>
+        </xpath>
+    </t>
+    
+    <!-- Remove duplicate customer section from base template -->
+    <t t-name="cr_electronic_invoice_pos.ReceiptHeader" t-inherit="point_of_sale.ReceiptHeader" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('pos-receipt-customer')]" position="replace">
+            <div class="pos-receipt-customer" style="display: none;"/>
+        </xpath>
+    </t>
+    
+    <!-- Remove company address section (left) from OrderReceipt footer -->
+    <t t-name="cr_electronic_invoice_pos.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('w-50') and hasclass('text-start')]" position="replace">
+            <div style="display: none;"/>
+        </xpath>
+    </t>
+    
+    <!-- Remove company contact section (right) from OrderReceipt footer -->
+    <t t-name="cr_electronic_invoice_pos.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('w-50') and hasclass('text-end')]" position="replace">
+            <div style="display: none;"/>
+        </xpath>
+    </t>
+    
+    <!-- Add authorization text at the end of OrderReceipt -->
+    <t t-name="cr_electronic_invoice_pos.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        <!-- Insert at the end before closing div -->
+        <xpath expr="//div[hasclass('pos-receipt')]/div[last()]" position="before">
+            <div style="text-align: center; margin-top: 10px; padding: 0 10px; font-size: 11px; color: #333;">
+                <div style="border-top: 1px dashed #000; padding-top: 8px;">
+                    <div style="margin-bottom: 4px;">
+                        Autorizada mediante resolucion N° MH-DGT-RES-0027-2024 del 13/11/2024.
+                    </div>
+                    <div>Version 4.4</div>
+                </div>
+            </div>
+        </xpath>
+    </t>
+    
+</templates>

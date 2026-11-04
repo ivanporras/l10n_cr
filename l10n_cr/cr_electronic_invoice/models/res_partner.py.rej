@@ -1,0 +1,15 @@
+diff a/l10n_cr/cr_electronic_invoice/models/res_partner.py b/l10n_cr/cr_electronic_invoice/models/res_partner.py	(rejected hunks)
+@@ -52,11 +52,13 @@ class PartnerElectronic(models.Model):
+         comodel_name="economic.activity",
+         string="Actividad Económica Principal",
+         context={'active_test': False},
++        check_company=False,
+     )
+     economic_activities_ids = fields.Many2many(
+         comodel_name='economic.activity',
+         string='Actividades Económicas',
+         context={'active_test': False},
++        check_company=False,
+     )
+     # Indicador principal de exoneración
+     has_exoneration = fields.Boolean(

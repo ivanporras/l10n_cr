@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_company_form_import_inherit" model="ir.ui.view">
+            <field name="name">res.company.form.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name="invoice_import" string="Facturación Electrónica - Importación">
+                        <group name="import_settings">
+                            <group>
+                                <field name="import_bill_automatic"/>
+                                <field name="import_bill_mail_server_id"
+                                       invisible="not import_bill_automatic"
+                                       required="import_bill_automatic"/>
+                                <field name="import_bill_folder_import"
+                                       invisible="not import_bill_automatic"
+                                       required="import_bill_automatic"/>
+                            </group>
+                            <group>
+                                <field name="import_bill_journal_id"
+                                       invisible="not import_bill_automatic"
+                                       required="import_bill_automatic"/>
+                                <field name="import_bill_product_id"
+                                       invisible="(import_bill_automatic == False)"/>
+                                <field name="import_bill_account_id"
+                                       invisible="(import_bill_automatic == False)"
+                                       required="(import_bill_automatic == True)"/>
+                                <field name="import_bill_account_analytic_id"
+                                       invisible="(import_bill_automatic == False)"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

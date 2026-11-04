@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Instituciones que emiten Exoneraciones
+    Según Nota 23 de la Resolución DGT - Versión 4.4
+-->
+<odoo>
+    <data noupdate="0">
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 01: Ministerio de Hacienda                                  -->
+        <!-- ================================================================== -->
+        <record id="institution_01" model="institution.exoneration">
+            <field name="code">01</field>
+            <field name="name">Ministerio de Hacienda</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 02: Ministerio de Relaciones Exteriores y Culto            -->
+        <!-- ================================================================== -->
+        <record id="institution_02" model="institution.exoneration">
+            <field name="code">02</field>
+            <field name="name">Ministerio de Relaciones Exteriores y Culto</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 03: Ministerio de Agricultura y Ganadería                  -->
+        <!-- ================================================================== -->
+        <record id="institution_03" model="institution.exoneration">
+            <field name="code">03</field>
+            <field name="name">Ministerio de Agricultura y Ganadería</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 04: Ministerio de Economía, Industria y Comercio           -->
+        <!-- ================================================================== -->
+        <record id="institution_04" model="institution.exoneration">
+            <field name="code">04</field>
+            <field name="name">Ministerio de Economía, Industria y Comercio</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 05: Cruz Roja Costarricense                                 -->
+        <!-- ================================================================== -->
+        <record id="institution_05" model="institution.exoneration">
+            <field name="code">05</field>
+            <field name="name">Cruz Roja Costarricense</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 06: Benemérito Cuerpo de Bomberos de Costa Rica            -->
+        <!-- ================================================================== -->
+        <record id="institution_06" model="institution.exoneration">
+            <field name="code">06</field>
+            <field name="name">Benemérito Cuerpo de Bomberos de Costa Rica</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 07: Asociación Obras del Espíritu Santo                     -->
+        <!-- ================================================================== -->
+        <record id="institution_07" model="institution.exoneration">
+            <field name="code">07</field>
+            <field name="name">Asociación Obras del Espíritu Santo</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 08: Federación Cruzada Nacional de protección al Anciano   -->
+        <!-- ================================================================== -->
+        <record id="institution_08" model="institution.exoneration">
+            <field name="code">08</field>
+            <field name="name">Federación Cruzada Nacional de protección al Anciano (Fecrunapa)</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 09: Escuela de Agricultura de la Región Húmeda (EARTH)     -->
+        <!-- ================================================================== -->
+        <record id="institution_09" model="institution.exoneration">
+            <field name="code">09</field>
+            <field name="name">Escuela de Agricultura de la Región Húmeda (EARTH)</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 10: Instituto Centroamericano de Administración de Empresas-->
+        <!-- ================================================================== -->
+        <record id="institution_10" model="institution.exoneration">
+            <field name="code">10</field>
+            <field name="name">Instituto Centroamericano de Administración de Empresas (INCAE)</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 11: Junta de Protección Social (JPS)                        -->
+        <!-- ================================================================== -->
+        <record id="institution_11" model="institution.exoneration">
+            <field name="code">11</field>
+            <field name="name">Junta de Protección Social (JPS)</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 12: Autoridad Reguladora de los Servicios Públicos         -->
+        <!-- ================================================================== -->
+        <record id="institution_12" model="institution.exoneration">
+            <field name="code">12</field>
+            <field name="name">Autoridad Reguladora de los Servicios Públicos (Aresep)</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+        <!-- ================================================================== -->
+        <!-- CÓDIGO 99: Otros                                                   -->
+        <!-- REQUIERE: Completar NombreInstitucionOtros                        -->
+        <!-- ================================================================== -->
+        <record id="institution_99" model="institution.exoneration">
+            <field name="code">99</field>
+            <field name="name">Otros</field>
+            <field name="active" eval="True"/>
+        </record>
+        
+    </data>
+</odoo>

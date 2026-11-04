@@ -1,0 +1,19 @@
+diff a/l10n_cr/cr_import_vendor_bills/__manifest__.py b/l10n_cr/cr_import_vendor_bills/__manifest__.py	(rejected hunks)
+@@ -5,12 +5,15 @@
+     'version': '18.0.0.0.0',
+     'category': 'Vendor Bills',
+     'author': 'OdooFeCR',
++    'maintainers': ['jartavia05'],
+     'license': 'AGPL-3',
+     'website': '',
+-    'summary': 'Import Vendor Bills from incoming mail server',
++    'summary': 'Importación automática de facturas de proveedores desde el servidor de correo.',
+ 
+     'description': """
+-        
++        Este módulo permite la importación y procesamiento automático de facturas de proveedores (XML v4.3/v4.4) 
++        recibidas por correo electrónico, facilitando el registro de documentos de compra en Odoo para la 
++        localización de Costa Rica.
+     """,
+ 
+     # any module necessary for this one to work correctly

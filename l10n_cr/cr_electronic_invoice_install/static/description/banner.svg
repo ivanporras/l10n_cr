@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <!-- Fondo del banner -->
+  <rect width="1200" height="300" fill="#f5f5f5" />
+  
+  <!-- Bandera de Costa Rica estilizada como fondo -->
+  <rect x="0" y="0" width="1200" height="60" fill="#002b7f" opacity="0.2" />
+  <rect x="0" y="60" width="1200" height="60" fill="#ffffff" opacity="0.2" />
+  <rect x="0" y="120" width="1200" height="60" fill="#ce1126" opacity="0.2" />
+  <rect x="0" y="180" width="1200" height="60" fill="#ffffff" opacity="0.2" />
+  <rect x="0" y="240" width="1200" height="60" fill="#002b7f" opacity="0.2" />
+  
+  <!-- Título -->
+  <text x="600" y="100" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#0072b2">Facturación Electrónica de Costa Rica</text>
+  <text x="600" y="160" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="#333333">Solución completa para cumplir con la normativa del Ministerio de Hacienda</text>
+  
+  <!-- Iconos representativos -->
+  <g transform="translate(200, 220)">
+    <circle cx="0" cy="0" r="30" fill="#0072b2" />
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">FE</text>
+  </g>
+  
+  <g transform="translate(400, 220)">
+    <circle cx="0" cy="0" r="30" fill="#0072b2" />
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">CR</text>
+  </g>
+  
+  <g transform="translate(600, 220)">
+    <circle cx="0" cy="0" r="30" fill="#0072b2" />
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">XML</text>
+  </g>
+  
+  <g transform="translate(800, 220)">
+    <circle cx="0" cy="0" r="30" fill="#0072b2" />
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">PDF</text>
+  </g>
+  
+  <g transform="translate(1000, 220)">
+    <circle cx="0" cy="0" r="30" fill="#0072b2" />
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">CABYS</text>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Mensaje de bienvenida para mostrar después de la instalación -->
+        <record id="cr_electronic_invoice_install_message" model="ir.config_parameter">
+            <field name="key">cr_electronic_invoice.install_message</field>
+            <field name="value">Módulo de Facturación Electrónica de Costa Rica instalado correctamente.</field>
+        </record>
+    </data>
+</odoo>

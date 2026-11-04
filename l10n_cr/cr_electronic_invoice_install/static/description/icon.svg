@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fondo del icono -->
+  <rect width="512" height="512" rx="100" ry="100" fill="#0072b2" />
+  
+  <!-- Bandera de Costa Rica estilizada -->
+  <rect x="106" y="106" width="300" height="60" fill="#002b7f" />
+  <rect x="106" y="166" width="300" height="60" fill="#ffffff" />
+  <rect x="106" y="226" width="300" height="60" fill="#ce1126" />
+  <rect x="106" y="286" width="300" height="60" fill="#ffffff" />
+  <rect x="106" y="346" width="300" height="60" fill="#002b7f" />
+  
+  <!-- Documento de factura -->
+  <g transform="translate(256, 256) rotate(-15) translate(-256, -256)">
+    <rect x="156" y="126" width="200" height="260" rx="10" ry="10" fill="#ffffff" stroke="#000000" stroke-width="8" />
+    <line x1="186" y1="186" x2="326" y2="186" stroke="#000000" stroke-width="4" />
+    <line x1="186" y1="226" x2="326" y2="226" stroke="#000000" stroke-width="4" />
+    <line x1="186" y1="266" x2="326" y2="266" stroke="#000000" stroke-width="4" />
+    <line x1="186" y1="306" x2="266" y2="306" stroke="#000000" stroke-width="4" />
+  </g>
+  
+  <!-- Símbolo de verificación -->
+  <g transform="translate(350, 350)">
+    <circle cx="0" cy="0" r="70" fill="#00aa44" />
+    <path d="M-35,0 L-10,25 L35,-20" fill="none" stroke="#ffffff" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

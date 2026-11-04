@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Migración: Agregar columnas personalizadas a la lista de facturas -->
+    <template id="portal_my_invoices_custom" name="My Invoices - Custom Columns" inherit_id="account.portal_my_invoices">
+        <!-- Agregar columnas en el header -->
+        <xpath expr="//thead/tr/th[@name='status']" position="before">
+            <th name="doc_elect" class="text-end d-none d-md-table-cell">Doc. Elect.</th>
+            <th name="state_tributacion" class="text-center">Estado Tributación</th>
+        </xpath>
+
+        <!-- Agregar datos en las filas -->
+        <xpath expr="//tbody//td[@name='invoice_status']" position="before">
+            <td class="text-end d-none d-md-table-cell">
+                <span t-out="invoice.tipo_documento"/>
+            </td>
+            <td class="text-center">
+                <!-- Badge de estado tributación -->
+                <t t-if="invoice.state_tributacion == 'aceptado'">
+                    <span class="badge rounded-pill text-bg-success">
+                        <i class="fa fa-check-circle"/>
+                        <span class="d-none d-md-inline">Aceptado</span>
+                    </span>
+                </t>
+                <t t-elif="invoice.state_tributacion == 'rechazado'">
+                    <span class="badge rounded-pill text-bg-danger">
+                        <i class="fa fa-times-circle"/>
+                        <span class="d-none d-md-inline">Rechazado</span>
+                    </span>
+                </t>
+                <t t-elif="invoice.state_tributacion == 'error'">
+                    <span class="badge rounded-pill text-bg-danger">
+                        <i class="fa fa-exclamation-triangle"/>
+                        <span class="d-none d-md-inline">Error</span>
+                    </span>
+                </t>
+                <t t-elif="invoice.state_tributacion == 'procesando'">
+                    <span class="badge rounded-pill text-bg-info">
+                        <i class="fa fa-spinner fa-spin"/>
+                        <span class="d-none d-md-inline">Procesando</span>
+                    </span>
+                </t>
+                <t t-elif="invoice.state_tributacion == 'na'">
+                    <span class="badge rounded-pill text-bg-secondary">
+                        <i class="fa fa-minus"/>
+                        <span class="d-none d-md-inline">N/A</span>
+                    </span>
+                </t>
+                <t t-else="">
+                    <span class="text-muted">-</span>
+                </t>
+            </td>
+        </xpath>
+    </template>
+
+    <!-- Migración: Agregar indicador de estado tributación en sidebar -->
+    <template id="portal_invoice_page_estado_tributacion" name="Invoice Page - Estado Tributación" inherit_id="account.portal_invoice_page">
+        <!-- Agregar estado de tributación después del título del monto -->
+        <xpath expr="//t[@t-set='title']//h2" position="after">
+            <!-- Tipo de Documento -->
+            <div class="mt-2 w-100 text-center" t-if="invoice.tipo_documento">
+                <div class="small text-muted">Tipo de Documento</div>
+                <div class="fw-bold">
+                    <t t-if="invoice.tipo_documento == 'FE'">Factura Electrónica</t>
+                    <t t-elif="invoice.tipo_documento == 'TE'">Tiquete Electrónico</t>
+                    <t t-elif="invoice.tipo_documento == 'NC'">Nota de Crédito</t>
+                    <t t-elif="invoice.tipo_documento == 'ND'">Nota de Débito</t>
+                    <t t-else=""><span t-out="invoice.tipo_documento"/></t>
+                </div>
+            </div>
+
+            <!-- Badge de Estado Tributación -->
+            <div class="mt-3 w-100 text-center" t-if="invoice.state_tributacion and invoice.state_tributacion != 'na'">
+                <div class="small text-muted mb-1">Estado Tributación</div>
+                <t t-if="invoice.state_tributacion == 'aceptado'">
+                    <span class="badge rounded-pill text-bg-success fs-6 px-3 py-2">
+                        <i class="fa fa-check-circle"/> Aceptado
+                    </span>
+                </t>
+                <t t-elif="invoice.state_tributacion == 'rechazado'">
+                    <span class="badge rounded-pill text-bg-danger fs-6 px-3 py-2">
+                        <i class="fa fa-times-circle"/> Rechazado
+                    </span>
+                </t>
+                <t t-elif="invoice.state_tributacion == 'error'">
+                    <span class="badge rounded-pill text-bg-danger fs-6 px-3 py-2">
+                        <i class="fa fa-exclamation-triangle"/> Error
+                    </span>
+                </t>
+                <t t-elif="invoice.state_tributacion == 'procesando'">
+                    <span class="badge rounded-pill text-bg-info fs-6 px-3 py-2">
+                        <i class="fa fa-spinner fa-spin"/> Procesando
+                    </span>
+                </t>
+            </div>
+
+            <!-- Número Electrónico -->
+            <div class="mt-2 w-100 text-center" t-if="invoice.number_electronic">
+                <div class="small text-muted">Clave Numérica</div>
+                <div class="small font-monospace" style="word-break: break-all;">
+                    <span t-out="invoice.number_electronic"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Migración: Agregar botón de descarga de XMLs -->
+    <template id="portal_invoice_page_custom" name="Invoice Page - XML Download" inherit_id="account.portal_invoice_page">
+        <!-- Agregar botón de ZIP con ambos XMLs después del botón de Download -->
+        <xpath expr="//div[hasclass('o_download_pdf')]" position="after">
+            <!-- Botón único para descargar ZIP con todos los XMLs -->
+            <div class="o_download_xmls_zip d-flex flex-lg-column flex-xl-row flex-wrap gap-2 mt-2"
+                 t-if="has_any_xml">
+                <a class="btn btn-success o_download_btn flex-grow-1"
+                   t-attf-href="/my/invoices/#{invoice.id}/download_xmls_zip?access_token=#{access_token}"
+                   title="Descargar XMLs en formato ZIP"
+                   role="button">
+                    <i class="fa fa-file-archive-o"/> Descargar XMLs
+                    <span class="small d-block" style="font-size: 0.75rem;">
+                        <t t-if="xml_documento and xml_respuesta">(Documento + Respuesta)</t>
+                        <t t-elif="xml_documento">(Solo Documento)</t>
+                        <t t-elif="xml_respuesta">(Solo Respuesta)</t>
+                    </span>
+                </a>
+            </div>
+        </xpath>
+    </template>
+</odoo>
