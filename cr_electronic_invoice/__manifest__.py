@@ -65,7 +65,8 @@
         'views/account_payment_register_views.xml',
         'views/report_invoice.xml',
         'views/account_portal_templates.xml',
-        'views/web_external_layout_striped.xml',
+        # CAMBIO-32 Migración v19 (temporal): reemplazaba web.external_layout_striped completo y rompe en 19
+        # 'views/web_external_layout_striped.xml',
         'security/ir.model.access.csv',
         'wizard/account_move_otro_texto_confirm_views.xml',
     ],
