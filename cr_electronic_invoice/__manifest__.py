@@ -27,7 +27,10 @@
         ],
     'data': [
         'data/account_tax_group_data.xml',
-        'data/account_tax_data.xml',
+        # MIGRATION V19 (AJUSTE-42): comentado igual que en producción 17. Los impuestos
+        # de este XML no traen company_id y en una base multicompañía se crean en la
+        # compañía principal (México). Las compañías de Costa Rica ya tienen sus impuestos.
+        #'data/account_tax_data.xml',
         'data/institution_exoneration_data.xml',
         'data/aut_ex_data.xml',
         'data/code_type_product_data.xml',
