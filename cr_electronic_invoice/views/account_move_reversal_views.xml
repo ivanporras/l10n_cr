@@ -1,24 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- MIGRATION V19 (AJUSTE-59) - MODIFICADO: se regresa el comportamiento de la 17.
+         - La vista quedo desactivada por el upgrade; se reactiva.
+         - Los campos de referencia se muestran solo para compañias de Costa Rica
+           (company_country_code), como en la 17; la rama 19.0 los mostraba en todos los paises.
+         - Obligatorios solo en Costa Rica al revertir una nota de credito/debito. En la 17 la
+           condicion decia company_country_code != 'CR' (invertida: obligatorio justo donde el
+           campo esta oculto); se corrige a == 'CR'.
+         - Campo Motivo (reason): en la 17 el xpath de atributos no cambiaba nada (attribute
+           "attrs" vacio), asi que se deja el estandar de la 19 en todos los paises.
+         - journal_id obligatorio: igual que en la 17 y en la rama 19.0. -->
     <record id="view_account_move_reversal_form_inherit" model="ir.ui.view">
         <field name="name">account.move.reversal.form.inherit</field>
         <field name="model">account.move.reversal</field>
         <field name="inherit_id" ref="account.view_account_move_reversal"/>
+        <!-- MIGRATION V19 (AJUSTE-59) - AGREGADO: reactivar la vista -->
+        <field name="active" eval="True"/>
         <field name="arch" type="xml">
+            <!-- MIGRATION V19 (AJUSTE-59) - MODIFICADO
+                 ORIGINAL 19.0 (l10n_cr):
+                 <field name="reference_code_id" string="Código Referencia"
+                        invisible="move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund')"
+                        required="move_type in ('out_refund', 'in_refund')"/>
+                 <field name="reference_document_id" string="Documento Referencia"
+                        invisible="move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund')"
+                        required="move_type in ('out_refund', 'in_refund')"/>
+                 NUEVO 19: -->
             <xpath expr="//field[@name='reason']" position="before">
+                <field name="company_country_code" invisible="1"/>
                 <field name="reference_code_id" string="Código Referencia"
-                       invisible="move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund')"
-                       required="move_type in ('out_refund', 'in_refund')"/>
+                       invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') or company_country_code != 'CR'"
+                       required="move_type in ('out_refund', 'in_refund') and company_country_code == 'CR'"/>
                 <field name="reference_document_id" string="Documento Referencia"
-                       invisible="move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund')"
-                       required="move_type in ('out_refund', 'in_refund')"/>
+                       invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') or company_country_code != 'CR'"
+                       required="move_type in ('out_refund', 'in_refund') and company_country_code == 'CR'"/>
             </xpath>
+            <!-- FIN MIGRATION V19 (AJUSTE-59) -->
 
-            <xpath expr="//field[@name='reason']" position="attributes">
-                <attribute name="invisible">move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')</attribute>
-                <attribute name='required'>move_type in ('out_refund', 'in_refund')</attribute>
-            </xpath>
+            <!-- MIGRATION V19 (AJUSTE-59) - MODIFICADO: en la 17 este xpath no cambiaba el campo
+                 (attribute attrs vacio); la rama 19.0 lo hacia obligatorio en todos los paises.
+                 Se desactiva para conservar el flujo de la 17.
+                 ORIGINAL 19.0 (l10n_cr):
+                 <xpath expr="//field[@name='reason']" position="attributes">
+                     <attribute name="invisible">move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')</attribute>
+                     <attribute name='required'>move_type in ('out_refund', 'in_refund')</attribute>
+                 </xpath>
+                 FIN MIGRATION V19 (AJUSTE-59) -->
 
             <xpath expr="//field[@name='journal_id']" position="attributes">
                 <attribute name="required">1</attribute>
