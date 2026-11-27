@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- MIGRATION V19 (AJUSTE-59) - MODIFICADO: se regresa el comportamiento de la 17.
+    <!-- MIGRATION V19 (AJUSTE-65) - MODIFICADO: se regresa el comportamiento de la 17.
          - La vista quedo desactivada por el upgrade; se reactiva.
          - Los campos de referencia se muestran solo para compañias de Costa Rica
            (company_country_code), como en la 17; la rama 19.0 los mostraba en todos los paises.
@@ -15,10 +15,10 @@
         <field name="name">account.move.reversal.form.inherit</field>
         <field name="model">account.move.reversal</field>
         <field name="inherit_id" ref="account.view_account_move_reversal"/>
-        <!-- MIGRATION V19 (AJUSTE-59) - AGREGADO: reactivar la vista -->
+        <!-- MIGRATION V19 (AJUSTE-65) - AGREGADO: reactivar la vista -->
         <field name="active" eval="True"/>
         <field name="arch" type="xml">
-            <!-- MIGRATION V19 (AJUSTE-59) - MODIFICADO
+            <!-- MIGRATION V19 (AJUSTE-65) - MODIFICADO
                  ORIGINAL 19.0 (l10n_cr):
                  <field name="reference_code_id" string="Código Referencia"
                         invisible="move_type not in ('out_invoice', 'out_refund','in_invoice', 'in_refund')"
@@ -36,9 +36,9 @@
                        invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund') or company_country_code != 'CR'"
                        required="move_type in ('out_refund', 'in_refund') and company_country_code == 'CR'"/>
             </xpath>
-            <!-- FIN MIGRATION V19 (AJUSTE-59) -->
+            <!-- FIN MIGRATION V19 (AJUSTE-65) -->
 
-            <!-- MIGRATION V19 (AJUSTE-59) - MODIFICADO: en la 17 este xpath no cambiaba el campo
+            <!-- MIGRATION V19 (AJUSTE-65) - MODIFICADO: en la 17 este xpath no cambiaba el campo
                  (attribute attrs vacio); la rama 19.0 lo hacia obligatorio en todos los paises.
                  Se desactiva para conservar el flujo de la 17.
                  ORIGINAL 19.0 (l10n_cr):
@@ -46,7 +46,7 @@
                      <attribute name="invisible">move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')</attribute>
                      <attribute name='required'>move_type in ('out_refund', 'in_refund')</attribute>
                  </xpath>
-                 FIN MIGRATION V19 (AJUSTE-59) -->
+                 FIN MIGRATION V19 (AJUSTE-65) -->
 
             <xpath expr="//field[@name='journal_id']" position="attributes">
                 <attribute name="required">1</attribute>

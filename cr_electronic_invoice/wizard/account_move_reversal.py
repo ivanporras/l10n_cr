@@ -8,7 +8,7 @@ class AccountMoveReversal(models.TransientModel):
     Account move reversal wizard, it cancel an account move by reversing it.
     """
 
-    # MIGRATION V19 (AJUSTE-59) - MODIFICADO: se regresa lo que Ikatech tenia en la 17.
+    # MIGRATION V19 (AJUSTE-65) - MODIFICADO: se regresa lo que Ikatech tenia en la 17.
     # En la rama 19.0 los dos campos venian con required=True: el asistente de reversion
     # (asientos y notas de credito) quedaba bloqueado en TODAS las compañias, porque el
     # campo es obligatorio aunque no se muestre. En la 17 eran required=False y la vista
@@ -20,7 +20,7 @@ class AccountMoveReversal(models.TransientModel):
     company_country_code = fields.Char(related="company_id.country_id.code", string="Company Country Code")
     reference_code_id = fields.Many2one("reference.code", string="Reference Code", required=False)
     reference_document_id = fields.Many2one("reference.document", string="Reference Document", required=False)
-    # --- FIN MIGRATION V19 (AJUSTE-59) ---
+    # --- FIN MIGRATION V19 (AJUSTE-65) ---
 
     def _prepare_default_reversal(self, move):
         default_values = super()._prepare_default_reversal(move)
